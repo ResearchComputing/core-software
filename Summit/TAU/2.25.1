@@ -1,0 +1,53 @@
+######### TAU 2.25.1 ###################
+
+Didn't do:
+ml cuda/7.5.18
+ -cuda=/curc/sw/cuda/7.5.18 \
+-opencl=<dir> ................ Specify location of the top level OpenCL SDK
+  Note: This option is needed when used with -cuda=<dir> option.
+
+Didn't Work:
+ml cube/4.3.4
+  -cube=/curc/sw/cube/4.3.4 \
+ml python/3.5.1
+ -pythonlib=/curc/sw/python/3.5.1/lib \
+ -pythoninc=/curc/sw/python/3.5.1/include \
+
+Note that the configure script actually copies a bunch of stuff to the -prefix directory. To reconfigure you should delete everything in that directory.
+
+
+ml purge
+ml intel/16.0.3
+ml impi/5.1.3.210
+ml papi/5.4.3
+ml vtf3/1.43
+ml otf/1.2.6
+ml jdk/1.8.0
+ml scalasca/2.3.1
+ml scorep/2.0.2
+./configure -prefix=/curc/sw/tau/2.25.1/impi/5.1.3.210/intel/16.0.3 \
+ -mpi \
+ -mpiinc=/curc/sw/intel/16.0.3/impi/5.1.3.210/include64 \
+ -mpilib=/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64 \
+ -c++=icpc \
+ -cc=icc \
+ -fortran=ifort \
+ -openmp \
+ -papi=/curc/sw/papi/5.4.3 \
+ -jdk=/curc/sw/jdk/1.8.0 \
+ -scalasca=/curc/sw/scalasca/2.3.1/impi/5.1.3.210/intel/16.0.3 \
+ -scorep=/curc/sw/scorep/2.0.2/impi/5.1.3.210/intel/16.0.3 \
+ -vtf=/curc/sw/vtf3/1.43 \
+ -otf=/curc/sw/otf/1.2.6/intel/16.0.3 \
+ -useropt='-g -O2 -std=c++11' \
+ -bfd=download \
+ -unwind=download
+
+export PATH=$PATH:/curc/sw/tau/2.25.1/impi/5.1.3.210/intel/16.0.3/x86_64/bin
+make install
+
+ln link fail ./libTAU.jnilib file exists error. Remove the link that failed.
+rm /curc/sw/tau/2.25.1/impi/5.1.3.210/intel/16.0.3/x86_64/lib/libTAU.jnilib
+make install
+
+May need to add binutils and libunwind stuff to modulefile...

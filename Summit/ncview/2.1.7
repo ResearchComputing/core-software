@@ -1,0 +1,41 @@
+##### ncview #######
+module purge
+module load gcc/6.1.0
+module load szip/2.1
+module load hdf5/1.10.0
+module load udunits/2.2.20
+module load netcdf/4.4.0
+./configure --prefix=/curc/sw/ncview/2.1.7/gcc/6.1.0 \
+ --with-udunits2_incdir=/curc/sw/udunits/2.2.20/include \
+ --with-udunits2_libdir=/curc/sw/udunits/2.2.20/lib
+make -j12
+make instal
+make distclean
+
+
+module purge
+module load intel/16.0.3
+module load szip/2.1
+module load hdf5/1.10.0
+module load udunits/2.2.20
+module load netcdf/4.4.0
+./configure --prefix=/curc/sw/ncview/2.1.7/intel/16.0.3 \
+ --with-udunits2_incdir=/curc/sw/udunits/2.2.20/include \
+ --with-udunits2_libdir=/curc/sw/udunits/2.2.20/lib
+make -j12
+make install
+make distclean
+
+
+module purge
+module load pgi/16.5
+module load szip/2.1
+module load hdf5/1.10.0
+module load udunits/2.2.20
+module load netcdf/4.4.0
+./configure --prefix=/curc/sw/ncview/2.1.7/pgi/16.5 \
+ --with-udunits2_incdir=/curc/sw/udunits/2.2.20/include \
+ --with-udunits2_libdir=/curc/sw/udunits/2.2.20/lib
+make -j12
+make install
+make distclean

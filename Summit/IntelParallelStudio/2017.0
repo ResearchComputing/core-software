@@ -1,0 +1,9 @@
+############### Intel parallel studio 2017  ###########
+# Your serial number for this product is ####-########. Save this number,
+since you will need it to install the software.
+# Make sure to change default installation path
+# use non-root install
+# The following avoids "not enough space" issues
+# ./install.sh --tmp-dir /projects/rcops/tmp
+# Get license from intel, move to /curc/sw/intel/VERSION/licenses/USE_SERVER.lic
+or wherever the path in the lua file points to.

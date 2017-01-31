@@ -1,0 +1,21 @@
+################## lb ##########################
+###### need slurm
+ml purge
+$ ./configure --prefix=/curc/sw/loadbalance/0.1
+CFLAGS=-static-intel LDFLAGS=-Wl,-rpath,/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64/
+-L/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64/ -lmpifort -lmpi
+
+## Might need this in module:
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+
+################# Loadbalancer ##########################
+# Needs to run without a compiler/mpi loaded
+./configure --prefix=/curc/tools/x86_64/rh6/software/loadbalance/0.1 \
+CFLAGS=-static-intel \
+LDFLAGS="-Wl,-rpath,/curc/tools/x86_64/rh6/software/impi/5.0.3.048/intel64/lib/ -L/curc/tools/x86_64/rh6/software/impi/5.0.3.048/intel64/lib/ -lmpifort -lmpi"
+
+./configure --prefix=/curc/sw/loadbalance/0.1 \
+CFLAGS="-static-intel -I/curc/sw/intel/16.0.3/impi/5.1.3.210/include64/ -I/curc/sw/intel/16.0.3/include" \
+LD=/curc/tools/src/ld_wrapper.sh \
+LDFLAGS="-Wl,-rpath,/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64 -L/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64 -Wl,-rpath,/curc/sw/intel/16.0.3/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64 -L/curc/sw/intel/16.0.3/compilers_and_libraries_2016.3.210/linux/compiler/lib/intel64 -lmpifort -lmpi"

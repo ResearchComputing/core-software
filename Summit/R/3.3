@@ -1,0 +1,7 @@
+# config R/3.3
+./configure  \
+  --prefix=/curc/sw/R/3.3.0/intel/16.0.3 \
+  --with-recommended-packages \
+  CFLAGS=-I/curc/sw/intel/16.0.3/include:/curc/sw/intel/16.0.3/mkl/include \
+  LDFLAGS=-L/curc/sw/intel/16.0.3/lib:/curc/sw/intel/16.0.3/lib/intel64:/curc/sw/intel/16.0.3/mkl/lib/intel64 \
+  LD=/curc/tools/src/ld_wrapper.sh

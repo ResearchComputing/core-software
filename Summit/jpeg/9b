@@ -1,0 +1,27 @@
+###### jpeg/9b #########
+
+ml purge
+ml gcc/6.1.0
+./configure --prefix=/curc/sw/jpeg/9b/gcc/6.1.0
+make -j12
+make check
+make install
+make distclean
+
+
+ml purge
+ml intel/16.0.3
+./configure --prefix=/curc/sw/jpeg/9b/intel/16.0.3
+make -j12
+make check
+make install
+make distclean
+
+
+ml purge
+ml pgi/16.5
+./configure --prefix=/curc/sw/jpeg/9b/pgi/16.5
+make -j12
+make check
+make install
+make distclean

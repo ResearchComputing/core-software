@@ -1,0 +1,64 @@
+#hdf5 intel
+module purge
+module load intel/16.0.3
+module load zlib/1.2.8
+module load szip/2.1
+ ../hdf5-1.10.0-patch1/configure \
+ --prefix=/curc/sw/hdf5/1.10.0/intel/16.0.3 \
+ --enable-fortran \
+ --enable-direct-vfd \
+ --with-szlib=/curc/sw/szip/2.1/intel/16.0.3 \
+ --with-default-plugindir=/curc/sw/hdf5/1.10.0/intel/16.0.3/lib/plugin \
+ --with-zlib=/curc/sw/zlib/1.2.8/intel/16.0.3 \
+ LD=/curc/tools/src/ld_wrapper.sh
+
+
+#hdf5 intel impi
+ml purge
+ml intel/16.0.3 impi/5.1.3.210 zlib/1.2.8 szip/2.1
+ ../hdf5-1.10.0-patch1/configure \
+ --prefix=/curc/sw/hdf5/1.10.0/impi/5.1.3.210/intel/16.0.3 \
+ --enable-fortran \
+ --enable-direct-vfd \
+ --with-szlib=/curc/sw/szip/2.1/intel/16.0.3 \
+ --with-default-plugindir=/curc/sw/hdf5/1.10.0/impi/5.1.3.210/intel/16.0.3/lib/plugin \
+ --enable-parallel \
+ LD=/curc/tools/src/ld_wrapper.sh
+
+ ###/curc/sw/modules/mdep/impi/5.1.3.210/intel/16.0.3/hdf5/1.10.0.lua
+
+#hdf5 intel openmpi
+ml purge
+ml intel/16.0.3 openmpi/1.10.2 zlib/1.2.8 szip/2.1
+ ../hdf5-1.10.0-patch1/configure \
+ --prefix=/curc/sw/hdf5/1.10.0/openmpi/1.10.2/intel/16.0.3 \
+ --enable-fortran \
+ --enable-direct-vfd \
+ --with-szlib=/curc/sw/szip/2.1/intel/16.0.3 \
+ --with-default-plugindir=/curc/sw/hdf5/1.10.0/openmpi/1.10.2/intel/16.0.3/lib/plugin \
+ --enable-parallel \
+ LD=/curc/tools/src/ld_wrapper.sh
+###/curc/sw/modules/mdep/openmpi/1.10.2/intel/16.0.3/hdf5/1.10.0.lua
+
+
+#hdf5 gcc impi
+ ../hdf5-1.10.0-patch1/configure \
+ --prefix=/curc/sw/hdf5/1.10.0/impi/5.1.3.210/gcc/6.1.0 \
+ --enable-fortran \
+ --enable-direct-vfd \
+ --with-szlib=/curc/sw/szip/2.1/gcc/6.1.0 \
+ --with-default-plugindir=/curc/sw/hdf5/1.10.0/impi/5.1.3.210/gcc/6.1.0/lib/plugin \
+ --enable-parallel \
+ LD=/curc/tools/src/ld_wrapper.sh
+
+ #hdf5 pgi openmpi
+ml purge
+ml pgi/16.5 openmpi/1.10.2 zlib/1.2.8 szip/2.1
+../hdf5-1.10.0-patch1/configure \
+--prefix=/curc/sw/hdf5/1.10.0/openmpi/1.10.2/pgi/16.5 \
+--enable-fortran \
+--enable-direct-vfd \
+--with-szlib=/curc/sw/szip/2.1/pgi/16.5 \
+--with-default-plugindir=/curc/sw/hdf5/1.10.0/openmpi/1.10.2/pgi/16.5/lib/plugin \
+--enable-parallel \
+LD=/curc/tools/src/ld_wrapper.sh

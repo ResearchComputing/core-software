@@ -1,0 +1,6 @@
+###########perl 5.24
+#Don't use old build directory. Perl saves your previous config. Untar a new one.
+ml purge
+./Configure -des -Dprefix=/curc/sw/perl/5.24.0
+make test
+make install

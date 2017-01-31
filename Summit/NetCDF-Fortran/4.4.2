@@ -1,0 +1,41 @@
+NetCDF-Fortran and NetCDF have DIFFERENT VERSIONS now. Still put then in same dir.
+
+######### NetCDF Fortran ######################
+ml purge
+ml intel
+ml impi
+ml netcdf
+./configure --prefix=/curc/sw/netcdf/4.4.0/impi/5.1.3.210/intel/16.0.3 \
+  --enable-shared \
+  CPPFLAGS="-I/curc/sw/netcdf/4.4.0/impi/5.1.3.210/intel/16.0.3/include" \
+  LDFLAGS="-L/curc/sw/netcdf/4.4.0/impi/5.1.3.210/intel/16.0.3/lib"
+####### Didn't include this line but maybe should have?
+#######  LDFLAGS=-L/curc/tools/x86_64/rh6/software/netcdf/4.3.3.1/impi/5.0.3.048/intel/15.0.2/lib
+
+ml purge
+ml intel
+ml openmpi
+ml netcdf
+./configure --prefix=/curc/sw/netcdf/4.4.0/openmpi/1.10.2/intel/16.0.3 \
+  --enable-shared \
+  CPPFLAGS="-I/curc/sw/netcdf/4.4.0/openmpi/1.10.2/intel/16.0.3/include" \
+  LDFLAGS="-L/curc/sw/netcdf/4.4.0/openmpi/1.10.2/intel/16.0.3/lib"
+
+
+ml purge
+ml gcc
+ml openmpi
+ml netcdf
+./configure --prefix=/curc/sw/netcdf/4.4.0/openmpi/1.10.2/gcc/6.1.0 \
+  --enable-shared \
+  CPPFLAGS="-I/curc/sw/netcdf/4.4.0/openmpi/1.10.2/gcc/6.1.0/include" \
+  LDFLAGS="-L/curc/sw/netcdf/4.4.0/openmpi/1.10.2/gcc/6.1.0/lib"
+
+ml purge
+ml gcc
+ml impi
+ml netcdf
+./configure --prefix=/curc/sw/netcdf/4.4.0/impi/5.1.3.210/gcc/6.1.0 \
+  --enable-shared \
+  CPPFLAGS="-I/curc/sw/netcdf/4.4.0/impi/5.1.3.210/gcc/6.1.0/include" \
+  LDFLAGS=""-L/curc/sw/netcdf/4.4.0/impi/5.1.3.210/gcc/6.1.0/lib"

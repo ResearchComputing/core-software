@@ -1,0 +1,114 @@
+######## grib api 1.15 ############
+OLD INSTALL
+module purge
+module load gcc/5.1.0
+module load szip/2.1
+module load hdf5/1.8.15
+module load jasper/1.900.1
+module load netcdf/4.3.3.1
+./configure  \
+  --prefix=/curc/tools/x86_64/rh6/software/grib_api/1.13.1/gcc/5.1.0 \
+  --enable-align-memory \
+  --enable-vector \
+  --enable-memory-management \
+  --enable-omp-packing \
+  --with-netcdf=${CURC_NETCDF_ROOT} \
+  --with-jasper=${CURC_JASPER_ROOT} \
+  --with-png-support
+
+
+NEW install recommends cmake:
+ml purge
+ml intel/16.0.3
+ml cmake/3.5.2
+ml szip/2.1
+ml jasper/1.900.1
+ml hdf5/1.10.0
+ml netcdf/4.4.0
+ml git/2.8.3
+ml zlib/1.2.8
+cmake ../grib_api-1.15.0 \
+-DCMAKE_INSTALL_PREFIX=/curc/sw/grib_api/1.15.0/intel/16.0.3 \
+-DENABLE_JPG=ON \
+-DENABLE_PNG=ON \
+-DENABLE_NETCDF=ON \
+-DENABLE_FORTRAN=ON \
+-DENABLE_MEMORY_MANAGEMENT=ON \
+-DENABLE_ALIGN_MEMORY=ON \
+-DENABLE_GRIB_THREADS=ON
+make
+ctest (fails 80% of tests)
+make install
+
+
+ml purge
+ml intel/16.0.3
+ml cmake/3.5.2
+ml szip/2.1
+ml jasper/1.900.1
+ml hdf5/1.10.0
+ml netcdf/4.4.0
+ml git/2.8.3
+ml zlib/1.2.8
+./configure  \
+  --prefix=/curc/sw/grib_api/1.15.0/intel/16.0.3 \
+  --enable-align-memory \
+  --enable-vector \
+  --enable-memory-management \
+  --enable-omp-packing \
+  --with-netcdf=${CURC_NETCDF_ROOT} \
+  --with-jasper=${CURC_JASPER_ROOT} \
+  --with-png-support
+
+here's why tests fail: https://software.ecmwf.int/wiki/display/GRIB/GRIB+API+Frequently+Asked+Questions+FAQ
+Building on High Performance Computer systems
+Some HPC batch systems have a different hardware architecture for their login (or frontend node) to the batch node, but the frontend compilation system is targeted at the batch nodes. This is known as cross-compilation. If this is the case you may see failures in the 'make check' stage because the checks, although compiled for the backend batch nodes, are being run on the frontend nodes and therefore may not work correctly. If this is the case on your system, we recommend using a batch job to do the 'configure; make; make check; make install' steps.
+In some cases, the batch system cannot be used for compilation at all. In this case, you have to compile on the frontend but without extra flags 'configure' will assume the build is for the frontend. You can make use of the --host option to ensure the build is correct for the architecture of the batch system. Again though, the tests will fail, a small serial batch job is recommended to make sure grib_api is installed correctly.
+Note if you plan on using the grib_api software in your own software that runs on the frontend nodes you will need to install grib_api twice; one for the batch system and again for the frontend system.
+If you have any questions installing grib_api in this type of environment, please contact: openifs-support@ecmwf.int for assistance.
+
+
+ml purge
+ml gcc/6.1.0
+ml cmake/3.5.2
+ml szip/2.1
+ml jasper/1.900.1
+ml hdf5/1.10.0
+ml netcdf/4.4.0
+ml git/2.8.3
+ml zlib/1.2.8
+make clean
+./configure  \
+  --prefix=/curc/sw/grib_api/1.15.0/gcc/6.1.0 \
+  --enable-align-memory \
+  --enable-vector \
+  --enable-memory-management \
+  --enable-omp-packing \
+  --with-netcdf=${CURC_NETCDF_ROOT} \
+  --with-jasper=${CURC_JASPER_ROOT} \
+  --with-png-support
+make -j14
+make install
+
+
+ml purge
+ml pgi/16.5
+ml cmake/3.5.2
+ml szip/2.1
+ml jasper/1.900.1
+ml hdf5/1.10.0
+ml netcdf/4.4.0
+ml git/2.8.3
+ml zlib/1.2.8
+make clean
+./configure  \
+  --prefix=/curc/sw/grib_api/1.15.0/pgi/16.5 \
+  --enable-align-memory \
+  --enable-vector \
+  --enable-memory-management \
+  --enable-omp-packing \
+  --with-netcdf=${CURC_NETCDF_ROOT} \
+  --with-jasper=${CURC_JASPER_ROOT} \
+  --with-png-support
+make -j14
+make install

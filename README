@@ -1,0 +1,1 @@
+Documenting the software builds for Research Computing. Organized by Cluster/SoftwareName/VersionNumber. The file "VersionNumber" contains builds (bash commands, notes, instructions etc.) to install the SoftwareName for each compiler and MPI. 

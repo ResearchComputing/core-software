@@ -1,0 +1,10 @@
+###### tdom #############
+ml purge
+ml tcltk/8.6.5
+./configure --prefix=/curc/sw/tdom/0.8.3 \
+--enable-shared \
+--with-tcl=/curc/sw/tcltk/8.6.5/lib \
+--with-tclinclude= /curc/sw/tcltk/8.6.5/include
+make  ## FAILED
+make test
+make install

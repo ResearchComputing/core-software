@@ -1,0 +1,24 @@
+###### hdf5-eos #####
+
+./configure
+--prefix=/curc/tools/x86_64/rh6/software/hdfeos5/1.15/intel/15.0.2
+CC=/curc/tools/x86_64/rh6/software/hdf5/1.8.15/intel/15.0.2/bin/h5cc
+-Df2cFortran
+--with-szlib=/curc/tools/x86_64/rh6/software/szip/2.1/intel/15.0.2
+
+##### hdfeos5 intel #####
+./configure --prefix=/curc/sw/hdfeos5/1.15/intel/16.0.3 \
+CC='/curc/sw/hdf5/1.10.0/intel/16.0.3/bin/h5cc -Df2cFortran' \
+--with-szlib=/curc/sw/szip/2.1/intel/16.0.3
+
+##### hdfeos5 gcc #####
+./configure --prefix=/curc/sw/hdfeos5/1.15/gcc/6.1.0 \
+CC=/curc/sw/hdf5/1.10.0/gcc/6.1.0/bin/h5cc \
+--with-szlib=/curc/sw/szip/2.1/gcc/6.1.0 \
+--with-zlib=/curc/sw/zlib/1.2.8/gcc/6.1.0
+
+##### hdfeos5 pgi #####
+./configure --prefix=/curc/sw/hdfeos5/1.15/pgi/16.5 \
+CC=/curc/sw/hdf5/1.10.0/pgi/16.5/bin/h5cc \
+--with-szlib=/curc/sw/szip/2.1/pgi/16.5 \
+--with-zlib=/curc/sw/zlib/1.2.8/pgi/16.5
