@@ -5,5 +5,7 @@ since you will need it to install the software.
 # use non-root install
 # The following avoids "not enough space" issues
 # ./install.sh --tmp-dir /projects/rcops/tmp
-# Get license from intel, move to /curc/sw/intel/VERSION/licenses/USE_SERVER.lic
+# Make sure to "customize install" to change default install directory
+# Get license from intel (https://registrationcenter.intel.com/en/products/)
+# Move license to /curc/sw/intel/VERSION/licenses/USE_SERVER.lic
 or wherever the path in the lua file points to.
