@@ -1,0 +1,31 @@
+###########openmpi2/gcc
+
+-bash-4.2$ vim ../openmpi-2.0.1/opal/mca/pmix/s1/pmix_s1.c
+-bash-4.2$ vim ../openmpi-2.0.1/opal/mca/pmix/s2/pmix_s2.c
+change:
+OBJ_CLASS_INSTANCE(pmi_opcaddy_t,
+                   opal_object_t,
+                   NULL, NULL);
+to:
+static OBJ_CLASS_INSTANCE(pmi_opcaddy_t,
+                   opal_object_t,
+                   NULL, NULL);
+
+
+ml cuda
+ml gcc
+../openmpi-2.0.1/configure \
+--prefix=/curc/sw/openmpi/2.0.1/gcc/6.1.0 \
+--enable-wrapper-rpath \
+--enable-static \
+--enable-mpi-thread-multiple \
+--enable-mpi-ext=all \
+--with-verbs=/usr \
+--with-slurm \
+--with-pmi=/usr \
+--with-psm2=/usr \
+--with-cuda=/curc/sw/cuda/7.5.18 \
+--enable-oshmem
+
+make -j20
+make install
