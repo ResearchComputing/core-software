@@ -1,0 +1,2 @@
+#Download and extract to desired directory
+tar -xf cudnn-7.0-linux-x64-v4.0-prod.tgz -C /curc/sw/cudnn/4.0
