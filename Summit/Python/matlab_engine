@@ -1,0 +1,20 @@
+Currently supported python versions = 2.7,3.4,3.5
+
+#### python/3.5.1
+cd /curc/sw/matlab/R2016b/extern/engines/python/
+python setup.py build --build-base="/projects/rcops/holtat/matlab_engine/python3" install --prefix="/curc/sw/python/3.5.1"
+
+
+#### python 2.7.11
+cd /curc/sw/matlab/R2016b/extern/engines/python/
+python setup.py build --build-base="/projects/rcops/holtat/matlab_engine/python2" install --prefix="/curc/sw/python/2.7.11"
+
+
+
+#### Test:
+import matlab.engine
+eng = matlab.engine.start_matlab()
+x = 4.0
+eng.workspace['y'] = x
+a = eng.eval('sqrt(y)')
+print(a)
