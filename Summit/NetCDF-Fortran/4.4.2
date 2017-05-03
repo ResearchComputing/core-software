@@ -39,3 +39,29 @@ ml netcdf
   --enable-shared \
   CPPFLAGS="-I/curc/sw/netcdf/4.4.0/impi/5.1.3.210/gcc/6.1.0/include" \
   LDFLAGS=""-L/curc/sw/netcdf/4.4.0/impi/5.1.3.210/gcc/6.1.0/lib"
+
+
+
+ml purge
+ml intel
+ml netcdf
+./configure --prefix=/curc/sw/netcdf/4.4.0/intel/16.0.3 \
+--enable-shared \
+CPPFLAGS="-I/curc/sw/netcdf/4.4.0/intel/16.0.3/include" \
+LDFLAGS="-L/curc/sw/netcdf/4.4.0/intel/16.0.3/lib"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
