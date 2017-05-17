@@ -9,3 +9,17 @@ since you will need it to install the software.
 # Get license from intel (https://registrationcenter.intel.com/en/products/)
 # Move license to /curc/sw/intel/VERSION/licenses/USE_SERVER.lic
 or wherever the path in the lua file points to.
+
+
+
+You have to delete the intel directory in /home/rcops or it won't let you
+install (only lets you upgrade previous install...)
+
+Choose license manager activation and then offline activation. Point it to
+a license file.
+
+You can't build the vtune sampling drivers as a non-root user. Install
+without them and build them as root later.
+
+
+### Building Vtune drivers ###

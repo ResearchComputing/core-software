@@ -1,0 +1,9 @@
+ml purge
+ml intel/17.4
+ml netcdf/4.4.1.1
+../netcdf-fortran-4.4.4/configure --prefix=/curc/sw/netcdf/4.4.1.1/intel/17.4 \
+--enable-shared \
+CPPFLAGS="-I/curc/sw/netcdf/4.4.1.1/intel/17.4/include -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+FCFLAGS="-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+FFLAGS="-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+LDFLAGS="-L/curc/sw/netcdf/4.4.1.1/intel/17.4/lib"
