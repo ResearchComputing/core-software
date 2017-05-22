@@ -2,3 +2,9 @@
 Added the following to lib/cpp/antlr/CharScanner.hpp to get PGI and Intel to compile:
 #include <string.h>
 #include <stdio.h>
+
+
+./configure --prefix=/curc/sw/nco/4.6.0/intel/16.0.3 \
+NETCDF_ROOT=/curc/sw/netcdf/4.4.0/intel/16.0.3 \
+UDUNITS2_PATH=/curc/sw/udunits/2.2.20 \
+ANTLR_ROOT=/curc/sw/antlr/2.7.7/intel/16.0.3

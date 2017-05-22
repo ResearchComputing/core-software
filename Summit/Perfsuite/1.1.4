@@ -6,6 +6,39 @@ old one:
 Make sure to load tcltk, cube, papi, jdk in modulefile
 Use jdk7, jdk8 will break make with doclint stuff.
 
+
+
+
+### intel/17.4 impi/17.3
+ml purge
+ml expat/2.1.1
+ml jdk/1.7.0
+ml papi/5.5.1
+ml cube/3.4.3
+ml tcltk/8.6.5
+ml tdom/0.8.3
+ml intel/17.4
+ml impi/17.3
+./configure --prefix=/curc/sw/perfsuite/1.1.4/impi/17.3/intel/17.4 \
+--with-mpi \
+--without-libbfd \
+--with-papi=/curc/sw/papi/5.5.1 \
+--enable-java \
+--with-cube=/curc/sw/cube/3.4.3 \
+--with-tdom=/curc/sw/tdom/0.8.3 \
+JAVAC=javac \
+F77=mpifc \
+CFLAGS="-I/curc/sw/expat/2.1.1/include" \
+LDFLAGS="-L/curc/sw/expat/2.1.1/lib"
+
+## Couldn't get the pfm stuff to work. Never version of libpfm that
+## support knl doesn't have the right headers. Older version doesn't
+## support knl. Deleted the libpfm install.
+--with-pfm=/curc/sw/libpfm/4.8.0 \
+--with-pfm=/curc/tools/src/papi/5.5.1/papi-5.5.1/src/libpfm-3.y \
+
+
+### intel/16 impi/5
 ml purge
 ml expat/2.1.1
 ml jdk/1.7.0
@@ -17,7 +50,6 @@ ml intel/16.0.3
 ml impi/5.1.3.210
 ./configure --prefix=/curc/sw/perfsuite/1.1.4/impi/5.1.3.210/intel/16.0.3 \
  --without-libbfd \
- --enable-debug \
  --with-mpi \
  --with-papi=/curc/sw/papi/5.4.3/ \
  --enable-java \
@@ -28,7 +60,6 @@ ml impi/5.1.3.210
 make -j12
 make install
 make distclean
-
 
 ml purge
 ml expat/2.1.1

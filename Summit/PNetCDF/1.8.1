@@ -1,0 +1,10 @@
+################## pnetcdf #######################
+module purge
+module load intel/17.4
+module load impi/5.1.3.210
+./configure  \
+--prefix=/curc/sw/pnetcdf/1.8.1/impi/17.3/intel/17.4 \
+CFLAGS="-g -O2 -fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+CXXFLAGS="-g -O2 -fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+FFLAGS="-g -O2 -fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+FCFLAGS="-g -O2 -fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2"
