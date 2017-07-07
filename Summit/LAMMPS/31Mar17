@@ -1,0 +1,264 @@
+##### lammps fat binary #####
+
+ml intel/17.4 impi/17.3
+
+
+### Make side libraries
+cd lib/reax
+vim Makefile.ifort
+# ifort -mcmodel=large, add -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+make -f Makefile.ifort
+
+
+cd lib/meam
+vim Makefile.lammps.ifort  #change lompstub to liomp5
+make -f Makefile.ifort
+
+
+cd lib/poems
+make -f Makefile.icc
+
+
+cd lib/voronoi
+wget http://math.lbl.gov/voro++/download/dir/voro++-0.4.6.tar.gz
+tar -xf voro++-0.4.6.tar.gz
+cd voro++-0.4.6
+# Change config.mk: g++ -> icpc, add -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+make
+cd ..
+ln -s voro++-0.4.6/src includelink
+ln -s voro++-0.4.6/src liblink
+
+
+cd lib/smd
+wget http://bitbucket.org/eigen/eigen/get/3.3.3.tar.gz
+tar -xf 3.3.3.tar.gz
+# eigen is template library, no need to build
+
+cd lib/atc
+# change Makefile.mpic++: mpic++ -> mpicxx, add -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+make -f Makefile.mpic++
+# add paths and links to Makefile.lammps
+user-atc_SYSINC = -I/curc/sw/intel/17.4/mkl/include
+user-atc_SYSLIB = -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl
+user-atc_SYSPATH = -L/curc/sw/intel/17.4/mkl/lib/intel64
+
+
+
+cd lib/kim
+wget https://s3.openkim.org/kim-api/kim-api-v1.8.2.tgz
+tar -xf kim-api-v1.8.2.tgz
+export KIM_INSTALL=/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kim/install
+./configure --prefix=KIM_INSTALL \
+CXX=mpicxx \
+CXXFLAGS="-O3 -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+CC=mpicc \
+CFLAGS="-O3 -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+FC=mpifc \
+FFLAGS="-O3 -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2"
+
+## get listing of kim models here: https://openkim.org/kim-items/model-drivers/alphabetical
+make add-EAM_Dynamo_Angelo_Moody_NiAlH__MO_418978237058_001
+make add-EAM_CubicNaturalSpline__MD_853402641673_000
+make add EAM_QuinticClampedSpline__MD_532469991695_001
+make add-EAM_QuinticClampedSpline__MD_532469991695_001
+make add-EAM_QuinticHermiteSpline__MD_029719603993_001
+make add-EDIP_BOP_C__MD_506186535567_001
+make add-EMT_Asap__MD_128315414717_002
+make add-Four_Body_Mistriotis_Flytzanis_Farantos__MD_514777050453_000
+make add-IMD_EAM__MD_113599595631_002
+## make add-LennardJones612__MD_414112407348_001
+make add-MEAM_2NN__MD_111291751625_001
+make add-model_driver_PF_cubic_splines__MD_620624592962_001
+make add-model_driver_PF_quintic_splines__MD_543355979582_001
+make add-MorseEIP_GuthikondaElliott_2009__MD_429561112321_001
+make add-MSMEAM_Dynamo_Gibson_Baskes__MD_080127949983_000
+## make add-Pair_Lennard_Jones_Shifted__MD_498634107543_001
+make add-Pair_Lennard_Jones_Truncated__MD_132729421025_000
+make add-Pair_LJ_Smooth__MD_716364606252_000
+make add-Pair_Morse_Shifted__MD_552566534109_001
+make add-Pair_Morse_Sigmoid__MD_199191711608_000
+make add-Pair_Morse_Smoothed__MD_093895395358_001
+make add-Tersoff_LAMMPS__MD_077075034781_001
+make add-Three_Body_Stillinger_Weber__MD_335816936951_002
+make -j24
+make install
+make install-set-default-to-v1.8.2
+vim Makefile.KIM_Config # GCC -> INTEL
+export PATH=$PATH:$KIM_INSTALL
+
+# It can't find kim-api-build-config because it's named kim-api-v1-build-config
+cd /curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kim/install/bin
+ln -s /curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kim/install/lib/kim-api-v1/bin/kim-api-v1-build-config kim-api-build-config
+
+-bash-4.2$ kim-api-build-config --includes
+-I/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kim/install/lib/kim-api-v1/include
+-bash-4.2$ ls
+bench  check_kim.sh  doc  examples  lib  LICENSE  potentials  python  README  src  tools
+-bash-4.2$ bash check_kim.sh
+check_kim.sh: line 3: syntax error near unexpected token `$(shell $(KIM_CONFIG_HELPER) --version 2> /dev/null),'
+check_kim.sh: line 3: `ifeq ($(shell $(KIM_CONFIG_HELPER) --version 2> /dev/null),)'
+-bash-4.2$ rm check_kim.sh
+-bash-4.2$ kim-api-build-config --ldlibs
+-lkim-api-v1 -nofor_main -cxxlib
+-bash-4.2$ kim-api-build-config --ldflags
+ -L/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kim/install/lib/kim-api-v1
+
+cd lib/kokkos
+export KOKKOS_INSTALL=/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kokkos/install
+mkdir lib/kokkos/install
+cd lib/kokkos/install
+../generate_makefile.bash \
+--prefix=$KOKKOS_INSTALL \
+--compiler=/curc/sw/intel/17.4/impi/2017.3.196/bin64/mpicxx \
+--cxxflags="-O3 -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2"
+
+
+cd lib/awpmd
+vim Makefile.mpicc
+# mpic++ -> mpicxx
+# -O -> -O3 -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+make -f Makefile.mpicc
+vim Makefile.lammps
+# add paths and links to Makefile.lammps
+user-atc_SYSINC = -I/curc/sw/intel/17.4/mkl/include
+user-atc_SYSLIB = -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl
+user-atc_SYSPATH = -L/curc/sw/intel/17.4/mkl/lib/intel64
+
+
+cd lib/colvars
+vim Makefile.colvars
+# g++ -> mpicxx, -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+
+
+cd lib/python
+vim Makefile.lammps.python2.7
+# include -> /curc/sw/python/2.7.11/include/python2.7
+## Change Makefile.lammps, Makefile.lammps.python2
+python_SYSINC = $(shell which python2.7-config > /dev/null 2>&1 && python2.7-config --includes || python2.7-config --includes )
+python_SYSLIB = $(shell which python2.7-config > /dev/null 2>&1 && python2.7-config --ldflags || python2.7-config --ldflags)
+python_SYSPATH =
+
+
+
+
+##### Tell lammps to add/link these packages
+
+make yes-asphere yes-body yes-class2 yes-colloid yes-compress yes-coreshell \
+yes-dipole yes-granular yes-kspace yes-manybody yes-poems \
+yes-mc yes-meam yes-misc yes-molecule yes-opt yes-peri yes-poems \
+yes-qeq yes-reax yes-replica yes-rigid yes-shock yes-snap yes-srd yes-voronoi \
+yes-kim yes-kokkos yes-python \
+yes-user-atc yes-user-awpmd yes-user-omp yes-user-phonon yes-user-smd \
+yes-user-colvars yes-user-intel yes-user-misc
+make kokkos_phi
+
+
+
+
+# from src directory,  make mpi -j 24
+# NOTE: adding intel_cluster_tools screws up kim package
+# as it adds a different glibc which is too old (from vtune amplifier)
+# Manually add tbb:
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/curc/sw/intel/17.4/tbb/lib/intel64/gcc4.7
+export MIC_LD_LIBRARY_PATH=$MIC_LD_LIBRARY_PATH:/curc/sw/intel/17.4/tbb/lib/mic
+export CPATH=$CPATH:/curc/sw/intel/17.4/tbb/include
+cd src
+make mpi -j 24
+
+
+
+
+#########################
+##### Lammps Makefile.mpi
+#########################
+
+# mpi = MPI with its default compiler
+
+SHELL = /bin/sh
+
+# ---------------------------------------------------------------------
+# compiler/linker settings
+# specify flags and libraries needed for your compiler
+
+#mcmodel=large needed as code>2GB
+CC =        mpicc -mcmodel=large
+CCFLAGS =   -g -O3 -restrict -qopenmp -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2 -I/curc/sw/intel/17.4/impi/2017.3.196/include64 -I/curc/sw/python/2.7.11/include/python2.7 -I/curc/sw/jpeg/9b/intel/17.4/include -I/curc/sw/intel/17.4/mkl/include -I/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kokkos/install/include
+SHFLAGS =   -fPIC
+DEPFLAGS =  -M
+
+LINK =      mpicxx -qopenmp -mcmodel=large
+LINKFLAGS = -g -O3 -lpython2.7 -ltbbmalloc -L/curc/sw/intel/17.4/tbb/lib/intel64/gcc4.7 -L/curc/sw/intel/17.4/impi/2017.3.196/lib64 -L/curc/sw/python/2.7.11/lib -L/curc/sw/intel/17.4/mkl/lib/intel64 -L/curc/sw/jpeg/9b/intel/17.4/lib -L/curc/sw/lammps/31Mar17/impi/17.3/intel/17.4/lib/kokkos/install/lib
+
+
+LIB =
+SIZE =      size
+
+ARCHIVE =   ar
+ARFLAGS =   -rc
+SHLIBFLAGS =    -shared
+
+# ---------------------------------------------------------------------
+# LAMMPS-specific settings, all OPTIONAL
+# specify settings for LAMMPS features you will use
+# if you change any -D setting, do full re-compile after "make clean"
+
+# LAMMPS ifdef settings
+# see possible settings in Section 2.2 (step 4) of manual
+
+LMP_INC =   -DLAMMPS_GZIP -DLAMMPS_MEMALIGN=64
+
+# MPI library
+# see discussion in Section 2.2 (step 5) of manual
+# MPI wrapper compiler/linker can provide this info
+# can point to dummy MPI library in src/STUBS as in Makefile.serial
+# use -D MPICH and OMPI settings in INC to avoid C++ lib conflicts
+# INC = path for mpi.h, MPI compiler settings
+# PATH = path for MPI library
+# LIB = name of MPI library
+
+MPI_INC =       -DMPICH_SKIP_MPICXX -DOMPI_SKIP_MPICXX=1
+MPI_PATH =
+MPI_LIB =
+
+# FFT library
+# see discussion in Section 2.2 (step 6) of manual
+# can be left blank to use provided KISS FFT library
+# INC = -DFFT setting, e.g. -DFFT_FFTW, FFT compiler settings
+# PATH = path for FFT library
+# LIB = name of FFT library
+
+FFT_INC =  -DFFT_MKL -DMKL_ILP64
+FFT_PATH =
+FFT_LIB = -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -lm -ldl
+
+#-lstdc++
+
+
+# JPEG and/or PNG library
+# see discussion in Section 2.2 (step 7) of manual
+# only needed if -DLAMMPS_JPEG or -DLAMMPS_PNG listed with LMP_INC
+# INC = path(s) for jpeglib.h and/or png.h
+# PATH = path(s) for JPEG library and/or PNG library
+# LIB = name(s) of JPEG library and/or PNG library
+
+JPG_INC =
+JPG_PATH =
+JPG_LIB = -ljpeg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
