@@ -83,8 +83,14 @@ CXX=mpicxx \
 --download-hyper=yes \
 --download-ptscotch=yes
 
+From the dev's:
+This build fails due to an internal compiler bug. You have to get to that point, and then edit
+$PETSC_ARCH/lib/petsc/conf/petscvariables, remove "-axCORE-AVX512,CORE-AVX2" (the branching causes the issue),
+and compile the last few files without those flags. do NOT rerun configure or do anything else.
+Note: we have found some bugs with those flags that cause crashes in some PETSc routines that we have reported to Intel.
 
 
+#### AVX2 only build
 
 ./configure --prefix=/projects/holtat/Summit/install/petsc17.4_avx2 \
 FC=mpifc \
@@ -119,7 +125,7 @@ CXX=mpicxx \
 
 
 
-
+#### Spacks Petsc Module for reference
 
 whatis("petsc @3.7.5 ")
 prepend_path("PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/bin")
