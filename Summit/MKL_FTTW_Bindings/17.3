@@ -1,0 +1,10 @@
+## Intel reference page on building fftw interfaces for mkl
+https://software.intel.com/en-us/mkl-developer-reference-c-building-your-own-fftw3-interface-wrapper-library#4CBEC431-EC89-4E28-B46B-848EDAEEDC71
+
+## Makes the fftw3 fortran interfaces with intel compiler for mkl
+cd /curc/sw/intel/17.4/mkl/interfaces/fftw3xf
+make libintel64 compiler=intel INSTALL_DIR=/curc/sw/intel/17.4/mkl/lib/intel64
+
+## fftw3 c interface
+cd /curc/sw/intel/17.4/mkl/interfaces/fftw3xc
+make libintel64 compiler=intel INSTALL_DIR=/curc/sw/intel/17.4/mkl/lib/intel64
