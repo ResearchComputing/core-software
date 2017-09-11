@@ -1,0 +1,6 @@
+ml purge
+ml intel
+export IDIR=/curc/sw/gsl/2.4/intel/17.4/
+./configure --prefix=$IDIR CXXFLAGS="-O3 -xCORE-AVX2" CFLAGS="-O3 -xCORE-AVX2"
+make
+make install
