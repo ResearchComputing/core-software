@@ -35,3 +35,16 @@ make -j12
 make installcheck
 make install
 make distclean
+
+
+##############################################33
+Intel 17.4 (N.F.)
+ml purge
+ml intel
+ml netcdf
+ml antlr
+ml udunits
+ml gsl
+./configure --prefix=/curc/sw/nco/4.6.0/intel/17.4 NETCDF_ROOT=/curc/sw/netcdf/4.4.1.1/intel/17.4 UDUNITS2_PATH=/curc/sw/udunits/2.2.25 ANTLR_ROOT=/curc/sw/antl
+r/2.7.7/intel/17.4
+
