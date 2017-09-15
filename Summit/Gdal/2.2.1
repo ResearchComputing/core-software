@@ -1,0 +1,69 @@
+# GDAL 2.2.1
+
+### NOTE: Can't have Jasper and OpenJPEG at same time.
+### Use OpenJPEG as Jasper can't open certain .ntf files
+
+### GDAL only recognized openjpeg 2.0-2.1
+### To use openjpeg2.2, copy include/openjpeg-2.2 to include/openjpeg-2.1
+### Same goes for the lib/openjpef/2.2
+
+module purge
+module load intel/17.4
+module load geos/3.6.2
+module load szip/2.1.1
+module load hdf5/1.10.1
+module load netcdf/4.4.1.1
+module load openjpeg/2.2.0
+./configure  \
+--prefix=/curc/sw/gdal/2.2.1/intel/17.4 \
+--with-jpeg=internal \
+--with-png=internal \
+--with-geotiff=internal \
+--with-libtiff=internal \
+--with-gif=internal \
+--with-hdf5=${CURC_HDF5_ROOT} \
+--with-netcdf=${CURC_NETCDF_ROOT} \
+--with-curl=/usr/bin \
+--with-xml2=/usr/bin \
+--with-pcraster=internal \
+--with-geos=yes \
+--with-openjpeg=${CURC_OPENJPEG_ROOT} \
+CFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+CXXFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2"
+make -j12
+make install
+
+Currently Loaded Modules:
+  1) intel/17.4 (m)   3) szip/2.1.1    5) netcdf/4.4.1.1
+  2) geos/3.6.2       4) hdf5/1.10.1   6) openjpeg/2.2.0
+
+
+
+### Test install
+
+ml use /projects/rcops/holtat/modules
+module purge
+module load intel/17.4
+module load geos3.6.2
+module load szip/2.1.1
+module load hdf5/1.10.1
+module load netcdf/4.4.1.1
+module load openjpeg2.2.0
+./configure  \
+--prefix=/projects/rcops/holtat/install/gdal2.2.1 \
+--with-jpeg=internal \
+--with-png=internal \
+--with-geotiff=internal \
+--with-libtiff=internal \
+--with-gif=internal \
+--with-hdf5=${CURC_HDF5_ROOT} \
+--with-netcdf=${CURC_NETCDF_ROOT} \
+--with-curl=/usr/bin \
+--with-xml2=/usr/bin \
+--with-pcraster=internal \
+--with-geos=yes \
+--with-openjpeg=/projects/rcops/holtat/install/openjpeg2.2.0 \
+CFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+CXXFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2"
+make -j12
+make install

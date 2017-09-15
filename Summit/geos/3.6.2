@@ -1,0 +1,11 @@
+# Geos
+
+
+
+
+
+ml purge
+ml intel/17.4
+./configure --prefix=/curc/sw/geos/3.6.2/intel/17.4 \
+CFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2 \
+CXXFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
