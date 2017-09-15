@@ -1,0 +1,17 @@
+## Jasper2.0.12
+# webpage http://www.ece.uvic.ca/~frodo/jasper/#download
+
+
+## TEST INSTALL
+## Didn't use as part of GDAL because it fails to open certain ntf files
+ml purge
+ml intel/17.4
+ml cmake/3.9.2
+cmake \
+-DCMAKE_C_FLAGS="-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+-DCMAKE_SKIP_INSTALL_RPATH=YES \
+-DCMAKE_INSTALL_PREFIX=/projects/rcops/holtat/install/jasper2.0.12 \
+-DCMAKE_BUILD_TYPE=Release \
+-DJPEG_LIBRARY=/curc/sw/jpeg/9b/intel/17.4/lib/libjpeg.so.9.2.0 \
+-DJPEG_INCLUDE_DIR=/curc/sw/jpeg/9b/intel/17.4/include \
+..
