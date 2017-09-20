@@ -1,14 +1,26 @@
 ###################### OpenFOAM 5.0 - GCC/OpenMPI with SCOTCH/metis ################
+
+# I HIGHLY recommend reading the OpenFOAM source install instructions
+# before following my notes.
+
+
+## Rename as per instructions
 mv ThirdParty-5.x-version-5.0/ ThirdParty-5.0
 mv OpenFOAM-5.x-version-5.0/ OpenFOAM-5.0
+
+# Modules
 ml gcc/6.1.0 openmpi/2.0.1 cmake autotools qt/5.9.1 zlib
+
+# OpenFOAM env
 source /curc/sw/openfoam/5.0/openmpi/2.0.1/gcc/6.1.0/OpenFOAM-5.0/etc/bashrc
+
+#  Make easier to type out
 export ROOT_DIR=/curc/sw/openfoam/5.0/openmpi/2.0.1/gcc/6.1.0
 export TP_DIR=$ROOT_DIR/ThirdParty-5.0
+
+# Third party stuff first
+#
 cd $TP_DIR
-mkdir gmp-system
-mkdir mpfr-system
-mkdir cgal-system
 tar -xf boost_1_61_0.tar.bz2
 mv boost_1_61_0 boost-system
 cd scotch_6.0.3/src
@@ -17,18 +29,27 @@ make ptscotch
 cd boost-system
 ./bootstrap.sh
 ./b2 install address-model=64 stage
-#Download metis, unpack, and move to ThidParty-5.0
+# Download metis, unpack, and move to ThidParty-5.0
+wget http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.1.0.tar.gz
 
 #### GMP, CGAL, MPFR should be downloaded and unpacked into ROOT_DIR
-##GMP
+# Make install directories for gmp, mpfr, cgal
+cd $TP_DIR
+mkdir gmp-system
+mkdir mpfr-system
+mkdir cgal-system
+
+## GMP
 ./configure --prefix=$TP_DIR/gmp-system/
 make
 make install
-##MPFR
+
+## MPFR
 ./configure --prefix=$TP_DIR/mpfr-system/ --with-gmp=$TP_DIR/gmp-system/
 make
 make install
-##CGAL
+
+## CGAL - Assumes CGAL unpacked in $ROOT_DIR
 cd $ROOT_DIR
 mkdir cgal_build
 cd cgal_build
@@ -43,18 +64,21 @@ cmake ../CGAL-4.9 \
 make -j12
 make install
 
-## Make all third party stuff
-## Change if [ -r $CGAL_ARCH_PATH/lib/libCGAL.so ] to if [ -r $CGAL_ARCH_PATH/lib64/libCGAL.so ] in Allwmake
+# ThirdParty Allwmake looks for libCGAL.so in $CGAL_ARCH_PATH/lib not $CGAL_ARCH_PATH/lib64
+# Change if [ -r $CGAL_ARCH_PATH/lib/libCGAL.so ] to if [ -r $CGAL_ARCH_PATH/lib64/libCGAL.so ] in Allwmake
 export CGAL_ARCH_PATH=$TP_DIR/cgal-system
+
+# Make paraview (takes a bit)
+./makeParaView -j12
+
+# Make all third party stuff
 ./Allwmake -j12
 
-
-### This failed. Can use system paraview if necessary
-#./makeParaView
-
+# Setup environment to build rest of OpenFOAM
 wmRefresh
 export CGAL_ARCH_PATH=$TP_DIR/cgal-system # need to re-export after wmRefresh...
 export CPLUS_INCLUDE_PATH=$TP_DIR/cgal-system/include:$TP_DIR/gmp-system/include:$TP_DIR/mpfr-system/include
 export LIBRARY_PATH=$TP_DIR/mpfr-system/lib/:$TP_DIR/cgal-system/lib64
 
+## In the OpenFOAM-5.0 dir ($ROOT_DIR/OpenFOAM-5.0)
 ./Allwmake -j20
