@@ -1,0 +1,60 @@
+###################### OpenFOAM 5.0 - GCC/OpenMPI with SCOTCH/metis ################
+mv ThirdParty-5.x-version-5.0/ ThirdParty-5.0
+mv OpenFOAM-5.x-version-5.0/ OpenFOAM-5.0
+ml gcc/6.1.0 openmpi/2.0.1 cmake autotools qt/5.9.1 zlib
+source /curc/sw/openfoam/5.0/openmpi/2.0.1/gcc/6.1.0/OpenFOAM-5.0/etc/bashrc
+export ROOT_DIR=/curc/sw/openfoam/5.0/openmpi/2.0.1/gcc/6.1.0
+export TP_DIR=$ROOT_DIR/ThirdParty-5.0
+cd $TP_DIR
+mkdir gmp-system
+mkdir mpfr-system
+mkdir cgal-system
+tar -xf boost_1_61_0.tar.bz2
+mv boost_1_61_0 boost-system
+cd scotch_6.0.3/src
+make scotch
+make ptscotch
+cd boost-system
+./bootstrap.sh
+./b2 install address-model=64 stage
+#Download metis, unpack, and move to ThidParty-5.0
+
+#### GMP, CGAL, MPFR should be downloaded and unpacked into ROOT_DIR
+##GMP
+./configure --prefix=$TP_DIR/gmp-system/
+make
+make install
+##MPFR
+./configure --prefix=$TP_DIR/mpfr-system/ --with-gmp=$TP_DIR/gmp-system/
+make
+make install
+##CGAL
+cd $ROOT_DIR
+mkdir cgal_build
+cd cgal_build
+cmake ../CGAL-4.9 \
+-DGMP_LIBRARIES=$TP_DIR/gmp-system/lib/libgmp.so \
+-DGMP_INCLUDE_DIR=$TP_DIR/gmp-system/include \
+-DMPFR_LIBRARIES=$TP_DIR/mpfr-system/lib/libmpfr.so \
+-DMPFR_INCLUDE_DIR=$TP_DIR/mpfr-system/include \
+-DBOOST_INCLUDEDIR=$TP_DIR/boost-system/ \
+-DCMAKE_INSTALL_PREFIX=$TP_DIR/cgal-system \
+-DZLIB_INCLUDE_DIR=$CURC_ZLIB_INC
+make -j12
+make install
+
+## Make all third party stuff
+## Change if [ -r $CGAL_ARCH_PATH/lib/libCGAL.so ] to if [ -r $CGAL_ARCH_PATH/lib64/libCGAL.so ] in Allwmake
+export CGAL_ARCH_PATH=$TP_DIR/cgal-system
+./Allwmake -j12
+
+
+### This failed. Can use system paraview if necessary
+#./makeParaView
+
+wmRefresh
+export CGAL_ARCH_PATH=$TP_DIR/cgal-system # need to re-export after wmRefresh...
+export CPLUS_INCLUDE_PATH=$TP_DIR/cgal-system/include:$TP_DIR/gmp-system/include:$TP_DIR/mpfr-system/include
+export LIBRARY_PATH=$TP_DIR/mpfr-system/lib/:$TP_DIR/cgal-system/lib64
+
+./Allwmake -j20
