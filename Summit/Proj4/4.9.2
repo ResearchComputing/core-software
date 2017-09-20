@@ -19,6 +19,18 @@ make check
 make install
 make distclean
 
+ml purge
+ml intel/17.4
+./configure --prefix=/curc/sw/proj/4.9.2/intel/17.4 \
+--without-jni \
+CPPFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2 \
+CFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+
+make -j12
+make check
+make install
+make distclean
+
 
 ml purge
 ml pgi/16.5
