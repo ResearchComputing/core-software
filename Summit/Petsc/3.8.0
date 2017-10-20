@@ -1,0 +1,39 @@
+############ AVX 512 + Blanca support - intel 2017.4 ######################
+Currently Loaded Modules:
+  1) intel/17.4 (m)   2) impi/17.3   3) valgrind/3.11.0   4) mkl/17.3 (m)
+
+./configure --prefix=/curc/sw/petsc/3.8.0/impi/17.3/intel/17.4 \
+FC=mpifc \
+CC=mpicc \
+CXX=mpicxx \
+--CXXFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+--CFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+--FFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" \
+--COPTFLAGS="-O3" \
+--FOPTFLAGS="-O3" \
+--CXXOPTFLAGS="-O3" \
+--with-gnu-compilers=0 \
+--with-shared-libraries=1 \
+--with-debugging=0 \
+--with-mpi-include=/curc/sw/intel/17.4/impi/2017.3.196/include64 \
+--with-mpi-lib=/curc/sw/intel/17.4/impi/2017.3.196/lib64/libmpi.so \
+--with-mpiexec=mpirun \
+--with-blas-lapack-dir=/curc/sw/intel/17.4/mkl \
+--with-scalapack-lib="/curc/sw/intel/17.4/mkl/lib/intel64/libmkl_scalapack_lp64.so /curc/sw/intel/17.4/mkl/lib/intel64/libmkl_blacs_intelmpi_lp64.so" \
+--download-cmake=yes \
+--download-hdf5=yes \
+--download-netcdf=yes \
+--download-fftw=yes \
+--download-superlu_dist=yes \
+--download-superlu=yes \
+--download-metis=yes \
+--download-parmetis=yes \
+--download-mumps=yes \
+--download-hyper=yes \
+--download-ptscotch=yes
+
+From the dev's:
+This build fails due to an internal compiler bug. You have to get to that point, and then edit
+$PETSC_ARCH/lib/petsc/conf/petscvariables, remove "-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" (the branching causes the issue),
+and compile the last few files without those flags. do NOT rerun configure or do anything else.
+Note: we have found some bugs with those flags that cause crashes in some PETSc routines that we have reported to Intel.
