@@ -44,6 +44,7 @@ Note: we have found some bugs with those flags that cause crashes in some PETSc 
 
 
 #INSTALLING PETSC4PY
+ml intel impi petsc
 (python 2.7.11 is loaded alongside petsc)
 cd $PETSC_DIR
 pip install petsc4py --prefix=$PETSC_DIR/petsc4py
@@ -52,5 +53,34 @@ ml python/3.5.1
 
 The PYTHON3PATH and PYTHON2PATH variables are prepended with the appropriate "site-packages" subdirectors 
 of petsc4py in the petsc 3.8.0 lua file
+
+
+#INSTALLING SLEPC
+ml intel impi petsc
+cd /curc/tools/petsc
+wget http://slepc.upv.es/download/distrib/slepc-3.8.2.tar.gz
+tar -xvf slepc-3.8.2.tar.gz
+cd slepc-3.8.2
+export SLEPC_DIR=$PWD
+export IDIR=$PETSC_DIR/slepc/3.8.2
+./configure --prefix=IDIR
+(next follow directions for Make, make install {make test worked for this version})
+
+now, reset SLEPC_DIR to IDIR (export SLEPC_DIR=$IDIR)
+LD_LIBRARY_PATH and SLEPC_DIR are set in the PETSC 3.8.0 LUA file
+
+##############################
+# Installing slepc4py
+ml purge
+ml intel impi petsc  (python 2.7.11 is loaded by default)
+cd $SLEPC_DIR
+pip install slepc4py --prefix=$PWD/slepc4py
+ml python/3.5.1
+pip install slepc4py --prefix=$PWD/slepc4py
+
+The PYTHON3PATH and PYTHON2PATH variables are prepended with the appropriate "site-packages" subdirectors 
+of slepc4py in the petsc 3.8.0 lua file
+
+
 
 
