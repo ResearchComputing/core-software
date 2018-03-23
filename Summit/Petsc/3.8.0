@@ -1,3 +1,7 @@
+#NOTE:  We also installed extension package Slepcy and python modules slepc4py + petsc4py with this version
+
+#See below for details
+
 ############ AVX 512 + Blanca support - intel 2017.4 ######################
 Currently Loaded Modules:
   1) intel/17.4 (m)   2) impi/17.3   3) valgrind/3.11.0   4) mkl/17.3 (m)
@@ -37,3 +41,16 @@ This build fails due to an internal compiler bug. You have to get to that point,
 $PETSC_ARCH/lib/petsc/conf/petscvariables, remove "-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2" (the branching causes the issue),
 and compile the last few files without those flags. do NOT rerun configure or do anything else.
 Note: we have found some bugs with those flags that cause crashes in some PETSc routines that we have reported to Intel.
+
+
+#INSTALLING PETSC4PY
+(python 2.7.11 is loaded alongside petsc)
+cd $PETSC_DIR
+pip install petsc4py --prefix=$PETSC_DIR/petsc4py
+ml python/3.5.1
+/curc/sw/petsc/3.8.0/impi/17.3/intel/17.4/slepc/3.8.2/lib
+
+The PYTHON3PATH and PYTHON2PATH variables are prepended with the appropriate "site-packages" subdirectors 
+of petsc4py in the petsc 3.8.0 lua file
+
+
