@@ -1,0 +1,52 @@
+
+export INST_DIR=/curc/sw/subversion/1.10.2
+
+## Make APR
+cd /curc/tools/src/subversion/apr-1.5.2
+make distclean
+./configure --prefix=$INST_DIR
+make
+make install
+
+## Make APR-util
+cd /curc/tools/src/subversion/apr-util-1.5.4
+make clean
+./configure --prefix=$INST_DIR --with-apr=$INST_DIR
+make
+make install
+
+## Install scons, add to path
+cd /curc/tools/src/subversion/scons-2.3.4
+python setup.py install --user
+export PATH=$PATH:/home/rcops/.local/bin
+
+## Get newer sqlite3 install for subversion, rename to what config error wanted (sqlite-amalgamation)
+## Append new sqlite3 to PATH
+cd /curc/tools/src/subversion/subversion-1.10.2
+wget https://www.sqlite.org/2015/sqlite-amalgamation-3081101.zip
+unzip sqlite-amalgamation-3081101.zip
+mv sqlite-amalgamation-3081101 sqlite-amalgamation
+cd sqlite-amalgamation
+gcc shell.c sqlite3.c -lpthread -ldl -o sqlite3
+export PATH=/curc/tools/src/subversion/subversion-1.10.2/sqlite-amalgamation:$PATH
+
+## Install serf
+cd /curc/tools/src/subversion/serf-1.3.9
+scons PREFIX=$INST_DIR \
+  APR=$INST_DIR \
+  APU=$INST_DIR
+scons PREFIX=$INST_DIR \
+  APR=$INST_DIR \
+  APU=$INST_DIR install
+
+## Install subversion
+cd /curc/tools/src/subversion/subversion-1.10.2
+make distclean
+./configure --prefix=$INST_DIR \
+  --with-apr=$INST_DIR \
+  --with-apr-util=$INST_DIR \
+  --with-serf=$INST_DIR \
+  --with-lz4=internal \
+  --with-utf8proc=internal
+make
+make install
