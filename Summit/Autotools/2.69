@@ -15,3 +15,8 @@ export PATH=/curc/sw/autotools/2.69:$PATH
 ./configure --prefix=/curc/sw/autotools/2.69
 make
 make install
+
+# untar and cd to libtool 2.4.6 dir
+./configure --prefix=/curc/sw/autotools/2.69
+make
+make install
