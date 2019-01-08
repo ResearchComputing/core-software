@@ -1,0 +1,28 @@
+# Singularity 3.0.2
+This release requires GO and it's dependency manager dep.
+
+# go 1.11.4
+wget https://dl.google.com/go/go1.11.4.linux-amd64.tar.gz
+tar -C /curc/sw/go/1.11.4 -xzf go1.11.4.linux-amd64.tar.gz
+export PATH=$PATH:/curc/sw/go/1.11.4/go/bin
+
+# Install dep
+export GOPATH=/curc/sw/go/1.11.4/godeps
+go get -u github.com/golang/dep/cmd/dep
+export PATH=$PATH:/curc/sw/go/1.11.4/godeps/bin
+
+# Singularity install
+go get -d github.com/sylabs/singularity
+cd $GOPATH/src/github.com/sylabs/singularity
+git fetch
+git checkout v3.0.2
+./mconfig --prefix=/curc/sw/singularity/3.0.2
+make -C ./builddir
+sudo make -C ./builddir install
+
+# SquashFS
+git clone https://github.com/plougher/squashfs-tools
+cd squashfs-tools/squashfs-tools
+make
+
+# Don't forget to edit the config file!
