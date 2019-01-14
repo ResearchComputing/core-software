@@ -1,0 +1,25 @@
+# Summit install
+ml purge
+ml gcc/8.2.0
+ml cuda/9.1.85
+../openmpi-4.0.0/configure \
+--prefix=/curc/sw/openmpi/4.0.0/gcc/8.2.0 \
+--enable-static \
+--enable-mpi-thread-multiple \
+--enable-mpi-ext=all \
+--enable-oshmem \
+--with-slurm \
+--with-pmi=/usr \
+--with-psm2=/usr \
+--with-verbs=/usr \
+--with-cuda=/curc/sw/cuda/9.1.85
+
+# Issues doing BOTH omnipath and ucx for bnode05* and summit
+--with-verbs=/usr \
+configure: WARNING: Expected file /usr/include/infiniband/verbs.h not found
+
+--with-psm2=/usr \
+checking --with-psm2 value... not found
+configure: WARNING: Expected file /usr/include/psm2.h not found
+
+built shared but it couldn't find libfabrics(omnipath stuff) on bnode
