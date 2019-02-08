@@ -4,3 +4,7 @@ ml impi
 sed -i '/using mpi :/c\using mpi : /curc/sw/intel/17.0.0/impi/2017.0.098/bin64/mpicc ;' ~/user-config.jam
 ./bootstrap.sh --prefix=/curc/sw/boost/1.64.0/impi/2017.0.098/intel/17.0.0 --with-toolset=intel-linux
 ./b2 install address-model=64 toolset=intel-linux stage
+
+
+
+## Also add the "using mpi : /curc/sw/intel/17.0.0/impi/2017.0.098/bin64/mpicc ;" to the project-config.jam
