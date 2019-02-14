@@ -66,9 +66,9 @@ spack install parallel-netcdf %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
 spack install parallel-netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 spack install parallel-netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 
-spack install hdf5+hl %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
-spack install hdf5+hl %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
-spack install hdf5+hl %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
+spack install hdf5 %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
+spack install hdf5 %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
+spack install hdf5 %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
 
 spack install netcdf %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
 spack install netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
