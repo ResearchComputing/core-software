@@ -1,0 +1,54 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gcc
+      cxx: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/g++
+      f77: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gfortran
+      fc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gfortran
+    spec: gcc@8.2.0
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/intel-18.0.3-kwbptw7qxxylgkaoj5nm4cmn2nfwq4hw/bin/icc
+      cxx: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/intel-18.0.3-kwbptw7qxxylgkaoj5nm4cmn2nfwq4hw/bin/icpc
+      f77: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/intel-18.0.3-kwbptw7qxxylgkaoj5nm4cmn2nfwq4hw/bin/ifort
+      fc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/intel-18.0.3-kwbptw7qxxylgkaoj5nm4cmn2nfwq4hw/bin/ifort
+    spec: intel@18.0.3
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags:
+      cflags: -fPIC
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/pgi-18.4-p3oqv4mfexi5soq4lvfhb4vkrl4cpxqj/linux86-64/18.4/bin/pgcc
+      cxx: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/pgi-18.4-p3oqv4mfexi5soq4lvfhb4vkrl4cpxqj/linux86-64/18.4/bin/pgc++
+      f77: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/pgi-18.4-p3oqv4mfexi5soq4lvfhb4vkrl4cpxqj/linux86-64/18.4/bin/pgfortran
+      fc: /curc/sw/spack/summit/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/pgi-18.4-p3oqv4mfexi5soq4lvfhb4vkrl4cpxqj/linux86-64/18.4/bin/pgfortran
+    spec: pgi@18.4
+    target: x86_64

@@ -1,0 +1,21 @@
+modules:
+  enable::
+    - lmod
+
+  lmod:
+    core_compilers::
+      - 'gcc@4.8.5'
+    hash_length: 0
+    blacklist:
+      - '%gcc'
+      - '%pgi'
+      - '%intel'
+    whitelist:
+      - lmod
+      - gcc
+      - pgi
+      - intel
+      - 'intel-parallel-studio'
+      - netcdf
+      - openmpi
+      - 'parallel-netcdf'
