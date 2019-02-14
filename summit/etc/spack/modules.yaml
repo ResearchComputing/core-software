@@ -14,7 +14,6 @@ modules:
       - lmod
       - gcc
       - pgi
-      - intel
       - 'intel-parallel-studio'
       - netcdf
       - openmpi

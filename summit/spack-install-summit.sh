@@ -30,6 +30,7 @@ COMPILERS=(
     gcc@8.2.0
     pgi@18.4
     intel@18.0.3
+    intel-parallel-studio@cluster.2018.3
 )
 
 for compiler in "${COMPILERS[@]}"
@@ -54,13 +55,13 @@ LOCAL_OPENMPI_DEPS=(
     ^slurm@17.11.7
 )
 
-
-#
-# edge
-
 spack install openmpi %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
 spack install openmpi %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
 spack install openmpi %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
+
+
+#
+# libraries and applications
 
 spack install parallel-netcdf %gcc@8.2.0 "${LOCAL_OPENMPI_DEPS[@]}"
 spack install parallel-netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0

@@ -21,3 +21,6 @@ packages:
 
   hdf5:
     variants: +hl
+
+  intel-parallel-studio:
+    variants: threads=openmp +vtune +gdb
