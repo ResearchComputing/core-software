@@ -1,0 +1,4 @@
+config:
+  build_stage::
+    - /scratch/local
+    - /curc/admin/spack-build_stage

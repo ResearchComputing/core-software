@@ -1,0 +1,52 @@
+packages:
+  all:
+    compiler::
+      - gcc
+
+    providers:
+      mpi::
+        - openmpi
+
+  openmpi:
+    variants: fabrics=psm2,verbs,ucx,libfabric schedulers=slurm +pmi
+
+  hdf5:
+    variants: +hl
+
+  intel-parallel-studio:
+    variants: threads=openmp +vtune +gdb
+
+  slurm:
+    version::
+      - 17-11-9-2
+
+    compiler::
+      - gcc@8.2.0
+
+  libpciaccess:
+    compiler::
+      - gcc@8.2.0
+
+  hwloc:
+    compiler::
+      - gcc@8.2.0
+
+  libfabric:
+    compiler::
+      - gcc@8.2.0
+
+  numactl:
+    compiler::
+      - gcc@8.2.0
+
+  pkgconf:
+    compiler::
+      - gcc@8.2.0
+
+  ucx:
+    compiler::
+      - gcc@8.2.0
+
+  zlib:
+    compiler::
+      - gcc@8.2.0

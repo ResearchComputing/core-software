@@ -1,0 +1,27 @@
+compilers:
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    spec: gcc@4.8.5
+    target: x86_64
+- compiler:
+    environment: {}
+    extra_rpaths: []
+    flags: {}
+    modules: []
+    operating_system: rhel7
+    paths:
+      cc: /curc/sw/spack/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gcc
+      cxx: /curc/sw/spack/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/g++
+      f77: /curc/sw/spack/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gfortran
+      fc: /curc/sw/spack/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-8.2.0-53nwzse3oyvekrsvnkvwo6c5nag5itct/bin/gfortran
+    spec: gcc@8.2.0
+    target: x86_64

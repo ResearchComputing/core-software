@@ -1,0 +1,23 @@
+
+--[[
+module_version (“known_version”,”default”):
+This command marks a known version to be the default. If there are duplicates, the last one applies.
+
+module_version (“known_version”,”alias”):
+The known version can be also known as the alias. For example: module_version(“ab/7.4”, “7”) means that the ab/7.4 and ab/7 names the same modulefile.
+
+module_alias (“alias”, “known_version”):
+An alias can be used as a global alias. For example: module_alias(“z13”, “z/13.0.1”) says that “module load z13” will load the “z/13.0.1” modulefile.
+
+hide_version (“fullName”):
+This command will hide all “fullName” modules. So if there are multiple phdf5/1.8.6 module, then all will be marked as hidden.
+
+hide_modulefile (“full_path”):
+This command will hide just one module located at “full_path” modules. This way only modulefile can be hidden.
+--]]
+
+-- module_version ("gcc/?", "default")
+
+-- module_version ("hdf5/?", "default")
+
+-- module_version ("netcdf/?", "default")

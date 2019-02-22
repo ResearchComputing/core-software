@@ -5,7 +5,6 @@ modules:
   lmod:
     core_compilers::
       - 'gcc@4.8.5'
-    hash_length: 0
     blacklist:
       - '%gcc'
       - '%pgi'
