@@ -38,7 +38,11 @@ function main
     spack install hdf5%gcc@8.2.0
     spack install hdf5%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3)
     spack install hdf5%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5) ^/$(gethash zlib%gcc@8.2.0)
+
     spack install netcdf%gcc@8.2.0
+    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
+
     spack install parallel-netcdf%gcc@8.2.0
 
     #spack install openmpi %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
@@ -46,10 +50,8 @@ function main
     # spack install parallel-netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
     # spack install parallel-netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 
-    # spack install hdf5 %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
     # spack install hdf5 %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
 
-    # spack install netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
     # spack install netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 
 
@@ -62,7 +64,7 @@ function main
 
 function gethash
 {
-    basename $(spack location -i $1) | grep -o '[^-]*$' | head -n 1
+    basename $(spack location -i "$@") | grep -o '[^-]*$' | head -n 1
 }
 
 
