@@ -44,10 +44,11 @@ function main
     spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
 
     spack install parallel-netcdf%gcc@8.2.0
+    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
+    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
 
     #spack install openmpi %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
 
-    # spack install parallel-netcdf %intel@18.0.3 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
     # spack install parallel-netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 
     # spack install hdf5 %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}"
