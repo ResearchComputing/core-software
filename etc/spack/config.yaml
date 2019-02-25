@@ -1,4 +1,6 @@
 config:
   build_stage::
+    - /pl/active/rcops/spack-build
+    - /curc/admin/spack-build
     - /scratch/local
-    - /curc/admin/spack-build_stage
+    - /tmp
