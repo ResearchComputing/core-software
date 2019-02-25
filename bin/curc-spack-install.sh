@@ -11,18 +11,15 @@ function main
 {
     spack clean
 
-
-    #
-    # core
-
     CORE_COMPILER='gcc@4.8.5'
     CORE_PACKAGES=(
         lmod
         gcc@8.2.0
         intel@18.0.3
         intel-parallel-studio@cluster.2018.3
-        #pgi@18.4
+        pgi@18.4
     )
+
     for package in "${CORE_PACKAGES[@]}"
     do
         spack install "${package}" "%${CORE_COMPILER}"
@@ -55,9 +52,8 @@ function main
 
     # spack install netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
 
-
-    #
-    # lmod sync
+    # libpng
+    # libgeotiff
 
     spack module lmod refresh -y
 }
