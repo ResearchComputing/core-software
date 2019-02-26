@@ -3,17 +3,24 @@ modules:
     - lmod
 
   lmod:
+    hash_length: 0
+
     core_compilers::
       - 'gcc@4.8.5'
+
     blacklist:
       - '%gcc'
       - '%pgi'
       - '%intel'
+
     whitelist:
-      - lmod
-      - gcc
-      - pgi
       - 'intel-parallel-studio'
+      - 'parallel-netcdf'
+      - gcc
+      - intel
+      - libgeotiff
+      - libpng
+      - lmod
       - netcdf
       - openmpi
-      - 'parallel-netcdf'
+      - pgi
