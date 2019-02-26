@@ -34,23 +34,32 @@ function main
               ^/$(gethash libfabric%gcc@8.2.0)
     done
 
+    for compiler in gcc@8.2.0 intel@18.0.3 pgi@18.4
+    do
+        spack install libpng%${compiler}
+    done
+
     spack install hdf5%gcc@8.2.0
-    spack install hdf5%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3)
-    spack install hdf5%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5) ^/$(gethash zlib%gcc@8.2.0)
-    spack install hdf5%pgi@18.4 ^/$(gethash openmpi%pgi@18.4)
+    for compiler in intel@18.0.3 pgi@18.4
+    do
+        spack install "hdf5%${compiler}" ^/$(gethash "openmpi%${compiler}")
+    done
+    spack install hdf5%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5)
 
     spack install netcdf%gcc@8.2.0
+    for compiler in intel@18.0.3 pgi@18.4
+    do
+        spack install netcdf%${compiler} ^/$(gethash hdf5%${compiler} ^openmpi%${compiler}) ^/$(gethash m4%gcc@8.2.0)
+    done
     spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
-    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
 
     spack install parallel-netcdf%gcc@8.2.0
+    for compiler in intel@18.0.3 pgi@18.4
+    do
+        spack install parallel-netcdf%${compiler} ^/$(gethash openmpi%${compiler}) ^/$(gethash m4%gcc@8.2.0)
+    done
     spack install parallel-netcdf%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
-    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
 
-    # spack install netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
-    # spack install parallel-netcdf %pgi@18.4 "${LOCAL_OPENMPI_DEPS[@]}" "${GCC_OPENMPI_DEPS[@]}" ^m4%gcc@8.2.0
-
-    # libpng
     # libgeotiff
 
     spack module lmod refresh -y
