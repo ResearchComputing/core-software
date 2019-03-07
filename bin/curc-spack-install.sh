@@ -54,9 +54,13 @@ function main
     spack install hdf5%pgi@18.4 ^/$(gethash openmpi%pgi@18.4)
 
     spack install netcdf%gcc@8.2.0
+    spack install netcdf-fortran%gcc@8.2.0 ^/$(gethash netcdf%gcc@8.2.0)
     spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel@18.0.3 ^openmpi)
     spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel@18.0.3 ^intel-parallel-studio)
     spack install netcdf%pgi@18.4 ^/$(gethash hdf5%pgi@18.4 ^openmpi%pgi@18.4) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%pgi@18.4 ^/$(gethash netcdf%pgi@18.4)
 
     spack install parallel-netcdf%gcc@8.2.0
     spack install parallel-netcdf%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)

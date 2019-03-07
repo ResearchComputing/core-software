@@ -22,5 +22,6 @@ modules:
       - libpng
       - lmod
       - netcdf
+      - netcdf-fortran
       - openmpi
       - pgi
