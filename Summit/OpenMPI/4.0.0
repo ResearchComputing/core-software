@@ -7,11 +7,8 @@ ml cuda/9.1.85
 --enable-static \
 --enable-mpi-thread-multiple \
 --enable-mpi-ext=all \
---enable-oshmem \
 --with-slurm \
---with-pmi=/usr \
 --with-psm2=/usr \
---with-verbs=/usr \
 --with-cuda=/curc/sw/cuda/9.1.85
 
 # Issues doing BOTH omnipath and ucx for bnode05* and summit
