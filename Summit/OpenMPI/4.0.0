@@ -8,6 +8,7 @@ ml cuda/9.1.85
 --enable-mpi-thread-multiple \
 --enable-mpi-ext=all \
 --with-slurm \
+--with-pmi=/usr \
 --with-psm2=/usr \
 --with-cuda=/curc/sw/cuda/9.1.85
 
