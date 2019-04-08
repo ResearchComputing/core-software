@@ -1,4 +1,4 @@
-# Summit install
+# Summit install (on an sgpu node for CUDA)
 ml purge
 ml gcc/8.2.0
 ml cuda/9.1.85
