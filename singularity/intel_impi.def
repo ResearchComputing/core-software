@@ -1,0 +1,94 @@
+BootStrap:docker
+From:centos:centos7
+ 
+#########################################################
+%files
+# Copy files from outside into the container
+parallel_studio_xe_2019_update2_cluster_edition_online /
+mpi_hello.c /   #Include basic mpi hello world program
+ 
+#########################################################
+%post
+# Setup container, install libraries
+ 
+yum check-update
+yum -y update
+yum -y upgrade
+ 
+# Speed up yum
+yum install -y yum-plugin-fastestmirror
+yum install -y deltarpm
+ 
+# Epel
+yum install -y epel-release
+ 
+# Intel psxe runtime (includes things you need to run applications built with intel)
+rpm --import https://yum.repos.intel.com/2019/setup/RPM-GPG-KEY-intel-psxe-runtime-2019
+rpm -Uhv https://yum.repos.intel.com/2019/setup/intel-psxe-runtime-2019-reposetup-1-0.noarch.rpm
+yum install -y intel-psxe-runtime
+ 
+# Omnipath and MPI user libraries for Summit
+yum install -y libfabric libfabric-devel
+yum install -y libhfi1 libpsm libpsm2 libpsm2-devel libpsm2-compat
+yum install -y libnl
+yum install -y perftest qperf
+yum install -y libibverbs libibverbs-devel rdma
+yum install -y numactl-libs numactl-devel
+ 
+# Other useful libraries
+yum install -y pciutils
+yum install -y which
+ 
+# Editors
+yum install -y vim
+ 
+# GCC make bison flex etc
+yum groupinstall -y 'Development Tools'
+yum install -y wget
+ 
+ 
+# gcc 7.2
+yum install -y centos-release-scl
+yum install -y devtoolset-7-gcc*
+#yum-config-manager --enable rhel-server-rhscl-7-rpms
+scl enable devtoolset-7 bash
+ 
+export LD_LIBRARY_PATH=/opt/rh/devtoolset-7/root/usr/lib/gcc/x86_64-redhat-linux/7:$LD_LIBRARY_PATH
+export PATH=/opt/rh/devtoolset-7/root/usr/bin:$PATH
+ 
+mkdir -p /app
+mv /parallel_studio_xe_2019_update2_cluster_edition_online /app
+cd /app/parallel_studio_xe_2019_update2_cluster_edition_online
+./install.sh --silent=/app/parallel_studio_xe_2019_update2_cluster_edition_online/silent.cfg
+ 
+# Need intel variables set to compile
+export PATH=/opt/intel/compilers_and_libraries/linux/bin/intel64:$PATH
+export PATH=/opt/intel/impi/2019.2.187/intel64/bin:$PATH
+export LD_LIBRARY_PATH=/opt/intel/compilers_and_libraries/linux/lib/intel64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/intel/impi/2019.2.187/intel64/lib:$LD_LIBRARY_PATH
+export CC=mpicc
+export FC=mpifc
+export CXX=mpicxx
+ 
+# Compile mpi hello world program
+cd /
+mpicc -o /app/mpi_hello_world mpi_hello.c
+ 
+# Edit command prompt so its short and shows you in a container
+export PS1="Singularity > "
+ 
+ 
+######################################################
+%environment
+# Runtime variables (mpivars.sh and compilervars.sh are failing)
+export PATH=/opt/intel/compilers_and_libraries/linux/bin/intel64:$PATH
+export PATH=/opt/intel/impi/2019.2.187/intel64/bin:$PATH
+export LD_LIBRARY_PATH=/opt/intel/compilers_and_libraries/linux/lib/intel64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/intel/impi/2019.2.187/intel64/lib:$LD_LIBRARY_PATH
+export CC=mpicc
+export FC=mpifc
+export CXX=mpicxx
+ 
+ 
+######################################################
+%runscript
