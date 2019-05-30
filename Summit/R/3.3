@@ -1,0 +1,96 @@
+# config R/3.3 (original, VERY SLOW)
+./configure  \
+  --prefix=/curc/sw/R/3.3.0/intel/16.0.3 \
+  --with-recommended-packages \
+  CFLAGS=-I/curc/sw/intel/16.0.3/include:/curc/sw/intel/16.0.3/mkl/include \
+  LDFLAGS=-L/curc/sw/intel/16.0.3/lib:/curc/sw/intel/16.0.3/lib/intel64:/curc/sw/intel/16.0.3/mkl/lib/intel64 \
+  LD=/curc/tools/src/ld_wrapper.sh
+
+############### R/3.3 with MKL (LD wrapper script for RPATHing), RPATHing didn't work, speed is fine though   ########################
+ml intel/16.0.3
+ml mkl/11.3.3
+
+export MKL_BLAS="-lmkl_blas95_ilp64 -lmkl_intel_ilp64 -lmkl_scalapack_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+export MKL_LAPACK="-lmkl_lapack95_ilp64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+
+export INTEL_LIBS="-L/curc/sw/intel/16.0.3/lib -L/curc/sw/intel/16.0.3/lib/intel64 -L/curc/sw/intel/16.0.3/mkl/lib/intel64"
+export INTEL_INCLUDES="-I/curc/sw/intel/16.0.3/include -I/curc/sw/intel/16.0.3/mkl/include"
+
+./configure  \
+--prefix=/projects/rcops/R_MKL \
+--with-recommended-packages \
+--enable-R-shlib \
+--enable-R-static-lib \
+--with-blas="$MKL_BLAS" \
+--with-lapack="$MKL_LAPACK" \
+CC=" icc -mkl" \
+CXX=" icpc -mkl" \
+FC=" ifort -mkl" \
+F77=" ifort -mkl" \
+CFLAGS="-O3 -ipo -qopenmp -xHost $INTEL_INCLUDES $INTEL_LIBS" \
+CXXFLAGS="-O3 -ipo -qopenmp -xHost $INTEL_INCLUDES $INTEL_LIBS " \
+LDFLAGS="-qopenmp $INTEL_INCLUDES $INTEL_LIBS" \
+LD=/curc/tools/src/ld_wrapper.sh \
+FPICFLAGS="-fPIC"
+
+make -j24
+touch doc/NEWS.pdf  ###no such file or directory. Who needs the docs anyway?
+make install
+
+-bash-4.2$ ml purge
+-bash-4.2$ ml RMKL
+-bash-4.2$ Rscript timing.R
+Rscript: error while loading shared libraries: libmkl_intel_lp64.so: cannot open shared object file: No such file or directory
+
+################ R/3.3 with MKL , manual RPATHing  ########################3
+ml intel/16.0.3
+ml mkl/11.3.3
+
+export MKL_BLAS="-lmkl_blas95_ilp64 -lmkl_intel_ilp64 -lmkl_scalapack_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+export MKL_LAPACK="-lmkl_lapack95_ilp64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+
+export INTEL_LIBS="-L/curc/sw/intel/16.0.3/lib -L/curc/sw/intel/16.0.3/lib/intel64 -L/curc/sw/intel/16.0.3/mkl/lib/intel64"
+export INTEL_INCLUDES="-I/curc/sw/intel/16.0.3/include -I/curc/sw/intel/16.0.3/mkl/include"
+
+export RPATHS="-Wl,-rpath,'/curc/sw/intel/16.0.3/lib' -Wl,-rpath,'/curc/sw/intel/16.0.3/lib/intel64' -Wl,-rpath,'/curc/sw/intel/16.0.3/mkl/lib/intel64'"
+
+./configure  \
+--prefix=/curc/sw/R/3.3.0 \
+--with-recommended-packages \
+--enable-R-shlib \
+--enable-R-static-lib \
+--with-blas="$MKL_BLAS" \
+--with-lapack="$MKL_LAPACK" \
+CC=" icc -mkl" \
+CXX=" icpc -mkl" \
+FC=" ifort -mkl" \
+F77=" ifort -mkl" \
+LD=xild \
+CFLAGS="-O3 -ipo -qopenmp -xHost $RPATHS $INTEL_INCLUDES $INTEL_LIBS" \
+CXXFLAGS="-O3 -ipo -qopenmp -xHost $RPATHS $INTEL_INCLUDES $INTEL_LIBS " \
+LDFLAGS="-qopenmp $RPATHS $INTEL_INCLUDES $INTEL_LIBS" \
+FPICFLAGS="-fPIC"
+
+
+###################### It can't find MKL ... ################
+
+-bash-4.2$ ml
+Currently Loaded Modules:
+  1) intel/16.0.3 (m)   2) mkl/11.3.3 (m)
+
+-bash-4.2$ ld -lmkl_blas95_ilp64
+ld: cannot find -lmkl_blas95_ilp64
+-bash-4.2$ ld -L/curc/sw/intel/16.0.3/mkl/lib/intel64 -lmkl_blas95_ilp64
+ld: warning: cannot find entry symbol _start; not setting start address
+
+-bash-4.2$ ld -lmkl_lapack95_ilp64
+ld: cannot find -lmkl_lapack95_ilp64
+-bash-4.2$ ld -L/curc/sw/intel/16.0.3/mkl/lib/intel64 -lmkl_lapack95_ilp64
+ld: warning: cannot find entry symbol _start; not setting start address
+
+# Fix
+-bash-4.2$ export ldmkl="-qopenmp -L/curc/sw/intel/16.0.3/lib -L/curc/sw/intel/16.0.3/lib/intel64 -L/curc/sw/intel/16.0.3/mkl/lib/intel64"
+-bash-4.2$ ld $ldmkl -lmkl_blas95_ilp64
+ld: warning: cannot find entry symbol _start; not setting start address
+-bash-4.2$ ld $ldmkl -lmkl_lapack95_ilp64
+ld: warning: cannot find entry symbol _start; not setting start address

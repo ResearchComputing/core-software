@@ -1,0 +1,183 @@
+############# LAMMPS GCC/OPENMPI/FFTW3 ############################
+## For openmp/serial versions:
+cd src/STUBS
+STUBS > make
+## OpenMP Version Makefile.omp modifications:
+CC =        g++ -fopenmp
+CCFLAGS =   -g -O3 -I/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/include
+LINK =      g++ -fopenmp
+LINKFLAGS = -g -O -L/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/lib
+FFT_INC =       -DFFT_FFTW3 -DFFT_SINGLE
+FFT_LIB =   -lfftw3f
+src > make yes-user-omp
+src > make -j8 omp
+./lmp_omp -sf omp < ../examples/melt/in.melt
+## Serial Version (remove -fopenmp)
+## MPI Version Makefile.mpi mods:
+CCFLAGS =   -g -O3 -I/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/include
+LINKFLAGS = -g -O -L/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/lib
+FFT_INC =       -DFFT_FFTW3 -DFFT_SINGLE
+FFT_LIB =   -lfftw3f
+mpirun -np 4 lmp_mpi < ../examples/melt/in.melt
+## Hybrid MPI/OpenMP
+src > make yes-user-omp
+src > make hybrid
+src > mpirun -np 4 lmp_hybrid -sf omp < ../examples/melt/in.melt
+
+##### Take 2 with gcc/openmpi  ################
+Currently Loaded Modules:
+1) gcc/6.1.0        3) jpeg/9b         5) fftw/3.3.4
+2) openmpi/1.10.2   4) python/2.7.11   6) cuda/7.5.18
+
+### Serial changes
+
+# Makefile
+CC =        g++
+CCFLAGS =   -g -O3 -I/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/include -I/curc/sw/python/2.7.11/include/python2.7 -I/curc/sw/jpeg/9b/gcc/6.1.0/include
+SHFLAGS =   -fPIC
+DEPFLAGS =  -M
+LINK =      g++
+LINKFLAGS = -g -O -L/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/lib -L/curc/sw/jpeg/9b/gcc/6.1.0/lib
+LIB =
+SIZE =      size
+ARCHIVE =   ar
+ARFLAGS =   -rc
+SHLIBFLAGS =    -shared
+
+LMP_INC =   -DLAMMPS_GZIP -DLAMMPS_JPEG -DLAMMPS_MEMALIGN=64
+
+MPI_INC =       -I../STUBS
+MPI_PATH =      -L../STUBS
+MPI_LIB =   -lmpi_stubs
+
+FFT_INC =       -DFFT_FFTW3 -DFFT_SINGLE
+FFT_PATH =
+FFT_LIB =   -lfftw3f
+
+JPG_LIB =   -ljpeg
+
+
+# Libraries
+make yes-asphere yes-body yes-class2 yes-colloid yes-compress yes-coreshell \
+yes-dipole yes-gpu yes-granular yes-kspace yes-manybody yes-python\
+yes-mc yes-meam yes-misc yes-molecule  yes-opt yes-peri yes-poems \
+yes-qeq yes-reax yes-replica yes-rigid yes-shock yes-snap yes-srd yes-voronoi
+
+## problem packages:  yes-gpu(gcc versions later than 4.9 not supported)
+## yes-kim(download...) yes-kokkos(download...) yes-mpiio(for serial/openmp) yes-python(we have intel python...)
+
+# Make side libs
+cd lib/reax
+make -f Makefile.gfortran
+cd lib/meam
+make -f Makefile.gfortran
+cd lib/poems
+make -f Makefile.g++
+
+cd lib/voronoi
+wget http://math.lbl.gov/voro++/download/dir/voro++-0.4.6.tar.gz
+tar -xf voro++-0.4.6.tar.gz
+cd voro++-0.4.6
+make
+cd ..
+ln -s voro++-0.4.6/src includelink
+ln -s voro++-0.4.6/src liblink
+
+# Testing
+../../src/lmp_serial < in.melt
+../../src/lmp_omp -sf omp < in.melt
+mpirun -np 4 ../../src/lmp_mpi < in.melt
+mpirun -np 4 ../../src/lmp_hybrid -sf omp < in.melt
+
+
+
+############# LAMMPS INTEL/IMPI/MKL ############################
+Similar to LAMMPS GCC/OPENMPI/FFTW3. Need -restrict with icc for it to compile
+## Openmp/Serial
+CC =        icc -qopenmp
+CCFLAGS =   -g -O3 -restrict -I/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3/include
+LINK =      icc -qopenmp
+LINKFLAGS = -g -O -L/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3/lib
+FFT_INC =       -DFFT_FFTW3 -DFFT_SINGLE
+FFT_LIB =   -lfftw3f
+## MPI/Hybrid
+CC =        mpiicpc -qopenmp
+CCFLAGS =   -g -O3 -restrict -I/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3/include
+LINK =      mpiicpc -qopenmp
+LINKFLAGS = -g -O -L/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3/lib
+FFT_INC =       -DFFT_FFTW3 -DFFT_SINGLE
+FFT_LIB =   -lfftw3f
+
+
+##### Take 2 ################################
+Currently Loaded Modules:
+  1) intel/16.0.3 (m)   2) jpeg/9b   3) python/2.7.11   4) mkl/11.3.3 (m)   5) impi/5.1.3.210
+
+#serial makefile#
+CC =        icpc
+CCFLAGS =   -O3 -restrict -I/curc/sw/intel/16.0.3/mkl/include -I/curc/sw/python/2.7.11/include/python2.7 -I/curc/sw/jpeg/9b/gcc/6.1.0/include
+SHFLAGS =   -fPIC
+DEPFLAGS =  -M
+
+LINK =      icpc
+LINKFLAGS = -O3 -L/curc/sw/python/2.7.11/lib -L/curc/sw/intel/16.0.3/mkl/lib/intel64 -L/curc/sw/jpeg/9b/gcc/6.1.0/lib
+LIB = -lpython2.7
+SIZE =      size
+
+ARCHIVE =   ar
+ARFLAGS =   -rc
+SHLIBFLAGS =    -shared
+
+MPI_INC =       -I../STUBS
+MPI_PATH =      -L../STUBS
+MPI_LIB =   -lmpi_stubs
+
+LMP_INC =   -DLAMMPS_GZIP -DLAMMPS_JPEG -DLAMMPS_MEMALIGN=64
+
+FFT_INC =       -DFFT_MKL
+FFT_PATH =
+FFT_LIB =  -lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lstdc++
+
+JPG_INC =
+JPG_PATH =
+JPG_LIB =  -ljpeg
+#end serial makefile#
+
+# Libraries
+make yes-asphere yes-body yes-class2 yes-colloid yes-compress yes-coreshell \
+yes-dipole yes-granular yes-kspace yes-manybody yes-python \
+yes-mc yes-meam yes-misc yes-molecule  yes-opt yes-peri yes-poems \
+yes-qeq yes-reax yes-replica yes-rigid yes-shock yes-snap yes-srd yes-voronoi
+
+## problem packages:  yes-gpu(cuda version not supported)
+## yes-kim(download...) yes-kokkos(download...) yes-mpiio(for serial/openmp)
+
+# Make side libs
+cd lib/reax
+make -f Makefile.ifort
+cd lib/meam
+vim Makefile.lammps.ifort  #change lompstub to liomp5
+make -f Makefile.ifort
+cd lib/poems
+make -f Makefile.icc
+
+cd lib/voronoi
+wget http://math.lbl.gov/voro++/download/dir/voro++-0.4.6.tar.gz
+tar -xf voro++-0.4.6.tar.gz
+cd voro++-0.4.6
+make
+cd ..
+ln -s voro++-0.4.6/src includelink
+ln -s voro++-0.4.6/src liblink
+
+# gpu stuff on gpunode...  ### OUR CUDA IS INCOMPATIBLE ####
+ssh sgpu0101
+cd lib/gpu
+vim Makefile.linux ##Change cuda home, mpic++ to mpicxx
+make -f Makefile.linux
+
+# Testing
+../../src/lmp_serial < in.melt
+../../src/lmp_omp -sf omp < in.melt
+mpirun -np 4 ../../src/lmp_mpi < in.melt
+mpirun -np 4 ../../src/lmp_hybrid -sf omp < in.melt

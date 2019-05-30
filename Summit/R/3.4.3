@@ -1,0 +1,28 @@
+################ R/3.4.3 with MKL , manual RPATHing  ########################3
+ml intel/17.4
+ml mkl/17.3
+
+export MKL_BLAS="-lmkl_blas95_ilp64 -lmkl_intel_ilp64 -lmkl_scalapack_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+export MKL_LAPACK="-lmkl_lapack95_ilp64 -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -lpthread  -lmkl_avx -lmkl_avx2"
+
+export INTEL_LIBS="-L/curc/sw/intel/17.4/lib -L/curc/sw/intel/17.4/lib/intel64 -L/curc/sw/intel/17.4/mkl/lib/intel64"
+export INTEL_INCLUDES="-I/curc/sw/intel/17.4/include -I/curc/sw/intel/17.4/mkl/include"
+
+export RPATHS="-Wl,-rpath,'/curc/sw/intel/17.4/lib' -Wl,-rpath,'/curc/sw/intel/17.4/lib/intel64' -Wl,-rpath,'/curc/sw/intel/17.4/mkl/lib/intel64'"
+
+./configure  \
+--prefix=/curc/sw/R/3.4.3 \
+--with-recommended-packages \
+--enable-R-shlib \
+--enable-R-static-lib \
+--with-blas="$MKL_BLAS" \
+--with-lapack="$MKL_LAPACK" \
+CC=" icc -mkl" \
+CXX=" icpc -mkl" \
+FC=" ifort -mkl" \
+F77=" ifort -mkl" \
+LD=xild \
+CFLAGS="-O3 -ipo -qopenmp -xHost $RPATHS $INTEL_INCLUDES $INTEL_LIBS" \
+CXXFLAGS="-O3 -ipo -qopenmp -xHost $RPATHS $INTEL_INCLUDES $INTEL_LIBS " \
+LDFLAGS="-qopenmp $RPATHS $INTEL_INCLUDES $INTEL_LIBS" \
+FPICFLAGS="-fPIC"

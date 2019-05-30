@@ -1,0 +1,20 @@
+Gaussian 16 - Only licensed for UCB users
+
+### As root ###
+mkdir /mnt/iso
+mount GV6_Linux.iso /mnt/iso
+bzip2 -dc /mnt/iso/tar/E6B-113N.tbz > /curc/sw/gaussian/16/E6B-113N.tar
+umount /mnt/iso
+
+mount GV6_Linux.iso /mnt/iso
+bzip2 -dc /mnt/iso/tar/gv-6016-Linux-x86_64.tbz > /curc/sw/gaussian/16/gv.tar
+umount /mnt/iso
+
+## Untar
+cd /curc/sw/gaussian/16
+tar -xvf E6B-113N.tar
+tar -xvf gv.tar
+
+## Change to ucb group so only UCB users can access
+chown -R rcops:ubc g16
+chown -R rcops:ubc gv

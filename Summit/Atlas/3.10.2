@@ -1,0 +1,6 @@
+# config ATLAS
+ml purge
+ml gcc/6.1.0
+../ATLAS/configure --prefix=/curc/sw/atlas/3.10.2/gcc/6.1.0 \
+ --with-netlib-lapack-tarfile=/curc/tools/src/atlas/atlas-3.10.2/lapack-3.6.0.tgz \
+ --shared

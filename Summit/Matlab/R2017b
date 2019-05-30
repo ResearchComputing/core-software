@@ -1,0 +1,35 @@
+# R2017b
+
+1) Download Matlab installer
+
+2) Run installer, login with Mathworks account
+3) Download all Matlab files using installer with 'Download Only' option.
+Note: In order to 'Download Only', the installer needs the gui,
+which means it needs an X session or to be downloaded somewhere it can
+open a window. I downloaded as my user in projects then copied to rcops
+with root.
+Note2: Make sure that the downloaded directory (called 'archives') is in
+the same directory as the 'install' script
+$ sudo scp -r archives /curc/tools/src/matlab/R2017b
+$ sudo chown rcops:rcopspgrp -R /curc/tools/src/matlab/R2017b/archives
+
+4) Edit 'installer_input.txt' to describe current system
+Note: Don't forget to copy old network.lic file from old Matlab, into new
+desired Matlab dir (or make a new one)
+$ mkdir /curc/sw/matlab/R2017b/licenses
+$ cp /curc/sw/matlab/R2016b/licenses/network.lic /curc/sw/matlab/R2017b/licenses
+
+## Modified lines in installer_input
+destinationFolder=/curc/sw/matlab/R2017b
+outputFile=/curc/tools/src/matlab/R2017b/output.log #wherever you want the install log
+mode=silent
+licensePath=/curc/sw/matlab/R2017b/licenses/network.lic
+lmgrFiles=true #These are used by license server (which has access to /curc/sw)
+fileInstallationKey=xxxxx-xxxxx-xxxxx-xxxxx...
+# Get file installation key from https://www.mathworks.com/licensecenter
+# Click on license, go to 'install and activate' tab
+# Click blue down arrow to download file and see key 
+
+
+5) Run installer in silent mode using input file, change tmp, use absolute paths...
+$ /curc/tools/src/matlab/R2017b/install -inputFile /curc/tools/src/matlab/R2017b/installer_input.txt -mode silent -tmpdir /projects/rcops/tmp

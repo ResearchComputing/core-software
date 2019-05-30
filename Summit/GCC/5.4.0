@@ -1,0 +1,35 @@
+
+
+GMP
+./configure --prefix=/curc/tools/src/gcc/5.4.0/tmp \
+--disable-shared \
+--enable-static
+
+MPFR
+./configure \
+--disable-shared \
+--enable-static \
+--prefix=/curc/tools/src/gcc/5.4.0/tmp \
+--with-gmp=/curc/tools/src/gcc/5.4.0/tmp
+
+MPC
+./configure \
+--disable-shared \
+--enable-static \
+--prefix=/curc/tools/src/gcc/5.4.0/tmp \
+--with-gmp=/curc/tools/src/gcc/5.4.0/tmp \
+--with-mpfr=/curc/tools/src/gcc/5.4.0/tmp
+
+GCC
+../gcc-5.4.0/configure \
+--prefix=/curc/sw/gcc/5.4.0 \
+--disable-bootstrap \
+--disable-multilib \
+--enable-languages=all \
+--enable-libgomp \
+--enable-lto \
+--enable-threads=posix \
+--enable-tls \
+--with-gmp=/curc/tools/src/gcc/5.4.0/tmp \
+--with-mpfr=/curc/tools/src/gcc/5.4.0/tmp \
+--with-mpc=/curc/tools/src/gcc/5.4.0/tmp

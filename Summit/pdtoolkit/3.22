@@ -1,0 +1,5 @@
+######## pdtoolkit #############
+ml purge
+./configure -prefix=/curc/sw/pdtoolkit/3.22   # Only ONE "-" before prefix...
+make
+make install

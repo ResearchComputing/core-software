@@ -1,0 +1,4 @@
+################# MatLab (is the devil) R2016b #######
+# The current Matlab was installed from the license server...
+chown directories to your user so you can use x forwarding
+./install -downloadFolder "/curc/tools/src/matlab/R2016b"

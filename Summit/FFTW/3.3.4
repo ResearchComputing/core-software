@@ -1,0 +1,144 @@
+#fftw intel17
+./configure \
+  --prefix=/curc/sw/fftw/3.3.4/intel/17.4/ \
+  --enable-openmp \
+  --enable-shared \
+  --enable-threads \
+  --enable-avx \
+  --enable-debug
+
+#fftw intel 17 impi
+./configure \
+  --prefix=/curc/sw/fftw/3.3.4/mpi/17.3/intel/17.4 \
+  --enable-mpi \
+  --enable-openmp \
+  --enable-shared \
+  --enable-threads \
+  --enable-debug \
+  --enable-avx
+
+#fftw intel impi
+./configure \
+  --prefix=/curc/sw/fftw/3.3.4/intel/16.0.3/impi/5.1.3.210 \
+  --enable-mpi \
+  --enable-openmp \
+  --enable-shared \
+  --enable-threads \
+  --enable-avx
+
+# MKL FFTW binding:
+Users who want fftw will need to link with -lmkl and -l(appropriate .a file) located in /curc/sw/intel/16.0.3/mkl/lib/intel64
+
+ml purge
+ml gcc
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/gcc/6.1.0/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug
+
+ml purge
+ml gcc
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/gcc/6.1.0/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug \
+--enable-single
+
+ml purge
+ml intel
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/intel/16.0.3/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug
+
+ml purge
+ml intel
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/intel/16.0.3/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug \
+--enable-single
+
+ml purge
+ml pgi
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/pgi/16.5/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug
+
+ml purge
+ml pgi
+./configure \
+--prefix=/curc/sw/fftw/3.3.4/pgi/16.5/ \
+--enable-shared \
+--enable-openmp \
+--enable-threads \
+--enable-debug \
+--enable-single
+
+
+
+####### MPI FFTW CONFIGS ################
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/ --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/gcc/6.1.0/ --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi --enable-single
+
+
+ml purge
+ml gcc impi
+make clean
+./configure --prefix=/curc/sw/fftw/3.3.4/impi/5.1.3.210/gcc/6.1.0/ --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi
+make -j14
+make install
+
+make clean
+./configure --prefix=/curc/sw/fftw/3.3.4/impi/5.1.3.210/gcc/6.1.0/ --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi --enable-single
+make -j14
+make install
+
+
+ml purge
+ml intel impi
+make clean
+./configure --prefix=/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi
+make -j14
+make install
+make clean
+
+./configure --prefix=/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi --enable-single
+make -j14
+make install
+
+ml purge
+ml intel openmpi
+make clean
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/intel/16.0.3 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi
+make -j14
+make install
+make clean
+
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/intel/16.0.3 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi --enable-single
+make -j14
+make install
+
+
+ml purge
+ml pgi openmpi
+make clean
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/pgi/16.5 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi
+make -j14
+make install
+make clean
+
+./configure --prefix=/curc/sw/fftw/3.3.4/openmpi/1.10.2/pgi/16.5 --enable-shared --enable-openmp --enable-threads --enable-debug --enable-mpi --enable-single
+make -j14
+make install

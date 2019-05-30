@@ -1,0 +1,41 @@
+########## Proj.4 ####################
+old:
+./configure --prefix=/curc/tools/x86_64/rh6/software/proj/4.9.2/intel/15.0.2 --without-jni
+
+ml purge
+ml gcc/6.1.0
+./configure --prefix=/curc/sw/proj/4.9.2/gcc/6.1.0 --without-jni
+make -j12
+make check
+make install
+make distclean
+
+
+ml purge
+ml intel/16.0.3
+./configure --prefix=/curc/sw/proj/4.9.2/intel/16.0.3 --without-jni
+make -j12
+make check
+make install
+make distclean
+
+ml purge
+ml intel/17.4
+./configure --prefix=/curc/sw/proj/4.9.2/intel/17.4 \
+--without-jni \
+CPPFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2 \
+CFLAGS=-axCORE-AVX512,CORE-AVX2,AVX,SSE4.2
+
+make -j12
+make check
+make install
+make distclean
+
+
+ml purge
+ml pgi/16.5
+./configure --prefix=/curc/sw/proj/4.9.2/pgi/16.5 --without-jni
+make -j12
+make check
+make install
+make distclean

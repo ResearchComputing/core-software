@@ -1,0 +1,13 @@
+######### otf ###############
+ml purge
+ml intel/16.0.3
+ml zlib/1.2.8
+./configure --prefix=/curc/sw/otf/1.2.6/intel/16.0.3 \
+ --with-vtf3=/curc/sw/vtf3/1.43 \
+ --with-vtf3-lib-dir=/curc/sw/vtf3/1.43/x86_64/lib \
+ --with-vtf3-include-dir=/curc/sw/vtf3/1.43/include \
+ --with-zlib=/curc/sw/zlib/1.2.8/intel/16.0.3
+make -j12
+make check
+make install
+make distclean

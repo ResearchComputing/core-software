@@ -1,0 +1,14 @@
+## OpenMPI for Infiniband
+
+/projects/oreillyr/openmpi/2.1.1/gcc/6.1.0
+
+ml gcc/6.1.0
+./configure \
+--prefix=/projects/oreillyr/openmpi/2.1.1/gcc/6.1.0 \
+--enable-mpi-thread-multiple \
+--with-slurm \
+--with-pmi \
+--enable-static \
+--enable-wrapper-rpath \
+--enable-mpi-ext=all \
+--with-verbs

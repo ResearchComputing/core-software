@@ -1,0 +1,118 @@
+# Install directions
+http://www.stats.uwo.ca/faculty/yu/Rmpi/install.htm
+
+
+# R package with compilation: https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Customizing-package-compilation
+LD=/curc/tools/src/ld_wrapper.sh
+
+ml R/3.3.0
+ml intel/16.0.3
+ml openmpi/1.10.2
+R CMD INSTALL Rmpi_0.6-6.tar.gz --configure-args=" \
+ --with-mpi=/curc/sw/openmpi/1.10.2/intel/16.0.3 \
+ CFLAGS='-static -i-static' \
+ CXXFLAGS='-static -i-static' \
+ LD=/curc/tools/src/ld_wrapper.sh"
+
+
+
+R CMD INSTALL Rmpi_version.tar.gz --configure-args="  \\
+ --with-Rmpi-include=/path/to/mpi_include_dir         \\
+ --with-Rmpi-libpath=/path/to/mpi_lib_dir             \\
+ --with-Rmpi-type={OPENMPI or MPICH or MPICH2 or LAM}"
+
+
+R_orca CMD INSTALL Rmpi_0.6-4.tar.gz --configure-args=--with-mpi=/opt/sharcnet/openmpi/1.6.2/intel
+
+
+In short: Rmpi does not work if OpenMPI was compiled to dynamically load
+extensions, which is nowadays the default installation.  If your OpenMPI
+is >= 1.5 (and for some installs of 1.4.x) you will need to install it
+from the sources disabling dlopen.
+
+# From openmpi configure
+--enable-dlopen         Whether build should attempt to use dlopen (or
+                        similar) to dynamically load components. Disabling
+                        dlopen implies --disable-mca-dso. (default: enabled)
+
+
+
+########################## Try in projects dir with new openmpi (failed) ###################
+# New openmpi 1.10.2
+ml intel
+../openmpi-1.10.2/configure \
+--prefix=/projects/rcops/openmpi/1.10.2 \
+--enable-wrapper-rpath \
+--enable-static \
+--enable-mpi-thread-multiple \
+--enable-mpi-ext=all \
+--with-verbs=/usr \
+--with-slurm \
+--with-pmi=/usr \
+--with-psm2=/usr \
+--disable-dlopen \
+--enable-oshmem
+
+
+# Rmpi
+ml R/3.3.0
+ml intel/16.0.3
+
+export R_LIBS=/projects/rcops/RLIBS
+mkdir /projects/rcops/RLIBS
+
+R CMD INSTALL Rmpi_0.6-6.tar.gz --configure-args=" \
+ --with-mpi=/projects/rcops/openmpi/1.10.2 \
+ LD=/curc/tools/src/ld_wrapper.sh"
+
+
+
+############### Try in projects dir with mpich2 v3.2 (success) #########################
+# mpich 3.2
+ml intel
+./configure --prefix=/projects/rcops/mpich2 \
+--with-slurm-include=/usr/include/slurm \
+--with-slurm-lib=/usr/lib64/slurm \
+--enable-fortran=yes \
+--enable-cxx \
+--enable-romio \
+--enable-threads=multiple
+
+ml R
+export R_LIBS=/projects/rcops/RLIBS
+R CMD INSTALL Rmpi_0.6-6.tar.gz --configure-args=" \
+--with-Rmpi-type=MPICH2 \
+--with-Rmpi-include=/projects/rcops/mpich2/include \
+--with-Rmpi-libpath=/projects/rcops/mpich2/lib \
+LD=/curc/tools/src/ld_wrapper.sh"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ !

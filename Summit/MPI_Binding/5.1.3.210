@@ -1,0 +1,113 @@
+#############################################################
+II.2.1. C Binding
+
+To use the Intel(R) MPI Library C binding with the PGI* compiler,
+do the following steps:
+
+1. Make sure that the PGI* C compiler (pgcc) is in your PATH.
+
+2. Go to the directory c
+
+3. Run the command
+
+   # make MPI_INST=<MPI_path> CC=<C_compiler> NAME=<name> \
+     [ARCH=<arch>]
+
+   with
+
+   <MPI_path>        - installation directory of the Intel(R) MPI Library
+   <C_compiler>      - compiler to be used
+   <name>            - base name for the compiler script
+   <arch>            - set `intel64` or `mic` architecture, `intel64` is used by
+                       default
+
+4. Copy the resulting <arch> directory to the Intel(R) MPI Library installation
+   directory.
+
+
+II.2.2. C++ Binding
+
+To create the Intel(R) MPI Library C++ binding library using the
+PGI* C++ compiler, do the following steps:
+
+1. Make sure that the PGI* C++ compiler (pgCC) is in your PATH.
+
+2. Go to the directory cxx
+
+3. Run the command
+
+   # make MPI_INST=<MPI_path> CXX=<C++_compiler> NAME=<name> \
+     [ARCH=<arch>] [MIC=<mic option>]
+
+   with
+
+   <MPI_path>        - installation directory of the Intel(R) MPI Library
+   <C++_compiler>    - compiler to be used
+   <name>            - base name for the libraries and compiler script
+   <arch>            - set `intel64` or `mic` architecture, `intel64` is used by
+                       default
+   <mic option>      - compiler option to generate code for Intel(R) MIC
+                       Architecture. Availalbe only when ARCH=mic is set, `-mmic`
+                       is used by default in such case
+
+4. Copy the resulting <arch> directory to the Intel(R) MPI Library installation
+   directory.
+
+
+II.2.3. Fortran 77 Binding
+
+To use the Intel(R) MPI Library Fortran 77 binding with the PGI*
+compiler, do the following steps:
+
+1. Make sure that the PGI* Fortran 77 compiler (pgf77) is in your PATH.
+
+2. Go to the directory f77
+
+3. Run the command
+
+   # make MPI_INST=<MPI_path> F77=<f77_compiler> NAME=<name> \
+     [ARCH=<arch>]
+
+   with
+
+   <MPI_path>        - installation directory of the Intel(R) MPI Library
+   <f77_compiler>    - compiler to be used
+   <name>            - base name for the compiler script
+   <arch>            - set `intel64` or `mic` architecture, `intel64` is used by
+                       default
+
+4. Copy the resulting <arch> directory to the Intel(R) MPI Library installation
+   directory.
+
+
+II.2.4. Fortran 90 Binding
+
+To create the Intel(R) MPI Library Fortran 95 binding library using
+the PGI* Fortran 90 compiler, do the following steps:
+
+1. Make sure that the PGI* Fortran 90 compiler (pgf90) is in your PATH
+
+2. Go to the directory f90
+
+3. Run the command
+
+   # make MPI_INST=<MPI_path> F90=<f90_compiler> NAME=<name> \
+     [ILP64=<ILP64 options>] [ARCH=<arch>] [MIC=<mic option>]
+
+   with
+
+   <MPI_path>        - installation directory of the Intel(R) MPI Library
+   <f90_compiler>    - compiler to be used
+   <name>            - base name for the libraries and compiler script
+   <ILP64 options>   - compiler option to specify 64 bits size for integer  and
+                       logical variables
+   <arch>            - set `intel64` or `mic` architecture, `intel64` is used by
+                       default
+   <mic option>      - compiler option to generate code for Intel(R) MIC
+                       Architecture. Availalbe only when ARCH=mic is set, `-mmic`
+                       is used by default in such case
+
+4. Copy the resulting <arch> directory to the Intel(R) MPI Library installation
+   directory.
+
+   NOTE: Don't remove existing libraries libmpifort.a, libmpifort.so.

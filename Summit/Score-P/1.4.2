@@ -1,0 +1,41 @@
+######### score-p ################
+TIM B Install:
+./configure --prefix=/curc/tools/x86_64/rh6/software/scorep/1.4.2/impi/5.0.3.048/intel/15.0.2/ --with-nocross-compiler-suite=intel --with-mpi=intel3 --with-pdt=/curc/tools/x86_64/rh6/software/pdtoolkit/3.20/x86_64/intel/15.0.2/bin/ --with-papi-header=/curc/tools/x86_64/rh6/software/papi/5.4.1/include --with-papi-lib=/curc/tools/x86_64/rh6/software/papi/5.4.1/lib --with-libpmi-include=/curc/slurm/slurm/current/include/slurm --with-libpmi-lib=/curc/slurm/slurm/current/lib
+
+ml purge
+ml intel/16.0.3
+ml impi/5.1.3.210
+ml papi/5.4.3
+ml pdtoolkit/3.22
+ml cube/4.3.4
+ml cuda/7.5.18
+./configure --prefix=/curc/sw/scorep/2.0.2/impi/5.1.3.210/intel/16.0.3 \
+--with-nocross-compiler-suite=intel \
+--with-mpi=intel3 \
+--with-cube=/curc/sw/cube/4.3.4/bin \
+--with-papi-header=/curc/sw/papi/5.4.3/include \
+--with-papi-lib=/curc/sw/papi/5.4.3/lib \
+--with-libcudart=/curc/sw/cuda/7.5.18
+make -j12
+make check
+make install
+make distclean
+
+ml purge
+ml intel/16.0.3
+ml openmpi/1.10.2
+ml papi/5.4.3
+ml pdtoolkit/3.22
+ml cube/4.3.4
+ml cuda/7.5.18
+./configure --prefix=/curc/sw/scorep/2.0.2/openmpi/1.10.2/intel/16.0.3 \
+--with-nocross-compiler-suite=intel \
+--with-mpi=intel3 \
+--with-cube=/curc/sw/cube/4.3.4/bin \
+--with-papi-header=/curc/sw/papi/5.4.3/include \
+--with-papi-lib=/curc/sw/papi/5.4.3/lib \
+--with-libcudart=/curc/sw/cuda/7.5.18
+make -j12
+make check
+make install
+make distclean

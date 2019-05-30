@@ -1,0 +1,155 @@
+ml intel/16.0.3
+ml impi/5.1.3.210
+ml cmake/3.5.2
+ml valgrind/3.11.0
+ml python/2.7.11
+ml jpeg/9b
+ml boost/1.61.0
+
+./configure --prefix=/curc/sw/petsc/3.7.6/impi/5.1.3.210/intel/16.0.3 \
+FC=mpifc \
+CC=mpicc \
+CXX=mpicxx \
+--CXXFLAGS="-fPIC" \
+--CFLAGS="-fPIC" \
+--FFLAGS="-fPIC" \
+COPTFLAGS="-O3" \
+--with-gnu-compilers=0 \
+--with-shared-libraries=1 \
+--with-debugging=0 \
+--with-mpi-include=/curc/sw/intel/16.0.3/impi/5.1.3.210/include64 \
+--with-mpi-lib=/curc/sw/intel/16.0.3/impi/5.1.3.210/lib64/libmpi.so \
+--with-mpiexec=mpirun \
+--with-cmake-dir=/curc/sw/cmake/3.5.2 \
+--with-valgrind-dir=/curc/sw/valgrind/3.11.0 \
+--with-libjpeg-dir=/curc/sw/jpeg/9b/intel/16.0.3 \
+--with-blas-lapack-dir=/curc/sw/intel/16.0.3/mkl \
+--with-scalapack-lib="/curc/sw/intel/16.0.3/mkl/lib/intel64/libmkl_scalapack_lp64.so /curc/sw/intel/16.0.3/mkl/lib/intel64/libmkl_blacs_intelmpi_lp64.so" \
+--download-boost=yes \
+--download-hdf5=yes \
+--download-netcdf=yes \
+--download-fftw=yes \
+--download-superlu_dist=yes \
+--download-superlu=yes \
+--download-metis=yes \
+--download-parmetis=yes \
+--download-mumps=yes \
+--download-hyper=yes \
+--download-ptscotch=yes \
+--with-numpy=yes \
+--with-mpi4py=yes
+
+#--download-numpy-shared=
+#--download-mpi4py=
+#--with-boost-dir=/curc/sw/boost/1.61.0/impi/5.1.3.210/intel/16.0.3 \
+#--with-hdf5-dir=/curc/sw/hdf5/1.10.0/impi/5.1.3.210/intel/16.0.3 \
+#--with-netcdf-dir=/curc/sw/netcdf/4.4.0/impi/5.1.3.210/intel/16.0.3 \
+#--with-fftw-dir=/curc/sw/fftw/3.3.4/impi/5.1.3.210/intel/16.0.3 \
+
+
+############ AVX 512 support - intel 2017.4 ######################
+Currently Loaded Modules:
+  1) intel17.4 (m)    3) impi/17.3   4) mkl/17.3 (m)
+
+./configure --prefix=/projects/holtat/Summit/install/petsc17.4_fat \
+FC=mpifc \
+CC=mpicc \
+CXX=mpicxx \
+--CXXFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2" \
+--CFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2" \
+--FFLAGS="-fPIC -axCORE-AVX512,CORE-AVX2" \
+--COPTFLAGS="-O3" \
+--FOPTFLAGS="-O3" \
+--CXXOPTFLAGS="-O3" \
+--with-gnu-compilers=0 \
+--with-shared-libraries=1 \
+--with-debugging=0 \
+--with-mpi-include=/curc/sw/intel/17.4/impi/2017.3.196/include64 \
+--with-mpi-lib=/curc/sw/intel/17.4/impi/2017.3.196/lib64/libmpi.so \
+--with-mpiexec=mpirun \
+--with-blas-lapack-dir=/curc/sw/intel/17.4/mkl \
+--with-scalapack-lib="/curc/sw/intel/17.4/mkl/lib/intel64/libmkl_scalapack_lp64.so /curc/sw/intel/17.4/mkl/lib/intel64/libmkl_blacs_intelmpi_lp64.so" \
+--download-cmake=yes \
+--download-hdf5=yes \
+--download-netcdf=yes \
+--download-fftw=yes \
+--download-superlu_dist=yes \
+--download-superlu=yes \
+--download-metis=yes \
+--download-parmetis=yes \
+--download-mumps=yes \
+--download-hyper=yes \
+--download-ptscotch=yes
+
+From the dev's:
+This build fails due to an internal compiler bug. You have to get to that point, and then edit
+$PETSC_ARCH/lib/petsc/conf/petscvariables, remove "-axCORE-AVX512,CORE-AVX2" (the branching causes the issue),
+and compile the last few files without those flags. do NOT rerun configure or do anything else.
+Note: we have found some bugs with those flags that cause crashes in some PETSc routines that we have reported to Intel.
+
+
+#### AVX2 only build
+
+./configure --prefix=/projects/holtat/Summit/install/petsc17.4_avx2 \
+FC=mpifc \
+CC=mpicc \
+CXX=mpicxx \
+--CXXFLAGS="-fPIC -xCORE-AVX2" \
+--CFLAGS="-fPIC -xCORE-AVX2" \
+--FFLAGS="-fPIC -xCORE-AVX2" \
+--with-gnu-compilers=0 \
+--with-shared-libraries=1 \
+--with-debugging=0 \
+--with-mpi-include=/curc/sw/intel/17.4/impi/2017.3.196/include64 \
+--with-mpi-lib=/curc/sw/intel/17.4/impi/2017.3.196/lib64/libmpi.so \
+--with-mpiexec=mpirun \
+--with-blas-lapack-dir=/curc/sw/intel/17.4/mkl \
+--with-scalapack-lib="/curc/sw/intel/17.4/mkl/lib/intel64/libmkl_scalapack_lp64.so /curc/sw/intel/17.4/mkl/lib/intel64/libmkl_blacs_intelmpi_lp64.so" \
+--download-cmake=yes \
+--download-hdf5=yes \
+--download-netcdf=yes \
+--download-fftw=yes \
+--download-superlu_dist=yes \
+--download-superlu=yes \
+--download-metis=yes \
+--download-parmetis=yes \
+--download-mumps=yes \
+--download-hyper=yes \
+--download-ptscotch=yes
+
+
+
+
+
+
+
+#### Spacks Petsc Module for reference
+
+whatis("petsc @3.7.5 ")
+prepend_path("PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/bin")
+prepend_path("CMAKE_PREFIX_PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/")
+prepend_path("LIBRARY_PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/lib")
+prepend_path("LD_LIBRARY_PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/lib")
+prepend_path("PKG_CONFIG_PATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/lib/pkgconfig")
+prepend_path("CPATH","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av/include")
+setenv("PETSC_DIR","/projects/holtat/spack/opt/spack/linux-rhel7-x86_64/gcc-6.3.0/petsc-3.7.5-j2qkfz5effl7vhfuhen2ar4vkbqro3av")
+unsetenv("PETSC_ARCH","")
+help([[PETSc is a suite of data structures and routines for the scalable
+(parallel) solution of scientific applications modeled by partial
+differential equations.
+]])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#

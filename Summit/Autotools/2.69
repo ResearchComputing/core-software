@@ -1,0 +1,22 @@
+## Autotools 2.69 is composed of autoconf 2.69 and automake 1.15 . 
+## They are installed to the same directory:
+
+# System perl is missing some required modules
+ml perl/5.24
+
+# cd to autoconf dir
+./configure --prefix=/curc/sw/autotools/2.69
+make
+make install
+
+# cd to automake dir (need to install autoconf first)
+# add autoconf to path then install
+export PATH=/curc/sw/autotools/2.69:$PATH
+./configure --prefix=/curc/sw/autotools/2.69
+make
+make install
+
+# untar and cd to libtool 2.4.6 dir
+./configure --prefix=/curc/sw/autotools/2.69
+make
+make install

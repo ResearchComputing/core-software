@@ -1,0 +1,7 @@
+## zlib
+ml intel/17.4
+
+./configure --prefix=/curc/sw/zlib/1.2.11/intel/17.4
+
+## There are no CFLAGS/CXXFLAGS options, edit makefile and
+change CC=icc to CC=icc -axCORE-AVX512,CORE-AVX2,AVX,SSE4.2

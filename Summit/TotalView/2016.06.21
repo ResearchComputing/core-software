@@ -1,0 +1,3 @@
+#################### TotalView 2016.06.21 #############
+./Install -help
+./Install -agree -directory /curc/sw/ -nosymlink -platform linux-x86-64

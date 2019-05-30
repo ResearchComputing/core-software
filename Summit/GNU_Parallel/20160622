@@ -1,0 +1,3 @@
+############# gnu_parallel #############################
+ml purge
+./configure --prefix=/curc/sw/gnu_parallel/20160622

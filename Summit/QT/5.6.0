@@ -1,0 +1,4 @@
+QT 5.6.0 had no config.log. Was installed with system compiler and no modules loaded:
+./configure --prefix=/curc/sw/qt/5.6.0/
+make
+make install

@@ -1,0 +1,39 @@
+################ boost ########################
+ml purge
+ml gcc
+ml openmpi
+## change ~/user-config.jam
+sed -i '/using mpi :/c\using mpi : /curc/sw/openmpi/1.10.2/gcc/6.1.0/bin/mpicc ;' ~/user-config.jam
+./bootstrap.sh --prefix=/curc/sw/boost/1.61.0/openmpi/1.10.2/gcc/6.1.0/
+./b2 install
+
+ml purge
+ml gcc
+ml impi
+sed -i '/using mpi :/c\using mpi : /curc/sw/intel/16.0.3/impi/5.1.3.210/bin64/mpicc ;' ~/user-config.jam
+./bootstrap.sh --prefix=/curc/sw/boost/1.61.0/impi/5.1.3.210/gcc/6.1.0/
+./b2 install
+
+
+ml purge
+ml intel
+ml impi
+#should use mpiicc?
+sed -i '/using mpi :/c\using mpi : /curc/sw/intel/16.0.3/impi/5.1.3.210/bin64/mpicc ;' ~/user-config.jam
+./bootstrap.sh --prefix=/curc/sw/boost/1.61.0/impi/5.1.3.210/intel/16.0.3/ ##--with-toolset=intel
+./b2 install address-model=64 toolset=intel stage
+
+ml purge
+ml intel
+ml openmpi
+sed -i '/using mpi :/c\using mpi : /curc/sw/openmpi/1.10.2/intel/16.0.3/bin/mpicc ;' ~/user-config.jam
+./bootstrap.sh --prefibx=/curc/sw/boost/1.61.0/openmpi/1.10.2/intel/16.0.3/ ##--with-toolset=intel
+./b2 install address-model=64 toolset=intel stage
+
+# PGI compiled libraries didn't build
+ml purge
+ml pgi
+ml openmpi
+sed -i '/using mpi :/c\using mpi : /curc/sw/openmpi/1.10.2/pgi/16.5/bin/mpicc ;' ~/user-config.jam
+./bootstrap.sh --prefix=/curc/sw/boost/1.61.0/openmpi/1.10.2/pgi/16.5/ --with-toolset=pgi
+./b2 install toolset=pgi
