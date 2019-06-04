@@ -17,7 +17,10 @@ modules:
       - 'intel-parallel-studio'
       - 'parallel-netcdf'
       - gcc
+      - hdf5
       - intel
+      - intel-mkl
+      - intel-mpi
       - libgeotiff
       - libpng
       - lmod
@@ -25,3 +28,7 @@ modules:
       - netcdf-fortran
       - openmpi
       - pgi
+
+    hierarchy::
+      - mpi
+      - lapack
