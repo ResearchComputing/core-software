@@ -8,34 +8,74 @@ set -e
 
 function main
 {
-    spack clean
+    install_core
 
-    # core packages
+    install_simple
 
-    CORE_COMPILER='gcc@4.8.5'
-    CORE_PACKAGES=(
+    install_mkl
+
+    install_impi
+    install_openmpi
+
+    # mpi-dependent packages
+    install_hdf5
+    install_netcdf
+    install_parallel_netcdf
+
+    spack module lmod refresh -y
+}
+
+
+function install_core
+{
+    local core_compiler='gcc@4.8.5'
+    local core_packages=(
         lmod
         gcc@8.2.0
-        intel@18.0.3
         intel-parallel-studio@cluster.2018.3
+        intel@18.0.3
         pgi@18.4
     )
 
-    for package in "${CORE_PACKAGES[@]}"
+    for package in "${core_packages[@]}"
     do
-        spack install "${package}" "%${CORE_COMPILER}"
+        spack install "${package}" "%${core_compiler}"
     done
+}
 
-    # simple packages
+
+function install_simple
+{
+    spack install m4%gcc@8.2.0
 
     spack install libpng%gcc@8.2.0
     spack install libpng%intel@18.0.3
 
     spack install libgeotiff%gcc@8.2.0
     spack install libgeotiff%intel@18.0.3
+}
 
-    # openmpi
 
+function install_mkl
+{
+    for compiler in gcc@8.2.0 intel@18.0.3 pgi@18.4
+    do
+        spack install "intel-mkl@2018.3.222 %${compiler}"
+    done
+}
+
+
+function install_impi
+{
+    for compiler in gcc@8.2.0 intel@18.0.3 pgi@18.4
+    do
+        spack install "intel-mpi@2018.3.222 %${compiler}"
+    done
+}
+
+
+function install_openmpi
+{
     spack install openmpi%gcc@8.2.0
     for compiler in intel@18.0.3 pgi@18.4
     do
@@ -45,29 +85,40 @@ function main
               ^/$(gethash slurm%gcc@8.2.0) \
               ^/$(gethash libfabric%gcc@8.2.0)
     done
+}
 
-    # mpi-dependent packages
 
+function install_hdf5
+{
     spack install hdf5%gcc@8.2.0
-    spack install hdf5%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3)
-    spack install hdf5%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5)
-    spack install hdf5%pgi@18.4 ^/$(gethash openmpi%pgi@18.4)
+    spack install hdf5%intel@18.0.3 ^/$(gethash openmpi %intel)
+    spack install hdf5%intel@18.0.3 ^/$(gethash intel-mpi %intel)
+    spack install hdf5%pgi@18.4 ^/$(gethash openmpi %pgi)
+}
 
-    spack install netcdf%gcc@8.2.0
-    spack install netcdf-fortran%gcc@8.2.0 ^/$(gethash netcdf%gcc@8.2.0)
-    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
-    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel@18.0.3 ^openmpi)
-    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel@18.0.3 ^intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
-    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel@18.0.3 ^intel-parallel-studio)
+
+function install_netcdf
+{
+    spack install netcdf%gcc@8.2.0 ^/$(gethash hdf5%gcc ^openmpi) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%gcc@8.2.0 ^/$(gethash netcdf%gcc)
+
+    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel ^openmpi) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel ^openmpi)
+
+    spack install netcdf%intel@18.0.3 ^/$(gethash hdf5%intel ^intel-mpi) ^/$(gethash m4%gcc@8.2.0)
+    spack install netcdf-fortran%intel@18.0.3 ^/$(gethash netcdf%intel ^intel-mpi)
+
     spack install netcdf%pgi@18.4 ^/$(gethash hdf5%pgi@18.4 ^openmpi%pgi@18.4) ^/$(gethash m4%gcc@8.2.0)
-    spack install netcdf-fortran%pgi@18.4 ^/$(gethash netcdf%pgi@18.4)
+    spack install netcdf-fortran%pgi@18.4 ^/$(gethash netcdf%pgi)
+}
 
-    spack install parallel-netcdf%gcc@8.2.0
-    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash openmpi%intel@18.0.3) ^/$(gethash m4%gcc@8.2.0)
-    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash intel-parallel-studio%gcc@4.8.5) ^/$(gethash m4%gcc@8.2.0)
-    spack install parallel-netcdf%pgi@18.4 ^/$(gethash openmpi%pgi@18.4) ^/$(gethash m4%gcc@8.2.0)
 
-    spack module lmod refresh -y
+function install_parallel_netcdf
+{
+    spack install parallel-netcdf%gcc@8.2.0 ^/$(gethash openmpi%gcc) ^/$(gethash m4%gcc@8.2.0)
+    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash openmpi%intel) ^/$(gethash m4%gcc@8.2.0)
+    spack install parallel-netcdf%intel@18.0.3 ^/$(gethash intel-mpi%intel) ^/$(gethash m4%gcc@8.2.0)
+    spack install parallel-netcdf%pgi@18.4 ^/$(gethash openmpi%pgi) ^/$(gethash m4%gcc@8.2.0)
 }
 
 
