@@ -50,3 +50,6 @@ packages:
   zlib:
     compiler::
       - gcc@8.2.0
+
+  cmake:
+    variants: doc=True
