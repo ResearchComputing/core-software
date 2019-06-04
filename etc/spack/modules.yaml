@@ -14,20 +14,30 @@ modules:
       - '%intel'
 
     whitelist:
-      - 'intel-parallel-studio'
-      - 'parallel-netcdf'
+      - autoconf%gcc@4.8.5
+      - automake%gcc@4.8.5
+      - cmake%gcc@4.8.5
+      - cuda%gcc@4.8.5
       - gcc
+      - gdb%gcc@4.8.5
+      - git%gcc@4.8.5
       - hdf5
       - intel
       - intel-mkl
       - intel-mpi
+      - intel-parallel-studio
       - libgeotiff
       - libpng
-      - lmod
+      - libtool%gcc@4.8.5
+      - mercurial%gcc@4.8.5
       - netcdf
       - netcdf-fortran
-      - openmpi
-      - pgi
+      - openmpi@4.8.5
+      - parallel%gcc@4.8.5
+      - parallel-netcdf
+      - perl%gcc@4.8.5
+      - pgi@4.8.5
+      - singularity%gcc@4.8.5
 
     hierarchy::
       - mpi
