@@ -5,6 +5,9 @@ set -e
 
 # See packages.yaml for additional specifications
 
+# starting over
+# spack uninstall --all --dependents $(spack find | grep -o '^[a-z][^@]*' | sort -u | grep -vE '^(intel-mkl|intel-mpi|intel|intel-parallel-studio|gcc|pgi)$')
+
 
 function main
 {
@@ -30,11 +33,22 @@ function install_core
 {
     local core_compiler='gcc@4.8.5'
     local core_packages=(
-        lmod
+        lmod@7.8
         gcc@8.2.0
         intel-parallel-studio@cluster.2018.3
         intel@18.0.3
         pgi@18.4
+        git@2.19.1
+        singularity@2.6.0
+        cmake@3.12.3
+        mercurial@4.4.1
+        cuda@10.0.130
+        parallel@20170322
+        perl@5.26.2
+        gdb@8.2
+        libtool@2.4.6
+        autoconf@2.69
+        automake@1.16.1
     )
 
     for package in "${core_packages[@]}"
