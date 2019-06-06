@@ -49,6 +49,7 @@ function install_core
         libtool@2.4.6
         autoconf@2.69
         automake@1.16.1
+        dmtcp@2.5.2
     )
 
     for package in "${core_packages[@]}"

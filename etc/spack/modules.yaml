@@ -18,6 +18,7 @@ modules:
       - automake%gcc@4.8.5
       - cmake%gcc@4.8.5
       - cuda%gcc@4.8.5
+      - dmtcp%gcc@4.8.5
       - gcc
       - gdb%gcc@4.8.5
       - git%gcc@4.8.5
