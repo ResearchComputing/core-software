@@ -1,0 +1,10 @@
+## OpenMPI 4.0.2 for bnode05* (RoCE support), build on bnode0501
+ml purge
+ml gcc/8.2.0
+../openmpi-4.0.2/configure \
+--prefix=/curc/sw/openmpi_ucx/4.0.2/gcc/8.2.0 \
+--enable-mpi-thread-multiple \
+--enable-mpi-ext=all \
+--enable-oshmem \
+--with-slurm \
+--with-ucx
