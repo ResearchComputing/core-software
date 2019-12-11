@@ -1,0 +1,67 @@
+Untar'd tarball
+ran install script (install.sh)
+
+----------------------------------------
+IDL 8.7.2 Installer
+----------------------------------------
+
+Please enter the directory to install in
+
+  (e.g. "/usr/local/harris ")
+  
+/curc/sw/idl/8.7
+ 
+ 
+ 
+Please select the optional features for installation.
+ 
+IDL Help files? (y/n): y
+DICOM Network Services? (y/n): y
+
+---------------------
+Installation Summary:
+---------------------
+    IDL 8.7.2
+    Installation location: /curc/sw/idl/8.7
+    Login: rcops
+Products:
+    IDL
+    IDL Help files
+    DICOM Network Services
+Platforms:
+    Linux - X86 (64-bit)
+ 
+Install the above configuration? (y/n): y
+ 
+Installation continuing...
+Do you want to run the License Administrator? (y/n): y
+
+----------------------
+Installation Complete:
+----------------------
+
+Setup files exist in the installation to run the product.  
+Have users set up their accounts as shown below:
+
+Have your C-shell users add the following line to their .cshrc files:
+
+	source /curc/sw/idl/8.7/idl87/bin/idl_setup
+
+Have your Korn shell users add the following line to their .profile files:
+
+	. /curc/sw/idl/8.7/idl87/bin/idl_setup.ksh
+
+ Have your Bash shell users add the following line to their .bashrc files:
+
+	. /curc/sw/idl/8.7/idl87/bin/idl_setup.bash
+
+ 
+The installation has successfully been completed.
+
+
+Activate license:
+/curc/sw/idl/8.7/idl87/bin/harrislicense
+Select "Use License Server"
+Insert license1 in server field.
+
+Create module file /curc/sw/modules/idep/idl/8.7.lua by copyin 8.5.lua and editing necessary fields.
