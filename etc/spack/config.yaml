@@ -1,4 +1,5 @@
 config:
+  install_tree: /curc/sw/opt/spack
   build_stage::
     - /pl/active/rcops/spack-build
     - /curc/admin/spack-build
