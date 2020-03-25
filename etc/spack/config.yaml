@@ -3,7 +3,5 @@ config:
   module_roots:
     lmod:       /curc/sw/modules/spack
   build_stage::
-    - /pl/active/rcops/spack-build
-    - /curc/admin/spack-build
     - /scratch/local
     - /tmp
