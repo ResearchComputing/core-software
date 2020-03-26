@@ -1,7 +1,0 @@
-config:
-  install_tree: /curc/sw/opt/spack
-  module_roots:
-    lmod:       /curc/sw/modules/spack
-  build_stage::
-    - /scratch/local
-    - /tmp
