@@ -39,3 +39,16 @@ compilers::
     modules: []
     environment: {}
     extra_rpaths: []
+- compiler:
+    spec: intel@19.0.5.281
+    paths:
+      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icc
+      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icpc
+      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
+      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []

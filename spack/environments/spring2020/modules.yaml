@@ -8,3 +8,9 @@ modules:
     hierarchy:
     - mpi
     - lapack
+    blacklist:
+      - '%gcc@4.8.5'
+    whitelist:
+      - intel@19.0.5%gcc@4.8.5
+      - gcc@9.3.0%gcc@4.8.5
+      - intel-mkl

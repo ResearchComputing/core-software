@@ -1,8 +1,13 @@
 spack:
   specs:
-  - intel@19.1.0%gcc@4.8.5
+  - lmod%gcc@4.8.5
+
   - gcc@9.3.0%gcc@4.8.5
-  concretization: together
+  - intel@19.0.5%gcc@4.8.5
+  - intel@19.1.0%gcc@4.8.5
+
+  - intel-mkl@2019.5.281%intel@19.0.5.281
+  - intel-mkl@2019.5.281%gcc@9.3.0
   view: false
   include:
   - config.yaml
