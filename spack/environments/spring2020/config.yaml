@@ -1,0 +1,7 @@
+config:
+  install_tree: /curc/sw/opt/spack
+  build_stage::
+  - /scratch/local
+  - /tmp
+  module_roots::
+    lmod: /curc/sw/modules/spack/spring2020

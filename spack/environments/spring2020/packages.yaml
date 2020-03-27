@@ -1,17 +1,19 @@
 packages:
   all:
-    compiler::
-      - gcc
-
+    compiler:
+    - gcc
     providers:
-      mpi::
-        - openmpi
+      mpi:
+      - openmpi
 
   openmpi:
     variants: fabrics=psm2,verbs,ucx,libfabric schedulers=slurm +pmi
 
   hdf5:
     variants: +hl
+
+  intel:
+    variants: auto_dispatch=AVX,CORE-AVX2,CORE-AVX512,SSE4.2
 
   intel-parallel-studio:
     variants: threads=openmp +vtune +gdb
