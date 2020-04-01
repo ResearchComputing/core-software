@@ -27,7 +27,7 @@ compilers::
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: intel@19.1.0.166
+    spec: intel@19.1.0
     paths:
       cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/icc
       cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/icpc
@@ -40,7 +40,7 @@ compilers::
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: intel@19.0.5.281
+    spec: intel@19.0.5
     paths:
       cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icc
       cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icpc
