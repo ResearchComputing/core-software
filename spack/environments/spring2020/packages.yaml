@@ -10,7 +10,7 @@ packages:
     variants: fabrics=libfabric schedulers=slurm +pmi +legacylaunchers ~gpfs
 
   hdf5:
-    variants: +hl
+    variants: +hl +cxx +fortran +szip
 
   intel:
     variants: auto_dispatch=AVX,CORE-AVX2,CORE-AVX512,SSE4.2

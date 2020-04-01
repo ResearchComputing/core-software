@@ -17,3 +17,4 @@ modules:
       - intel-mkl
       - intel-mpi
       - openmpi
+      - hdf5
