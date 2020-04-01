@@ -20,7 +20,7 @@ packages:
 
   slurm:
     version::
-      - 17-11-9-2
+      - 19-05-5-1
 
     compiler::
       - gcc@8.2.0
