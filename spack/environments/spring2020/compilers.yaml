@@ -27,12 +27,12 @@ compilers::
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: intel@19.1.0
+    spec: intel@19.0.5
     paths:
-      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/icc
-      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/icpc
-      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/ifort
-      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.1.0-3z7dl2exnd4k3abplkh7islmxa7itkta/bin/ifort
+      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icc
+      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icpc
+      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
+      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
     flags: {}
     operating_system: rhel7
     target: x86_64
@@ -40,12 +40,12 @@ compilers::
     environment: {}
     extra_rpaths: []
 - compiler:
-    spec: intel@19.0.5
+    spec: intel@18.0.4
     paths:
-      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icc
-      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/icpc
-      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
-      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-19.0.5-kunu3stjnxwn4r3mndan3hgi3cudfsos/bin/ifort
+      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-18.0.4-4hsegss7lfz65xgv2plxgll3e47jstjx/bin/icc
+      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-18.0.4-4hsegss7lfz65xgv2plxgll3e47jstjx/bin/icpc
+      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-18.0.4-4hsegss7lfz65xgv2plxgll3e47jstjx/bin/ifort
+      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/intel-18.0.4-4hsegss7lfz65xgv2plxgll3e47jstjx/bin/ifort
     flags: {}
     operating_system: rhel7
     target: x86_64

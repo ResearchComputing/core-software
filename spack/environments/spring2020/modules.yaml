@@ -11,8 +11,8 @@ modules:
       - '%gcc'
       - '%intel'
     whitelist:
-      - intel@19.0.5
-      - gcc@9.3.0
+      - intel
+      - gcc
       - intel-mkl
       - intel-mpi
       - openmpi
