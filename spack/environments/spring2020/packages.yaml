@@ -7,7 +7,7 @@ packages:
       - openmpi
 
   openmpi:
-    variants: fabrics=psm2,verbs,ucx,libfabric schedulers=slurm +pmi
+    variants: fabrics=libfabric schedulers=slurm +pmi +legacylaunchers ~gpfs
 
   hdf5:
     variants: +hl
