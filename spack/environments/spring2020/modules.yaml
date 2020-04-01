@@ -7,7 +7,6 @@ modules:
     - gcc@4.8.5
     hierarchy:
     - mpi
-    - lapack
     blacklist:
       - '%gcc'
       - '%intel'
