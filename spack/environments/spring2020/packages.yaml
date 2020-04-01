@@ -55,3 +55,6 @@ packages:
 
   cmake:
     variants: doc=True
+
+  netcdf-c:
+    variants: +dap +hdf4 +parallel-netcdf

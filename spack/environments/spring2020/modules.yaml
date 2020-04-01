@@ -19,3 +19,4 @@ modules:
       - openmpi
       - hdf5
       - parallel-netcdf
+      - netcdf-c
