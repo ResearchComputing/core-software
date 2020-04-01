@@ -14,6 +14,8 @@ spack:
   - openmpi@3.1.5%gcc@9.3.0 ^perl%gcc@4.8.5
 
   - hdf5@1.12.0%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
+
+  - parallel-netcdf@1.12.1%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
   view: false
   include:
   - config.yaml

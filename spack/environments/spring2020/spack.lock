@@ -39,6 +39,10 @@
   {
    "hash": "ho56fvoabczymhtsglpk4ouc7nbjovdr",
    "spec": "hdf5@1.12.0%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5"
+  },
+  {
+   "hash": "zwpn3zpjd6rd6sp5yz3fxe5thnjjfjxp",
+   "spec": "parallel-netcdf@1.12.1%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5"
   }
  ],
  "concrete_specs": {
@@ -6620,6 +6624,75 @@
      "ldlibs": []
     },
     "hash": "jn3vfoyd53ve2upqnhvjqajqltr4apis"
+   }
+  },
+  "zwpn3zpjd6rd6sp5yz3fxe5thnjjfjxp": {
+   "parallel-netcdf": {
+    "version": "1.12.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "intel",
+     "version": "19.0.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cxx": true,
+     "fortran": true,
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "intel-mpi": {
+      "hash": "f54mwospzosqmvbx6drpqijvhlwzca65",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "m4": {
+      "hash": "6xp26qtmpbpqcmbixwxal4ufwmlfs5vx",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "cw4lp2puddbzidslh54ildmml4jwiyip"
    }
   }
  }
