@@ -18,7 +18,7 @@ spack:
   - parallel-netcdf@1.12.1%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
 
   - netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
-  #- netcdf-cxx4
+  - netcdf-cxx4@4.3.1%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
   #- netcdf-fortran
   view: false
   include:

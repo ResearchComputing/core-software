@@ -19,3 +19,4 @@ modules:
       - hdf5
       - parallel-netcdf
       - netcdf-c
+      - netcdf-cxx4
