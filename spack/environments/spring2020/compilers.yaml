@@ -14,17 +14,18 @@ compilers::
       unset: []
     extra_rpaths: []
 - compiler:
-    spec: gcc@9.3.0
+    spec: gcc@8.4.0
     paths:
-      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-9.3.0-srkywtb7vfyguaxfw73pwu6fovw7iz5z/bin/gcc
-      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-9.3.0-srkywtb7vfyguaxfw73pwu6fovw7iz5z/bin/g++
-      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-9.3.0-srkywtb7vfyguaxfw73pwu6fovw7iz5z/bin/gfortran
-      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-9.3.0-srkywtb7vfyguaxfw73pwu6fovw7iz5z/bin/gfortran
+      cc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-8.4.0-ov32qmrh6h36qmq6scyjh3msb23anjmu/bin/gcc
+      cxx: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-8.4.0-ov32qmrh6h36qmq6scyjh3msb23anjmu/bin/g++
+      f77: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-8.4.0-ov32qmrh6h36qmq6scyjh3msb23anjmu/bin/gfortran
+      fc: /curc/sw/opt/spack/linux-rhel7-haswell/gcc-4.8.5/gcc-8.4.0-ov32qmrh6h36qmq6scyjh3msb23anjmu/bin/gfortran
     flags: {}
     operating_system: rhel7
     target: x86_64
     modules: []
-    environment: {}
+    environment:
+      unset: []
     extra_rpaths: []
 - compiler:
     spec: intel@19.0.5
