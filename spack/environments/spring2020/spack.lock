@@ -51,6 +51,10 @@
   {
    "hash": "wnbo6fmpy7srtz3ilkcnmcqut44ubhac",
    "spec": "netcdf-cxx4@4.3.1%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5"
+  },
+  {
+   "hash": "ae4dddd5n5mqp3fv436wqjojjyuqbowm",
+   "spec": "netcdf-fortran@4.5.2%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5"
   }
  ],
  "concrete_specs": {
@@ -10514,6 +10518,81 @@
      }
     },
     "hash": "yjz4gzrbylcjwrkpnlsusqr6n43aj7ih"
+   }
+  },
+  "ae4dddd5n5mqp3fv436wqjojjyuqbowm": {
+   "netcdf-fortran": {
+    "version": "4.5.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "intel",
+     "version": "19.0.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "mpi": true,
+     "patches": [
+      "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+     ],
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "patches": [
+     "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+    ],
+    "dependencies": {
+     "intel-mpi": {
+      "hash": "f54mwospzosqmvbx6drpqijvhlwzca65",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "netcdf-c": {
+      "hash": "vutwyhqmw3r6ucpsxcnfamy3lcfbsreu",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "ebydaingwfayhh3z6swc4d7yasclklln"
    }
   }
  }
