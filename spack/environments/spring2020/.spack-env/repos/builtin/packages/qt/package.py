@@ -24,6 +24,7 @@ class Qt(Package):
 
     phases = ['configure', 'build', 'install']
 
+    version('5.14.2', md5='b3d2b6d00e6ca8a8ede6d1c9bdc74daf')
     version('5.14.1', sha256='6f17f488f512b39c2feb57d83a5e0a13dcef32999bea2e2a8f832f54a29badb8')
     version('5.14.0', sha256='be9a77cd4e1f9d70b58621d0753be19ea498e6b0da0398753e5038426f76a8ba')
     version('5.13.1', sha256='adf00266dc38352a166a9739f1a24a1e36f1be9c04bf72e16e142a256436974e')
