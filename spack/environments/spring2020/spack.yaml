@@ -11,6 +11,7 @@ spack:
   - udunits@2.2.24%gcc@4.8.5
   - jdk@14%gcc@4.8.5
   - singularity@3.5.3%gcc@4.8.5
+  - tcl@8.6.8%gcc@4.8.5
 
   - gcc@8.4.0%gcc@4.8.5
   - intel@19.0.5%gcc@4.8.5
