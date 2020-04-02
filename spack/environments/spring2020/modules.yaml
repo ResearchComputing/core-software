@@ -30,3 +30,4 @@ modules:
       - parallel-netcdf
       - netcdf-c
       - netcdf-cxx4
+      - netcdf-fortran
