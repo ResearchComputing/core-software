@@ -9,6 +9,7 @@ spack:
   - parallel@20190222%gcc@4.8.5
   - perl@5.30.1%gcc@4.8.5
   - udunits@2.2.24%gcc@4.8.5
+  - jdk@14%gcc@4.8.5
 
   - gcc@8.4.0%gcc@4.8.5
   - intel@19.0.5%gcc@4.8.5
