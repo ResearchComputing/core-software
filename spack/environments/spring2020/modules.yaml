@@ -1,5 +1,5 @@
 modules:
-  enable:
+  enable::
   - lmod
   lmod:
     hash_length: 0
