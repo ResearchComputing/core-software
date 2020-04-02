@@ -22,37 +22,6 @@ packages:
     version::
       - 19-05-5-1
 
-    compiler::
-      - gcc@8.2.0
-
-  libpciaccess:
-    compiler::
-      - gcc@8.2.0
-
-  hwloc:
-    compiler::
-      - gcc@8.2.0
-
-  libfabric:
-    compiler::
-      - gcc@8.2.0
-
-  numactl:
-    compiler::
-      - gcc@8.2.0
-
-  pkgconf:
-    compiler::
-      - gcc@8.2.0
-
-  ucx:
-    compiler::
-      - gcc@8.2.0
-
-  zlib:
-    compiler::
-      - gcc@8.2.0
-
   cmake:
     variants: doc=True
 
