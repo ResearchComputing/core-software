@@ -191,6 +191,18 @@
   {
    "hash": "hj6iv34wpy3ytdapx66ht3no6cn7bchd",
    "spec": "libjpeg@9c%intel@18.0.4"
+  },
+  {
+   "hash": "bxoups6hj3de2h44qp46zyiw5l254j3s",
+   "spec": "zlib@1.2.11%gcc@8.4.0"
+  },
+  {
+   "hash": "jn3vfoyd53ve2upqnhvjqajqltr4apis",
+   "spec": "zlib@1.2.11%intel@19.0.5"
+  },
+  {
+   "hash": "5veiyydwi4qn6ynfj5yzm2qigedaenyx",
+   "spec": "zlib@1.2.11%intel@18.0.4"
   }
  ],
  "concrete_specs": {

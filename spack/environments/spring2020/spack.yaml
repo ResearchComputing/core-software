@@ -18,6 +18,10 @@ spack:
   - intel@19.0.5%gcc@4.8.5
   - intel@18.0.4%gcc@4.8.5
 
+  - zlib@1.2.11%gcc@8.4.0
+  - zlib@1.2.11%intel@19.0.5
+  - zlib@1.2.11%intel@18.0.4
+
   - libszip@2.1.1%gcc@8.4.0
   - libszip@2.1.1%intel@19.0.5
   - libszip@2.1.1%intel@18.0.4
@@ -29,6 +33,14 @@ spack:
   - libjpeg@9c%gcc@8.4.0
   - libjpeg@9c%intel@19.0.5
   - libjpeg@9c%intel@18.0.4
+
+#  - openjpeg@2.3.1%gcc@8.4.0
+#  - openjpeg@2.3.1%intel@19.0.5
+#  - openjpeg@2.3.1%intel@18.0.4
+
+#  - jasper@2.0.16%gcc@8.4.0
+#  - jasper@2.0.16%intel@19.0.5
+#  - jasper@2.0.16%intel@18.0.4
 
   - intel-mkl@2019.5.281%intel@19.0.5
   - intel-mkl@2018.4.274%intel@18.0.4
