@@ -31,3 +31,4 @@ modules:
       - netcdf-c
       - netcdf-cxx4
       - netcdf-fortran
+      - qemu

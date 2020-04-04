@@ -151,6 +151,10 @@
   {
    "hash": "ftlv7h2efs3dunlkkmdrbungljrqoqlc",
    "spec": "tcl@8.6.8%gcc@4.8.5"
+  },
+  {
+   "hash": "w4yoxyo3dbx2inp5o5c6wfvnqofg24sy",
+   "spec": "qemu@4.1.1%gcc@4.8.5"
   }
  ],
  "concrete_specs": {
@@ -22750,6 +22754,313 @@
      }
     },
     "hash": "fi2r2kor5xrunskbbdmdejbrxzuor245"
+   }
+  },
+  "w4yoxyo3dbx2inp5o5c6wfvnqofg24sy": {
+   "qemu": {
+    "version": "4.1.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "glib": {
+      "hash": "i4w2575xe44qufh6uvc3yhmzuch2ty56",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pixman": {
+      "hash": "le4onbf2xnzowc5sm3vxbwrjsyd747pr",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "jfwmadcupins2c3hmwg6wwzfys6iwf5z"
+   }
+  },
+  "i4w2575xe44qufh6uvc3yhmzuch2ty56": {
+   "glib": {
+    "version": "2.56.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "libmount": false,
+     "patches": [
+      "c325997b72a205ad1638bb3e3ba0e5b73e3d32ce63b2d0d3282f3e3a2ff4663c"
+     ],
+     "tracing": [
+      "none"
+     ],
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "patches": [
+     "c325997b72a205ad1638bb3e3ba0e5b73e3d32ce63b2d0d3282f3e3a2ff4663c"
+    ],
+    "dependencies": {
+     "gettext": {
+      "hash": "noqh6aq2m54ucgohpkksued3c3nfx7x3",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libffi": {
+      "hash": "sacvu6itusmahk7dm6pk4xzqtxcidt7u",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libiconv": {
+      "hash": "xcmzb6amddii7iat3lrfs3r6lnvevaf6",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pcre": {
+      "hash": "elag3cv4fvevxarcwevxvjxefat4mymk",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "perl": {
+      "hash": "nj6yw5zc5aia3rznyridxtmprrowmdcx",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "pkgconf": {
+      "hash": "oqak6dhv5zjxjo4z7ctcmmb3oaz74fml",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "nkflyvd4uqgwzk2ykg4yvxcx6yt7nxgx",
+      "type": [
+       "build",
+       "run"
+      ]
+     },
+     "zlib": {
+      "hash": "zolwez4onex3iueybyju2zi55njtdg5d",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "yawruobyvshazcx3en7wxegvwl46lzr6"
+   }
+  },
+  "le4onbf2xnzowc5sm3vxbwrjsyd747pr": {
+   "pixman": {
+    "version": "0.38.4",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libpng": {
+      "hash": "wc4lkwlqrf6b6vbaftehs5r4rsvodtwu",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "oqak6dhv5zjxjo4z7ctcmmb3oaz74fml",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "zkavn525jnzs7rhufxbpuirlw5ehfyng"
+   }
+  },
+  "wc4lkwlqrf6b6vbaftehs5r4rsvodtwu": {
+   "libpng": {
+    "version": "1.6.37",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "rhel7",
+     "target": {
+      "name": "haswell",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "avx2",
+       "bmi1",
+       "bmi2",
+       "f16c",
+       "fma",
+       "mmx",
+       "movbe",
+       "pclmulqdq",
+       "popcnt",
+       "rdrand",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "ivybridge"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "zlib": {
+      "hash": "zolwez4onex3iueybyju2zi55njtdg5d",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "wc4lkwlqrf6b6vbaftehs5r4rsvodtwu"
    }
   }
  }
