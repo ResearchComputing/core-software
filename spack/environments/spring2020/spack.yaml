@@ -35,12 +35,12 @@ spack:
   - libjpeg@9c%intel@18.0.4
 
 #  - openjpeg@2.3.1%gcc@8.4.0
-#  - openjpeg@2.3.1%intel@19.0.5
-#  - openjpeg@2.3.1%intel@18.0.4
+  - openjpeg@2.3.1%intel@19.0.5
+  - openjpeg@2.3.1%intel@18.0.4
 
 #  - jasper@2.0.16%gcc@8.4.0
-#  - jasper@2.0.16%intel@19.0.5
-#  - jasper@2.0.16%intel@18.0.4
+  - jasper@2.0.16%intel@19.0.5
+  - jasper@2.0.16%intel@18.0.4
 
   - intel-mkl@2019.5.281%intel@19.0.5
   - intel-mkl@2018.4.274%intel@18.0.4
