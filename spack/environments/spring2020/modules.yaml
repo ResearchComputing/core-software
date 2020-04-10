@@ -51,3 +51,4 @@ modules:
       - netcdf-cxx4
       - netcdf-fortran
       - qemu
+      - zip
