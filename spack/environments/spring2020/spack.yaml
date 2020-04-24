@@ -30,9 +30,13 @@ spack:
   - libjpeg@9c%gcc@8.4.0
   - libjpeg@9c%intel@19.0.5
 
+
+  
 #  - openjpeg@2.3.1%gcc@8.4.0
   - openjpeg@2.3.1%intel@19.0.5
 
+
+  
 #  - jasper@2.0.16%gcc@8.4.0
   - jasper@2.0.16%intel@19.0.5
 
@@ -41,35 +45,40 @@ spack:
 
   - intel-mpi@2019.6.166%intel@19.0.5
 
-  - openmpi@2.1.6%gcc@8.4.0
-  - openmpi@3.1.5%gcc@8.4.0
+  - openmpi@2.1.6%gcc@8.4.0 ^slurm%gcc@4.8.5
+  - openmpi@3.1.5%gcc@8.4.0 ^slurm%gcc@4.8.5
 
   - hdf5@1.12.0%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
-  - hdf5@1.12.0%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0
+  - hdf5@1.12.0%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^slurm%gcc@4.8.5
 
   - parallel-netcdf@1.12.1%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
-  - parallel-netcdf@1.12.1%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0
+  - parallel-netcdf@1.12.1%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^slurm%gcc@4.8.5
 
   - netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
-  - netcdf-cxx4@4.3.1%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
-  - netcdf-fortran@4.5.2%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
+  - netcdf-cxx4@4.3.1%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
+    ^hdf5@1.12.0%intel@19.0.5
+  - netcdf-fortran@4.5.2%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
+    ^hdf5@1.12.0%intel@19.0.5
 
-  - netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
-  - netcdf-cxx4@4.3.1%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
-  - netcdf-fortran@4.5.2%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
+  - netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0 ^slurm%gcc@4.8.5
   view:
     gcc8-openmpi-netcdf:
       root: /curc/sw/views/spring2020/gcc8-openmpi-netcdf
       select:
-        - netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
-        - netcdf-cxx4@4.3.1%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
-        - netcdf-fortran@4.5.2%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0
+      - netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0 ^hdf5@1.12.0%gcc@8.4.0 ^slurm%gcc@4.8.5
+      - netcdf-cxx4@4.3.1%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0
+        ^hdf5@1.12.0%gcc@8.4.0 ^slurm%gcc@4.8.5
+      - netcdf-fortran@4.5.2%gcc@8.4.0 ^netcdf-c@4.7.3%gcc@8.4.0 ^openmpi@3.1.5%gcc@8.4.0
+        ^hdf5@1.12.0%gcc@8.4.0 ^slurm%gcc@4.8.5
     intel19-impi-netcdf:
       root: /curc/sw/views/spring2020/intel19-impi-netcdf
       select:
-        - netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
-        - netcdf-cxx4@4.3.1%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
-        - netcdf-fortran@4.5.2%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
+      - netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5 ^hdf5@1.12.0%intel@19.0.5
+        ^slurm%gcc@4.8.5
+      - netcdf-cxx4@4.3.1%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
+        ^hdf5@1.12.0%intel@19.0.5 ^slurm%gcc@4.8.5
+      - netcdf-fortran@4.5.2%intel@19.0.5 ^netcdf-c@4.7.3%intel@19.0.5 ^intel-mpi@2019.6.166%intel@19.0.5
+        ^hdf5@1.12.0%intel@19.0.5 ^slurm%gcc@4.8.5
 
   include:
   - config.yaml
