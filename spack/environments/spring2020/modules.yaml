@@ -5,6 +5,7 @@ modules:
     hash_length: 0
     core_compilers:
     - gcc@4.8.5
+    - intel@0.0.0
     hierarchy:
     - mpi
     blacklist:
