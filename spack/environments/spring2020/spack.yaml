@@ -52,9 +52,9 @@ spack:
     - - netcdf-c
       - netcdf-cxx4
       - netcdf-fortran
-    - - ^cmake%gcc@4.8.5
     - - '%intel@19.0.5 ^parallel-netcdf~cxx ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
+    - - ^cmake%gcc@4.8.5
 
   view:
     gcc8-openmpi-netcdf:
