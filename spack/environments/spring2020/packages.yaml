@@ -1,11 +1,4 @@
 packages:
-  all:
-    compiler:
-    - gcc
-    providers:
-      mpi:
-      - openmpi
-
   cmake:
     version: [3.16.5]
     variants: doc=True
