@@ -44,7 +44,7 @@ modules:
       - gcc
       - intel-mkl
       - intel-mpi
-      - openmpi
+      - openmpi ^python%gcc@8.4.0
       - mvapich2
       - hdf5
       - parallel-netcdf
