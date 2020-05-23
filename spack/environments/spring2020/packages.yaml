@@ -51,6 +51,9 @@ packages:
   tcl:
     version: [8.6.8]
 
+  tk:
+    version: [8.6.8]
+
   udunits:
     version: [2.2.24]
 

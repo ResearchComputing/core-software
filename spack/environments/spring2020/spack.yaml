@@ -16,6 +16,7 @@ spack:
       - qemu
       - singularity
       - tcl
+      - tk
       - udunits
       - zip
     - - '%gcc@4.8.5'
