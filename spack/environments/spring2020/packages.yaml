@@ -68,7 +68,7 @@ packages:
     version: [1.2.11]
 
   openmpi:
-    variants: fabrics=libfabric,verbs,psm2 schedulers=slurm +pmi +cxx +cxx_exceptions +atomics +thread_multiple +legacylaunchers ~gpfs
+    variants: fabrics=libfabric,ucx,verbs,psm2 schedulers=slurm +pmi +cxx +cxx_exceptions +atomics +thread_multiple +legacylaunchers ~gpfs
 
   hdf5:
     variants: +hl +cxx +fortran +szip
@@ -81,27 +81,28 @@ packages:
     variants: threads=openmp +vtune +gdb
 
   slurm:
-    version: ['19-05-5-1']
+    version: [19-05-5-1]
     variants: +pmix
 
   netcdf-c:
     variants: +dap +hdf4 +parallel-netcdf
-    version: ['4.7.3']
+    version: [4.7.3]
 
   netcdf-cxx4:
-    version: ['4.3.1']
+    version: [4.3.1]
+    variants: ~doxygen
 
   netcdf-fortran:
-    version: ['4.5.2']
+    version: [4.5.2]
 
   intel-mkl:
-    version: ['2019.5.281']
+    version: [2019.5.281]
 
   intel-mpi:
-    version: ['2019.6.166']
+    version: [2019.6.166]
 
   hdf5:
-    version: ['1.12.0']
+    version: [1.12.0]
 
   parallel-netcdf:
-    version: ['1.12.1']
+    version: [1.12.1]

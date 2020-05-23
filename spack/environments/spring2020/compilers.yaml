@@ -10,8 +10,7 @@ compilers::
     operating_system: rhel7
     target: x86_64
     modules: []
-    environment:
-      unset: []
+    environment: {}
     extra_rpaths: []
 - compiler:
     spec: intel@0.0.0
@@ -24,8 +23,20 @@ compilers::
     operating_system: rhel7
     target: x86_64
     modules: []
-    environment:
-      unset: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@0.0.0
+    paths:
+      cc: /dev/null
+      cxx: /dev/null
+      f77: /dev/null
+      fc: /dev/null
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
     extra_rpaths: []
 - compiler:
     spec: gcc@8.4.0
