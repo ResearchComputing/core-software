@@ -49,6 +49,95 @@
     "hash": "xpihlagcp4s22rxpsxw6aymg4vynk4gx"
    }
   },
+  "aert7gghc6iu2wvoow7fsk3px7hp5x3p": {
+   "libxfont": {
+    "version": "1.5.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "fontsproto": {
+      "hash": "y7rkdoy4gtnxfuns7a5fqbli3ioyys3x",
+      "type": [
+       "build"
+      ]
+     },
+     "freetype": {
+      "hash": "pclkqzezj2wg5dxpheyf53j3wkx5dd24",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libfontenc": {
+      "hash": "7xiawak7uqvyvp5bljlxwur2azattdk3",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     },
+     "xtrans": {
+      "hash": "ac3a5dcckbh5vimny6xeucitysbw4r77",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "mrmziqkcdd3ccqiysk3ztdzhxfvwdc4c"
+   }
+  },
   "uwm7jevmw2ukuc35syem5t27voydn4iw": {
    "libpng": {
     "version": "1.6.37",
@@ -99,6 +188,65 @@
      }
     },
     "hash": "uwm7jevmw2ukuc35syem5t27voydn4iw"
+   }
+  },
+  "vtx3232tehtovjbvjhb6bwrgbaqramsa": {
+   "py-setuptools-scm": {
+    "version": "3.3.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "v47oae74i4mny5gjslqqhepiduguuig5"
    }
   },
   "x64wi6a2kk4ayjuuur4ljs64tztai3dw": {
@@ -538,6 +686,156 @@
     "hash": "3wvystmxkgata5ra2it7sg63jqautiq3"
    }
   },
+  "akd3zenmhim437q4eo56gnoxxcyv5mxd": {
+   "libxft": {
+    "version": "2.3.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "fontconfig": {
+      "hash": "gvvethv4fcci4klws6rfyhcpexpo5rpl",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "freetype": {
+      "hash": "pclkqzezj2wg5dxpheyf53j3wkx5dd24",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libx11": {
+      "hash": "z2tucpjkyisubhbp4xk52vava3vpmaqf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxrender": {
+      "hash": "64m2qwv6xxm77tns7oraev4lg4tyzr4g",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "h6akmait7zh2furrxjbpdy476idgd7rv"
+   }
+  },
+  "s2trkufoaqnuxoa5hzit2g4rs4j47fpq": {
+   "py-pytest-runner": {
+    "version": "5.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "pe6aeav3roqlspxzezfylv2ae76t5vky",
+      "type": [
+       "build"
+      ]
+     },
+     "py-setuptools-scm": {
+      "hash": "n2pglh7tsvfdk7ppgukpetowx5r6ea5f",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "v5ed3gcg4kxjmwebnza3mba5iyijudhx",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "qwjsou665l7pmhonikoutn4vyeefkihi"
+   }
+  },
   "5yua2lvmqpe7egcbgfpmhww2rqryjidh": {
    "libsigsegv": {
     "version": "2.12",
@@ -873,65 +1171,6 @@
     "hash": "wnhlbvaqm35jlaozo7b5sy5vd2svqofg"
    }
   },
-  "do6sgy7dbooeqv722nussv4xax2aej25": {
-   "py-sphinxcontrib-jsmath": {
-    "version": "1.0.1",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "4.8.5"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "py-setuptools": {
-      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "teoeih35n7py4rxp6oor2vfenjdsmezv"
-   }
-  },
   "gv2od3i5yawu4jdpk2ciaicwksgbjo7p": {
    "flex": {
     "version": "2.6.4",
@@ -1216,6 +1455,65 @@
     "hash": "xfz3drgpg5mjrqpu2jomhxupaailrw75"
    }
   },
+  "7vemtqys6n3u6ouqwvbfdtni4bm2ho2d": {
+   "py-sphinxcontrib-serializinghtml": {
+    "version": "1.1.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "sosdjwjjt6akpu5afykaoy4psfvmdesv"
+   }
+  },
   "kauaoanfg3xnrui4ayon7h3vawzemq7h": {
    "libjpeg-turbo": {
     "version": "2.0.3",
@@ -1412,9 +1710,9 @@
     "hash": "fpewpggvj5waskttqi4ioruagcvf3kwc"
    }
   },
-  "7im7d3b3fcmulrr2hfj6feeww4nobey5": {
-   "parallel-netcdf": {
-    "version": "1.12.1",
+  "kdxxe4apf42gefs3r5ntrlwlrezpqnfn": {
+   "renderproto": {
+    "version": "0.11.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -1441,14 +1739,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "cxx": true,
-     "fortran": true,
-     "pic": true,
-     "shared": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -1457,21 +1751,20 @@
      "ldlibs": []
     },
     "dependencies": {
-     "m4": {
-      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "openmpi": {
-      "hash": "sb3ggtkadvdlkulnegq244umbycj3c7i",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
       "type": [
-       "build",
-       "link"
+       "build"
       ]
      }
     },
-    "hash": "sh5qxxqlqognapniehiwzuoewnz6lell"
+    "hash": "yearmqepym6i5qkfht7osxkactjcfxfi"
    }
   },
   "rqotsigjgakhkprjhrmsqwqiw36oggfx": {
@@ -1963,9 +2256,9 @@
     "hash": "ac5v5pxdxqautknhroktru32z7ncvota"
    }
   },
-  "jigyuxxxxklxjke2mwjh25kmzexljvx6": {
-   "netcdf-c": {
-    "version": "4.7.3",
+  "2cgp3gromnc5clpr2es2teubfhi6cudn": {
+   "py-pytz": {
+    "version": "2019.3",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -1992,17 +2285,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "dap": true,
-     "hdf4": true,
-     "jna": false,
-     "mpi": true,
-     "parallel-netcdf": true,
-     "pic": true,
-     "shared": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2011,131 +2297,22 @@
      "ldlibs": []
     },
     "dependencies": {
-     "curl": {
-      "hash": "oj43cqbzxzbpwopk5qtymmlethbaof3e",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "hdf": {
-      "hash": "tsnrde6geit5qbvnjwgmdhfqe62yzwjx",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "hdf5": {
-      "hash": "qyhbubways7bsynequ3lqu6cbywwa237",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "m4": {
-      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+     "py-setuptools": {
+      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
       "type": [
        "build"
       ]
      },
-     "openmpi": {
-      "hash": "mjwrcdv3cula2wmpyhivbaghpim6nw2a",
+     "python": {
+      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
       "type": [
        "build",
-       "link"
-      ]
-     },
-     "parallel-netcdf": {
-      "hash": "mrfrmayjsjrfzdlod3mzkdwevscaskhz",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
+       "link",
+       "run"
       ]
      }
     },
-    "hash": "dkzepovck6leeyxpjekblcf6fcfw4b24"
-   }
-  },
-  "4gxblcshib7f2nwfoft4jz2ieybn7rix": {
-   "netcdf-fortran": {
-    "version": "4.5.2",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "intel",
-     "version": "19.0.5"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "doc": false,
-     "mpi": true,
-     "patches": [
-      "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
-     ],
-     "pic": true,
-     "shared": true,
-     "cflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
-     "cppflags": [],
-     "cxxflags": [
-      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
-     ],
-     "fflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "patches": [
-     "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
-    ],
-    "dependencies": {
-     "intel-mpi": {
-      "hash": "xpihlagcp4s22rxpsxw6aymg4vynk4gx",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "netcdf-c": {
-      "hash": "ypefguemlrfmpdzbzbozrtsrnklvpzar",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "pp5oism25hehgoidm7ozo3mbzoisnvmo"
+    "hash": "bcfrcv5h4vgaccuse2cyeiilk3vf5akd"
    }
   },
   "h7233a6vvgpimlifowxi5a64sfxrnjqw": {
@@ -2368,6 +2545,65 @@
     "hash": "ih26g25gidjm4be4hxefewfrgvjtcwuv"
    }
   },
+  "32zt2plkryo2nypd4i2mucbdbj7uduko": {
+   "py-sphinxcontrib-jsmath": {
+    "version": "1.0.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "5hhzptu4zqfazwz7f3uftczuruqgfg45",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "34joybs27foneaw4i7xenap56gffxsb2",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "onojfr5fffcs7lvphy2zcearmzf5stcn"
+   }
+  },
   "gti2vaaqgprbwjurrhngoibjhczg6zmt": {
    "gawk": {
     "version": "5.0.1",
@@ -2580,9 +2816,80 @@
     "hash": "m5oewmafgdvptuxrggds3oqtjw245hlc"
    }
   },
-  "v5ed3gcg4kxjmwebnza3mba5iyijudhx": {
-   "python": {
-    "version": "3.7.7",
+  "64m2qwv6xxm77tns7oraev4lg4tyzr4g": {
+   "libxrender": {
+    "version": "0.9.10",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libx11": {
+      "hash": "z2tucpjkyisubhbp4xk52vava3vpmaqf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "renderproto": {
+      "hash": "kdxxe4apf42gefs3r5ntrlwlrezpqnfn",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "ybx77ezdefnt5xjcoh3czbscnqoxw4mg"
+   }
+  },
+  "geb2axul5xnmefktm3myikx44cmim2js": {
+   "rdma-core": {
+    "version": "20",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -2613,26 +2920,7 @@
     },
     "namespace": "builtin",
     "parameters": {
-     "bz2": true,
-     "ctypes": true,
-     "dbm": true,
-     "debug": false,
-     "libxml2": true,
-     "lzma": true,
-     "nis": false,
-     "optimizations": false,
-     "pic": true,
-     "pyexpat": true,
-     "pythoncmd": true,
-     "readline": true,
-     "shared": true,
-     "sqlite3": true,
-     "ssl": true,
-     "tix": false,
-     "tkinter": false,
-     "ucs4": false,
-     "uuid": false,
-     "zlib": true,
+     "build_type": "RelWithDebInfo",
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -2641,50 +2929,14 @@
      "ldlibs": []
     },
     "dependencies": {
-     "bzip2": {
-      "hash": "ltoodu3gqwhjqoiqhrxl6hyahxar4jdi",
+     "cmake": {
+      "hash": "m4dyai4zwe2yrvg6ehk7vwbtfyzh4ptv",
       "type": [
-       "build",
-       "link"
+       "build"
       ]
      },
-     "expat": {
-      "hash": "dgayigpifx4zwn5pechg5nwrzyc6vwjk",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "gdbm": {
-      "hash": "iwb673ti3oll3hzejmc6ae772u7fh7cw",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "gettext": {
-      "hash": "fxlwglu53ko6ae2fgskjf657wsqtg52k",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libffi": {
-      "hash": "ebw4rkhic2etehezagd5prqza6wovpza",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ncurses": {
-      "hash": "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openssl": {
-      "hash": "mnakyruturs2kfnflbu7yabv55wl52jk",
+     "libnl": {
+      "hash": "gozllnde7fqfohsm7eyfdv4opw3ellze",
       "type": [
        "build",
        "link"
@@ -2695,37 +2947,9 @@
       "type": [
        "build"
       ]
-     },
-     "readline": {
-      "hash": "ubmdu3bfq6hsll2ccpvjzx5dy7vfu6vx",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "sqlite": {
-      "hash": "dvdq4xp7l73z5fnla3aiiocxf2gprwdl",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "xz": {
-      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
-      ]
      }
     },
-    "hash": "fo4yjmkhuli5cw26l3rkl33nasw2crda"
+    "hash": "w7fooob55d7f7ola3sm7veimliptfqvd"
    }
   },
   "63nrd7fsr5ottbtnvzraksei2sssnb3l": {
@@ -3167,65 +3391,6 @@
     "hash": "xf4l2lil2yosbvrjpqwzgk4qetiu4ckn"
    }
   },
-  "pucbqi355cv2lssd4hvjnkzh7kxyf3dh": {
-   "py-pygments": {
-    "version": "2.4.2",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "4.8.5"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "py-setuptools": {
-      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "dbioivmrhqdywkja4ndsgk6qy3eyxxoe"
-   }
-  },
   "hyz76r7mktjxzovaj3wqmzlhh6mc2k66": {
    "xz": {
     "version": "5.2.5",
@@ -3374,6 +3539,114 @@
      "ldlibs": []
     },
     "hash": "vw7i4eb43g4kozeebghijtngppmz6fe3"
+   }
+  },
+  "tnjjasizd75fkotcjm4j6ngez43eew4m": {
+   "openmpi": {
+    "version": "3.1.5",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "atomics": true,
+     "cuda": false,
+     "cxx": true,
+     "cxx_exceptions": true,
+     "fabrics": [
+      "libfabric",
+      "ucx"
+     ],
+     "gpfs": false,
+     "java": false,
+     "legacylaunchers": true,
+     "memchecker": false,
+     "pmi": true,
+     "runpath": true,
+     "schedulers": [
+      "slurm"
+     ],
+     "sqlite3": false,
+     "static": true,
+     "thread_multiple": true,
+     "vt": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "hwloc": {
+      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libfabric": {
+      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "numactl": {
+      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "slurm": {
+      "hash": "altpy6j4vw7dmzzr62g7lxsnr32szul2",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ucx": {
+      "hash": "2l7443pnhuvyxzgu4prrnzsxk3p3dtzo",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "nn4z6grohojmxw27do7tpztbb26irg4r"
    }
   },
   "zvbgpthdui4dkny7nrezdiilrnsuu2f2": {
@@ -3603,9 +3876,9 @@
     "hash": "jqd7evx3uknxel3nfx5voxzgntteo6w6"
    }
   },
-  "7vemtqys6n3u6ouqwvbfdtni4bm2ho2d": {
-   "py-sphinxcontrib-serializinghtml": {
-    "version": "1.1.3",
+  "2hlzm2z27nnq7zq5nrdmq3gcyz3dmo55": {
+   "kbproto": {
+    "version": "1.0.7",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -3644,22 +3917,20 @@
      "ldlibs": []
     },
     "dependencies": {
-     "py-setuptools": {
-      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "python": {
-      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
       "type": [
-       "build",
-       "link",
-       "run"
+       "build"
       ]
      }
     },
-    "hash": "sosdjwjjt6akpu5afykaoy4psfvmdesv"
+    "hash": "am7fdw6355gscxcfgpj6t4h6lmeoclxh"
    }
   },
   "rsffyvsihrsnvsofkg7ay6zoojmrkm6w": {
@@ -4042,6 +4313,89 @@
     "hash": "lz4zf54lsejudgquhdnguinooxa3t3jy"
    }
   },
+  "u2bcqifx5fnin7zkadl6rgd4ikjsah2r": {
+   "hdf5": {
+    "version": "1.12.0",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "api": "none",
+     "cxx": true,
+     "debug": false,
+     "fortran": true,
+     "hl": true,
+     "mpi": true,
+     "pic": true,
+     "shared": true,
+     "szip": true,
+     "threadsafe": false,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libszip": {
+      "hash": "r5qptfq7oipkgvndcd4kv44rch4aah6k",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "numactl": {
+      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openmpi": {
+      "hash": "tnjjasizd75fkotcjm4j6ngez43eew4m",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "ojp3ll2uhewxvowgbzfvi57sspyjk7m7"
+   }
+  },
   "vznam47shgu6iq7r2qe2t2jlpbckbtna": {
    "rdma-core": {
     "version": "20",
@@ -4215,6 +4569,108 @@
      }
     },
     "hash": "p6lcwhkvnfuereycnnyhazflf7olhlqn"
+   }
+  },
+  "z2tucpjkyisubhbp4xk52vava3vpmaqf": {
+   "libx11": {
+    "version": "1.6.7",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "inputproto": {
+      "hash": "rmzsucws4vzutpmen5anpyinziuuehap",
+      "type": [
+       "build"
+      ]
+     },
+     "kbproto": {
+      "hash": "2hlzm2z27nnq7zq5nrdmq3gcyz3dmo55",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxcb": {
+      "hash": "nwlixdwxasimth3tj6orrq45nmxo2k3q",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "perl": {
+      "hash": "3qvjlgr6un7awy5xcwpzbomc5trwwtkp",
+      "type": [
+       "build"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xextproto": {
+      "hash": "szg36gtaqhrkswhrnurxnz7r65zj6vex",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     },
+     "xtrans": {
+      "hash": "ac3a5dcckbh5vimny6xeucitysbw4r77",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "amvo7vxiivmu5rofxdfhy7mwm42x7v2j"
    }
   },
   "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7": {
@@ -4433,6 +4889,71 @@
     "hash": "pqzpsei6eibmlrsobgtyxvhypmzg33uq"
    }
   },
+  "pclkqzezj2wg5dxpheyf53j3wkx5dd24": {
+   "freetype": {
+    "version": "2.10.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "bzip2": {
+      "hash": "6gahq3dxqlpv3w2ghhrfegabg7swfviu",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libpng": {
+      "hash": "vp34bnwxs2nvaj5ysjjdgauhsjlv77gr",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "blwarebecybwydxfkoeljygulh3lwfdl"
+   }
+  },
   "4odzezf5k5nj7lumsb6bgsmr5f3ulrac": {
    "help2man": {
     "version": "1.47.11",
@@ -4489,6 +5010,89 @@
      }
     },
     "hash": "2wwsbnvcy4f4hw56tpd2c343ejxv262u"
+   }
+  },
+  "qup2y3uyon32djm5v6ex3uqgjw3lug5o": {
+   "hdf5": {
+    "version": "1.12.0",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "api": "none",
+     "cxx": true,
+     "debug": false,
+     "fortran": true,
+     "hl": true,
+     "mpi": true,
+     "pic": true,
+     "shared": true,
+     "szip": true,
+     "threadsafe": false,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libszip": {
+      "hash": "r5qptfq7oipkgvndcd4kv44rch4aah6k",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "numactl": {
+      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openmpi": {
+      "hash": "ryemdfz4nsdvmh4xpzbi5kogp7d2sqy4",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "t7w2javouprnz3dqnj6sf24qukjx3oka"
    }
   },
   "rfgchqs6gpfpddp74dfgqfxv3nzwxzrx": {
@@ -4550,9 +5154,9 @@
     "hash": "weamyklymbxzsdm6e46o4kcs7b7foffc"
    }
   },
-  "fxlwglu53ko6ae2fgskjf657wsqtg52k": {
-   "gettext": {
-    "version": "0.20.2",
+  "cl4gvcafw2ssfgfcgbvo654fqs7dzf6c": {
+   "py-pyparsing": {
+    "version": "2.4.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -4579,17 +5183,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "bzip2": true,
-     "curses": true,
-     "git": true,
-     "libunistring": false,
-     "libxml2": true,
-     "tar": true,
-     "xz": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -4598,43 +5195,14 @@
      "ldlibs": []
     },
     "dependencies": {
-     "bzip2": {
-      "hash": "ltoodu3gqwhjqoiqhrxl6hyahxar4jdi",
+     "py-setuptools": {
+      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
       "type": [
-       "build",
-       "link"
+       "build"
       ]
      },
-     "libiconv": {
-      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libxml2": {
-      "hash": "qtqz3jtwoulhzoialzdodc6sedn3xo6x",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ncurses": {
-      "hash": "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "tar": {
-      "hash": "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "xz": {
-      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
+     "python": {
+      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
       "type": [
        "build",
        "link",
@@ -4642,12 +5210,12 @@
       ]
      }
     },
-    "hash": "ffe5gu2kmopx6celzpzdzt3btr5qbi6e"
+    "hash": "z2fvfa42nxmpdcg3e7dwekasseybsu2a"
    }
   },
-  "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q": {
-   "ncurses": {
-    "version": "6.2",
+  "dwfmhsyj6vcxaayzk45cjg6x7csuemoq": {
+   "shadow": {
+    "version": "4.7",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -4674,12 +5242,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "symlinks": false,
-     "termlib": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -4687,15 +5253,7 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "pkgconf": {
-      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
-      "type": [
-       "build"
-      ]
-     }
-    },
-    "hash": "n462obasstwprutw6q4evsmmebd577jr"
+    "hash": "dwfmhsyj6vcxaayzk45cjg6x7csuemoq"
    }
   },
   "jvv3gxdqipoghv5eet6emy4z26773la3": {
@@ -4894,6 +5452,81 @@
      }
     },
     "hash": "m4oj23za6xyocvpiskrlafcupion3uvw"
+   }
+  },
+  "hfuyt23px5zt6gw3eozauseo5uvd5qyz": {
+   "tk": {
+    "version": "8.6.8",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "xft": true,
+     "xss": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libx11": {
+      "hash": "z2tucpjkyisubhbp4xk52vava3vpmaqf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxft": {
+      "hash": "akd3zenmhim437q4eo56gnoxxcyv5mxd",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxscrnsaver": {
+      "hash": "icc5ybmfrxjj5rjmfiyfwjeizqyovgqg",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "tcl": {
+      "hash": "5eseieqqialpwbmmemaoy32kojjpjs2j",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "rgssemmsmpkjbipk52jm2vbbvg73qa5b"
    }
   },
   "2oh4x4p4hwwycgjtwfcpkqn2oi2ycmgu": {
@@ -5221,6 +5854,63 @@
     "hash": "ayxdpolxj46dtigayd33i3vyqcn6u6lh"
    }
   },
+  "skfd2qonnjtmsf2ndg2v7lf2au3bwal6": {
+   "xproto": {
+    "version": "7.0.31",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "o24gwb6lnzr5v7i3jtt5zfvajon54b6c"
+   }
+  },
   "yq5fmnafgrn7l6aguod4an5qxre7x3af": {
    "py-markupsafe": {
     "version": "1.1.1",
@@ -5527,6 +6217,49 @@
     "hash": "dzrwtlfoaezdemaruer25ymid7r5td3h"
    }
   },
+  "a6ursrm462mkqqozsmu5e7yzxc2v6osj": {
+   "xcb-proto": {
+    "version": "1.13",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "a6ursrm462mkqqozsmu5e7yzxc2v6osj"
+   }
+  },
   "5g4nd5lwgnurucgrhv77eatcafqlxlaj": {
    "gawk": {
     "version": "5.0.1",
@@ -5664,75 +6397,6 @@
      }
     },
     "hash": "hgrwne4lfnoimsy7v2gojneieszsoyp6"
-   }
-  },
-  "kht4hzm75ajphkafriv2vczceuce4pyc": {
-   "netcdf-fortran": {
-    "version": "4.5.2",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "doc": false,
-     "mpi": true,
-     "patches": [
-      "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
-     ],
-     "pic": true,
-     "shared": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "patches": [
-     "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
-    ],
-    "dependencies": {
-     "netcdf-c": {
-      "hash": "jigyuxxxxklxjke2mwjh25kmzexljvx6",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openmpi": {
-      "hash": "mjwrcdv3cula2wmpyhivbaghpim6nw2a",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "ycylhknbi2ysa4b2rrq7huhksgtqmr2u"
    }
   },
   "tkfxv66pnlor23tel3an4omlzbqlwvrm": {
@@ -6501,9 +7165,9 @@
     "hash": "megicttuzuyy6nwuzio37jcwtqtptrze"
    }
   },
-  "32zt2plkryo2nypd4i2mucbdbj7uduko": {
-   "py-sphinxcontrib-jsmath": {
-    "version": "1.0.1",
+  "y7rkdoy4gtnxfuns7a5fqbli3ioyys3x": {
+   "fontsproto": {
+    "version": "2.1.3",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -6542,27 +7206,25 @@
      "ldlibs": []
     },
     "dependencies": {
-     "py-setuptools": {
-      "hash": "5hhzptu4zqfazwz7f3uftczuruqgfg45",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "python": {
-      "hash": "34joybs27foneaw4i7xenap56gffxsb2",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
       "type": [
-       "build",
-       "link",
-       "run"
+       "build"
       ]
      }
     },
-    "hash": "onojfr5fffcs7lvphy2zcearmzf5stcn"
+    "hash": "jgh2p4omamsrtjw3rz2ddd2op5qcouzk"
    }
   },
-  "5eseieqqialpwbmmemaoy32kojjpjs2j": {
-   "tcl": {
-    "version": "8.6.8",
+  "gvvethv4fcci4klws6rfyhcpexpo5rpl": {
+   "fontconfig": {
+    "version": "2.13.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -6601,15 +7263,105 @@
      "ldlibs": []
     },
     "dependencies": {
-     "zlib": {
-      "hash": "gd3pam7gbjvgvvd6nvgk3j6lpnuam5pt",
+     "font-util": {
+      "hash": "jhfrhei7cy7revs7cxyn2gz46nboj3kf",
       "type": [
        "build",
        "link"
       ]
+     },
+     "freetype": {
+      "hash": "pclkqzezj2wg5dxpheyf53j3wkx5dd24",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "gperf": {
+      "hash": "ifls5weroeoeagslsdwuitikwkogfntg",
+      "type": [
+       "build"
+      ]
+     },
+     "libuuid": {
+      "hash": "6gym6w6zxgslj5aq4mtv7bfics5xdvci",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxml2": {
+      "hash": "fwfbhdyixqewn4rekv5574osn7e3h5id",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
      }
     },
-    "hash": "5eseieqqialpwbmmemaoy32kojjpjs2j"
+    "hash": "hjvwpqyq6xzm4ypvvvhdqgzhe3pvpfgu"
+   }
+  },
+  "ac3a5dcckbh5vimny6xeucitysbw4r77": {
+   "xtrans": {
+    "version": "1.3.5",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "f5owqwexrirryweeec6mjieinxpn34yh"
    }
   },
   "44p7tz5f5xwexonrgdr2o5zokllasstg": {
@@ -6675,6 +7427,71 @@
      }
     },
     "hash": "cpqstxe2xspb5temfyqiq6kehgy4nowo"
+   }
+  },
+  "lpm3eoj2thrhghleb2raeu43xjowi57h": {
+   "py-sphinxcontrib-devhelp": {
+    "version": "1.0.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "intel",
+     "version": "19.0.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "cppflags": [],
+     "cxxflags": [
+      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
+     ],
+     "fflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "py-setuptools": {
+      "hash": "w4otf7jwcgye5ttmca3inlukiklnhxvm",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "vnmui4pd34kb2afzqlnqpi7eurr27qge",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "63ildgcb4626jwat3sv5x36znleibyzo"
    }
   },
   "mgmjmvgdyo5tnu52gujzazezkgpkuibs": {
@@ -8747,9 +9564,9 @@
     "hash": "zfarjktd4bijeut2u2ay4mevkjiaokt5"
    }
   },
-  "tlinmarfiy6niazotqzqqll26yr2vmv5": {
-   "netcdf-cxx4": {
-    "version": "4.3.1",
+  "7qrnb24heifyzix6lyslgxkejizpfqhi": {
+   "gettext": {
+    "version": "0.20.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -8775,61 +9592,77 @@
      }
     },
     "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
+     "name": "intel",
+     "version": "19.0.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "dap": false,
-     "doxygen": false,
-     "jna": false,
-     "ncgen4": true,
-     "netcdf4": false,
-     "pic": true,
-     "pnetcdf": true,
-     "shared": true,
-     "static": true,
-     "cflags": [],
+     "bzip2": true,
+     "curses": true,
+     "git": true,
+     "libunistring": false,
+     "libxml2": true,
+     "tar": true,
+     "xz": true,
+     "cflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
      "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
+     "cxxflags": [
+      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
+     ],
+     "fflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
      "ldflags": [],
      "ldlibs": []
     },
     "dependencies": {
-     "autoconf": {
-      "hash": "se6fix7cwrn3hvxe2xqmeza3mwobuofs",
-      "type": [
-       "build"
-      ]
-     },
-     "automake": {
-      "hash": "kcbufkn7log2mny7w3gdub7yov5nqlai",
-      "type": [
-       "build"
-      ]
-     },
-     "libtool": {
-      "hash": "xtaikxzv6jtve6iunxd45y37kloiobx3",
-      "type": [
-       "build"
-      ]
-     },
-     "m4": {
-      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
-      "type": [
-       "build"
-      ]
-     },
-     "netcdf-c": {
-      "hash": "jigyuxxxxklxjke2mwjh25kmzexljvx6",
+     "bzip2": {
+      "hash": "c4jdtczot7f7fyoeyfwuekkirniiohsg",
       "type": [
        "build",
        "link"
       ]
+     },
+     "libiconv": {
+      "hash": "3roshozu3nitqposnnhq4dpjbj33frox",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxml2": {
+      "hash": "zsgrqikg3os2ea47t24vkkyl32byr7zf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ncurses": {
+      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "tar": {
+      "hash": "qsnovhunhy4j6ftmd2xih5us766to2u2",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "xz": {
+      "hash": "hyz76r7mktjxzovaj3wqmzlhh6mc2k66",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
      }
     },
-    "hash": "sqha3kp2o3xhps35glafpovc7wahtd6g"
+    "hash": "kv46skz6r5iadyxcwcobqwc7pumix4cq"
    }
   },
   "drb5hp7hfamo4aj2y5nwygfazlsiper6": {
@@ -8897,6 +9730,107 @@
     "hash": "4s6xnkqrdm5j4zduuqvplewgeljkhtss"
    }
   },
+  "qfzb6xh6nsk63nupaa5fadlp2rny3mri": {
+   "openmpi": {
+    "version": "2.1.6",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "atomics": true,
+     "cuda": false,
+     "cxx": true,
+     "cxx_exceptions": true,
+     "fabrics": [
+      "libfabric",
+      "ucx"
+     ],
+     "gpfs": false,
+     "java": false,
+     "legacylaunchers": true,
+     "memchecker": false,
+     "pmi": true,
+     "runpath": true,
+     "schedulers": [
+      "slurm"
+     ],
+     "sqlite3": false,
+     "static": true,
+     "thread_multiple": true,
+     "vt": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "hwloc": {
+      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libfabric": {
+      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "numactl": {
+      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "slurm": {
+      "hash": "au54r7n4ppwxga4w474w4p4rz2qdxtte",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ucx": {
+      "hash": "k4rume3erpnoihcnp5xkcbuzziim7gil",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "xmf6gvv3tfpc5lud5jsbs5j4axnmiqbu"
+   }
+  },
   "oj43cqbzxzbpwopk5qtymmlethbaof3e": {
    "curl": {
     "version": "7.68.0",
@@ -8959,6 +9893,75 @@
      }
     },
     "hash": "woiuzmmjx4tyywmghjv2qwb4spg4zjkd"
+   }
+  },
+  "bvs5k7n6mz47d32uenruluslil7qfpc6": {
+   "netcdf-fortran": {
+    "version": "4.5.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "doc": false,
+     "mpi": true,
+     "patches": [
+      "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+     ],
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "patches": [
+     "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+    ],
+    "dependencies": {
+     "netcdf-c": {
+      "hash": "ghcbbkh6bpdffxajjqqcdqz6kqtxn6o7",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openmpi": {
+      "hash": "tnjjasizd75fkotcjm4j6ngez43eew4m",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "ednc6mqszvn4lcjldshrgs6d2pvu3x4o"
    }
   },
   "hlkc7jdwfn7jutrbe32jccr5c7gznqzl": {
@@ -9531,116 +10534,6 @@
     "hash": "cur27edkzdi7tnzbjzhvfyxxjyvdreq3"
    }
   },
-  "sb3ggtkadvdlkulnegq244umbycj3c7i": {
-   "openmpi": {
-    "version": "3.1.5",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "atomics": true,
-     "cuda": false,
-     "cxx": true,
-     "cxx_exceptions": true,
-     "fabrics": [
-      "libfabric",
-      "psm2",
-      "ucx",
-      "verbs"
-     ],
-     "gpfs": false,
-     "java": false,
-     "legacylaunchers": true,
-     "memchecker": false,
-     "pmi": true,
-     "runpath": true,
-     "schedulers": [
-      "slurm"
-     ],
-     "sqlite3": false,
-     "static": true,
-     "thread_multiple": true,
-     "vt": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "hwloc": {
-      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libfabric": {
-      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "numactl": {
-      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "slurm": {
-      "hash": "au54r7n4ppwxga4w474w4p4rz2qdxtte",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ucx": {
-      "hash": "k4rume3erpnoihcnp5xkcbuzziim7gil",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "xay6x3r6htghrsv44jdxedzs4c2d566r"
-   }
-  },
   "o4fuxwdq7g5ezvz45cumpqkhkko3ft2x": {
    "gdbm": {
     "version": "1.18.1",
@@ -9693,9 +10586,9 @@
     "hash": "ptacztusnzwvqvz662zbmr4pe674sxt5"
    }
   },
-  "qynzmlxswrhddcceqfqakj25qq3sxe7m": {
-   "cmake": {
-    "version": "3.16.5",
+  "6tgwj5wuglxxki75cnv5eazrxabzgk6p": {
+   "libxau": {
+    "version": "1.0.8",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -9726,14 +10619,6 @@
     },
     "namespace": "builtin",
     "parameters": {
-     "doc": true,
-     "ncurses": true,
-     "openssl": true,
-     "ownlibs": true,
-     "patches": [
-      "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
-     ],
-     "qt": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -9741,38 +10626,171 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "patches": [
-     "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
-    ],
     "dependencies": {
-     "ncurses": {
-      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openssl": {
-      "hash": "cygpud5vky5sve2l6dvaojjpewk2bhdq",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "py-sphinx": {
-      "hash": "k2flw5qafme2ro3tsqxpygyxldne42os",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "python": {
-      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "ic33e7hoy7jkbjkvsrmo2ykmggtrt57v"
+   }
+  },
+  "nwlixdwxasimth3tj6orrq45nmxo2k3q": {
+   "libxcb": {
+    "version": "1.13",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libpthread-stubs": {
+      "hash": "vh7lxs4eenau5id2ktri6kjayybq5pfl",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxau": {
+      "hash": "6tgwj5wuglxxki75cnv5eazrxabzgk6p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxdmcp": {
+      "hash": "2rgt66k5tmdse2dodz67gskwf25yow4t",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xcb-proto": {
+      "hash": "a6ursrm462mkqqozsmu5e7yzxc2v6osj",
       "type": [
        "build"
       ]
      }
     },
-    "hash": "c4evpmevkwtfl46jqptluwgx7ioduacr"
+    "hash": "6nyng7brbznkfycmt72puu7bv2q7d4p7"
+   }
+  },
+  "tiheevjlqb55codk4pqstwox2lyc5zm7": {
+   "mpc": {
+    "version": "1.1.0",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "gmp": {
+      "hash": "nolxorewyfezibuspqwui3rklnwzr3y3",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "mpfr": {
+      "hash": "35w2ltz3uslzapqy4wmewcwvn7jzmf7x",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "3drl53ek55lwosy4u4zcjuyvqbtl6qoi"
    }
   },
   "2l7443pnhuvyxzgu4prrnzsxk3p3dtzo": {
@@ -10291,9 +11309,9 @@
     "hash": "o6ro25rmun74r35y46xysmulp5jq6qaw"
    }
   },
-  "dwfmhsyj6vcxaayzk45cjg6x7csuemoq": {
-   "shadow": {
-    "version": "4.7",
+  "5eseieqqialpwbmmemaoy32kojjpjs2j": {
+   "tcl": {
+    "version": "8.6.8",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -10331,70 +11349,16 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "dwfmhsyj6vcxaayzk45cjg6x7csuemoq"
-   }
-  },
-  "yayecput2rcxtsfndqfrnjsenx4zsqkd": {
-   "libpciaccess": {
-    "version": "0.13.5",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
     "dependencies": {
-     "libtool": {
-      "hash": "xtaikxzv6jtve6iunxd45y37kloiobx3",
+     "zlib": {
+      "hash": "gd3pam7gbjvgvvd6nvgk3j6lpnuam5pt",
       "type": [
-       "build"
-      ]
-     },
-     "pkgconf": {
-      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
-      "type": [
-       "build"
-      ]
-     },
-     "util-macros": {
-      "hash": "6yhp2cn7qipiruvnz3zszlwpz7riqxoj",
-      "type": [
-       "build"
+       "build",
+       "link"
       ]
      }
     },
-    "hash": "olonx2bmbbwnst7rim2xdeizqawc52pq"
+    "hash": "5eseieqqialpwbmmemaoy32kojjpjs2j"
    }
   },
   "gx5mkmnbo6dxt4gmytomjged4avyytm3": {
@@ -10454,6 +11418,68 @@
      }
     },
     "hash": "z4c74bifhvkvmf7hm6w3vd2f2efigmlv"
+   }
+  },
+  "rpkukpwbdzkt27vpxac3e2g47desn3mf": {
+   "parallel-netcdf": {
+    "version": "1.12.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cxx": true,
+     "fortran": true,
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "m4": {
+      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+      "type": [
+       "build"
+      ]
+     },
+     "openmpi": {
+      "hash": "tnjjasizd75fkotcjm4j6ngez43eew4m",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "rmmogpn5um5sqh5l6ckbfr4s4yjs7hz7"
    }
   },
   "w5nzoxpx3ginb5zbnny26bendh3xcei3": {
@@ -10519,107 +11545,6 @@
      }
     },
     "hash": "rkjc6hpe2e6qj4sfi7g6v2so6wjvb4zb"
-   }
-  },
-  "7qrnb24heifyzix6lyslgxkejizpfqhi": {
-   "gettext": {
-    "version": "0.20.2",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "intel",
-     "version": "19.0.5"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "bzip2": true,
-     "curses": true,
-     "git": true,
-     "libunistring": false,
-     "libxml2": true,
-     "tar": true,
-     "xz": true,
-     "cflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
-     "cppflags": [],
-     "cxxflags": [
-      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
-     ],
-     "fflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "bzip2": {
-      "hash": "c4jdtczot7f7fyoeyfwuekkirniiohsg",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libiconv": {
-      "hash": "3roshozu3nitqposnnhq4dpjbj33frox",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libxml2": {
-      "hash": "zsgrqikg3os2ea47t24vkkyl32byr7zf",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ncurses": {
-      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "tar": {
-      "hash": "qsnovhunhy4j6ftmd2xih5us766to2u2",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "xz": {
-      "hash": "hyz76r7mktjxzovaj3wqmzlhh6mc2k66",
-      "type": [
-       "build",
-       "link",
-       "run"
-      ]
-     }
-    },
-    "hash": "kv46skz6r5iadyxcwcobqwc7pumix4cq"
    }
   },
   "3oplpz6cwkqbrduggzwl5j76hghh4oi7": {
@@ -10839,9 +11764,9 @@
     "hash": "ypm4lqzho7vjomevusp5nxv2p3xy5qd3"
    }
   },
-  "wcbqms37goeflujphuunqfbcerpfkhix": {
-   "automake": {
-    "version": "1.16.2",
+  "2rgt66k5tmdse2dodz67gskwf25yow4t": {
+   "libxdmcp": {
+    "version": "1.1.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -10867,40 +11792,46 @@
      }
     },
     "compiler": {
-     "name": "intel",
-     "version": "19.0.5"
+     "name": "gcc",
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "cflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cflags": [],
      "cppflags": [],
-     "cxxflags": [
-      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
-     ],
-     "fflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cxxflags": [],
+     "fflags": [],
      "ldflags": [],
      "ldlibs": []
     },
     "dependencies": {
-     "autoconf": {
-      "hash": "pnvemvhw7jzdx3phomuzycf3pgeyq3pu",
+     "libbsd": {
+      "hash": "vi5uxf24ueqhpjudfze6ancsid4qhfin",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "perl": {
-      "hash": "r4obyp3eov7xnt3b44gwyshy5qlyhah3",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
       "type": [
-       "build",
-       "run"
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
       ]
      }
     },
-    "hash": "pubn4jwlcaifi74gj5r34cxrkyielze6"
+    "hash": "xaafxd2ywd4nknae7t5fvdxsjhl3r56v"
    }
   },
   "dybl3c4g36gvs5aa6nuuyvzs7do6b2ez": {
@@ -11158,9 +12089,68 @@
     "hash": "yei5eaajmcs47zforp422wxey2zluh7g"
    }
   },
-  "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7": {
-   "tar": {
-    "version": "1.32",
+  "w4otf7jwcgye5ttmca3inlukiklnhxvm": {
+   "py-setuptools": {
+    "version": "46.1.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "intel",
+     "version": "19.0.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "cppflags": [],
+     "cxxflags": [
+      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
+     ],
+     "fflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "python": {
+      "hash": "vnmui4pd34kb2afzqlnqpi7eurr27qge",
+      "type": [
+       "build",
+       "link",
+       "run"
+      ]
+     }
+    },
+    "hash": "ewm2veljihsnagv6ypcc4aomteeitjya"
+   }
+  },
+  "t64shver7i4td25b7sitbdmowgwmipap": {
+   "scrnsaverproto": {
+    "version": "1.2.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -11187,7 +12177,7 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
@@ -11199,15 +12189,20 @@
      "ldlibs": []
     },
     "dependencies": {
-     "libiconv": {
-      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
-       "build",
-       "link"
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
       ]
      }
     },
-    "hash": "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7"
+    "hash": "gurxk7al4vjdvybihwepuav5jojfdc2m"
    }
   },
   "nsejj4ub5eo2cfs375s5bj32vuqo2avq": {
@@ -11455,6 +12450,182 @@
      }
     },
     "hash": "e5oqoelsn5ktfroqkeafzxc2lk2qljge"
+   }
+  },
+  "ghcbbkh6bpdffxajjqqcdqz6kqtxn6o7": {
+   "netcdf-c": {
+    "version": "4.7.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "dap": true,
+     "hdf4": true,
+     "jna": false,
+     "mpi": true,
+     "parallel-netcdf": true,
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "curl": {
+      "hash": "oj43cqbzxzbpwopk5qtymmlethbaof3e",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "hdf": {
+      "hash": "tsnrde6geit5qbvnjwgmdhfqe62yzwjx",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "hdf5": {
+      "hash": "u2bcqifx5fnin7zkadl6rgd4ikjsah2r",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "m4": {
+      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+      "type": [
+       "build"
+      ]
+     },
+     "openmpi": {
+      "hash": "tnjjasizd75fkotcjm4j6ngez43eew4m",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "parallel-netcdf": {
+      "hash": "rpkukpwbdzkt27vpxac3e2g47desn3mf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "lpvqns4xguf6mkjqvjjxk5o3vpbcuy2a"
+   }
+  },
+  "6rq4hlntljzuwdq3zrzib4lp5dx3clsl": {
+   "bdftopcf": {
+    "version": "1.0.5",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "fontsproto": {
+      "hash": "y7rkdoy4gtnxfuns7a5fqbli3ioyys3x",
+      "type": [
+       "build"
+      ]
+     },
+     "libxfont": {
+      "hash": "aert7gghc6iu2wvoow7fsk3px7hp5x3p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "zdjeqjtonozbhn52cinhvdizfvyb6dnt"
    }
   },
   "5sostdhpddibz3ep5xqb43x347r4vsxz": {
@@ -11852,9 +13023,9 @@
     "hash": "gt5i2x3uf2t4q57mavyz3ga4hyge2j6q"
    }
   },
-  "cl4gvcafw2ssfgfcgbvo654fqs7dzf6c": {
-   "py-pyparsing": {
-    "version": "2.4.2",
+  "fxlwglu53ko6ae2fgskjf657wsqtg52k": {
+   "gettext": {
+    "version": "0.20.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -11881,10 +13052,17 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "4.8.5"
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
+     "bzip2": true,
+     "curses": true,
+     "git": true,
+     "libunistring": false,
+     "libxml2": true,
+     "tar": true,
+     "xz": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -11893,14 +13071,43 @@
      "ldlibs": []
     },
     "dependencies": {
-     "py-setuptools": {
-      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
+     "bzip2": {
+      "hash": "ltoodu3gqwhjqoiqhrxl6hyahxar4jdi",
       "type": [
-       "build"
+       "build",
+       "link"
       ]
      },
-     "python": {
-      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
+     "libiconv": {
+      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxml2": {
+      "hash": "qtqz3jtwoulhzoialzdodc6sedn3xo6x",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ncurses": {
+      "hash": "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "tar": {
+      "hash": "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "xz": {
+      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
       "type": [
        "build",
        "link",
@@ -11908,7 +13115,7 @@
       ]
      }
     },
-    "hash": "z2fvfa42nxmpdcg3e7dwekasseybsu2a"
+    "hash": "ffe5gu2kmopx6celzpzdzt3btr5qbi6e"
    }
   },
   "ihn7o7cp4pzb6raijskzoxsluyiwleka": {
@@ -11982,116 +13189,6 @@
      }
     },
     "hash": "xnblfoezxpxm2mgmdnvbaokqyvbjrjur"
-   }
-  },
-  "mjwrcdv3cula2wmpyhivbaghpim6nw2a": {
-   "openmpi": {
-    "version": "3.1.5",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "atomics": true,
-     "cuda": false,
-     "cxx": true,
-     "cxx_exceptions": true,
-     "fabrics": [
-      "libfabric",
-      "psm2",
-      "ucx",
-      "verbs"
-     ],
-     "gpfs": false,
-     "java": false,
-     "legacylaunchers": true,
-     "memchecker": false,
-     "pmi": true,
-     "runpath": true,
-     "schedulers": [
-      "slurm"
-     ],
-     "sqlite3": false,
-     "static": true,
-     "thread_multiple": true,
-     "vt": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "hwloc": {
-      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libfabric": {
-      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "numactl": {
-      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "slurm": {
-      "hash": "altpy6j4vw7dmzzr62g7lxsnr32szul2",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ucx": {
-      "hash": "2l7443pnhuvyxzgu4prrnzsxk3p3dtzo",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "kdvgxgc2an36hj7e3nncnoq7huon3w6a"
    }
   },
   "k4uwcjokv5pexwrsxjx7md2dl4lvplxf": {
@@ -12396,9 +13493,9 @@
     "hash": "wcnfudw5khqbooerrnjm6sppzk53wgzr"
    }
   },
-  "lpm3eoj2thrhghleb2raeu43xjowi57h": {
-   "py-sphinxcontrib-devhelp": {
-    "version": "1.0.1",
+  "ifls5weroeoeagslsdwuitikwkogfntg": {
+   "gperf": {
+    "version": "3.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -12424,41 +13521,76 @@
      }
     },
     "compiler": {
-     "name": "intel",
-     "version": "19.0.5"
+     "name": "gcc",
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "cflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cflags": [],
      "cppflags": [],
-     "cxxflags": [
-      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
-     ],
-     "fflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "ifls5weroeoeagslsdwuitikwkogfntg"
+   }
+  },
+  "rmzsucws4vzutpmen5anpyinziuuehap": {
+   "inputproto": {
+    "version": "2.3.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
      "ldflags": [],
      "ldlibs": []
     },
     "dependencies": {
-     "py-setuptools": {
-      "hash": "w4otf7jwcgye5ttmca3inlukiklnhxvm",
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
       "type": [
        "build"
       ]
      },
-     "python": {
-      "hash": "vnmui4pd34kb2afzqlnqpi7eurr27qge",
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
       "type": [
-       "build",
-       "link",
-       "run"
+       "build"
       ]
      }
     },
-    "hash": "63ildgcb4626jwat3sv5x36znleibyzo"
+    "hash": "jnl7annezui7bajisgz3y43e4sx2oase"
    }
   },
   "uc6hbdqjermoqcuflgbyyuol5cgc54w4": {
@@ -12764,6 +13896,49 @@
      }
     },
     "hash": "y63nghavzufa6kvvh33qeq3vd5kiau2k"
+   }
+  },
+  "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp": {
+   "util-macros": {
+    "version": "1.19.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp"
    }
   },
   "5hhzptu4zqfazwz7f3uftczuruqgfg45": {
@@ -13138,9 +14313,9 @@
     "hash": "wdm2enhamqzniig6mwrcd7fyggnhdwwg"
    }
   },
-  "tiheevjlqb55codk4pqstwox2lyc5zm7": {
-   "mpc": {
-    "version": "1.1.0",
+  "qynzmlxswrhddcceqfqakj25qq3sxe7m": {
+   "cmake": {
+    "version": "3.16.5",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -13171,6 +14346,14 @@
     },
     "namespace": "builtin",
     "parameters": {
+     "doc": true,
+     "ncurses": true,
+     "openssl": true,
+     "ownlibs": true,
+     "patches": [
+      "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
+     ],
+     "qt": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -13178,23 +14361,38 @@
      "ldflags": [],
      "ldlibs": []
     },
+    "patches": [
+     "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
+    ],
     "dependencies": {
-     "gmp": {
-      "hash": "nolxorewyfezibuspqwui3rklnwzr3y3",
+     "ncurses": {
+      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
       "type": [
        "build",
        "link"
       ]
      },
-     "mpfr": {
-      "hash": "35w2ltz3uslzapqy4wmewcwvn7jzmf7x",
+     "openssl": {
+      "hash": "cygpud5vky5sve2l6dvaojjpewk2bhdq",
       "type": [
        "build",
        "link"
       ]
+     },
+     "py-sphinx": {
+      "hash": "k2flw5qafme2ro3tsqxpygyxldne42os",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+      "type": [
+       "build"
+      ]
      }
     },
-    "hash": "3drl53ek55lwosy4u4zcjuyvqbtl6qoi"
+    "hash": "c4evpmevkwtfl46jqptluwgx7ioduacr"
    }
   },
   "4cspeh57jivcmgghratzib3itecwm72p": {
@@ -13390,6 +14588,69 @@
      }
     },
     "hash": "swfxa2bnamqpcvq3hhvpf7qirqt5wfoy"
+   }
+  },
+  "bgnas6v2dpifgrun6kygitxxo46s4yda": {
+   "mkfontdir": {
+    "version": "1.0.7",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "mkfontscale": {
+      "hash": "3jkkhn3wgp5jvw5jai6xhn7sblomz5q4",
+      "type": [
+       "run"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "g6xe6uqd6oq6d67iigfkpv4hpkybzg6p"
    }
   },
   "a64brrfzkd4l7ikmoboea3ehtxdsmgqw": {
@@ -13681,68 +14942,6 @@
      "ldlibs": []
     },
     "hash": "gg6m2ln2yzzw2auf4dnos7wsblcyvlwl"
-   }
-  },
-  "mrfrmayjsjrfzdlod3mzkdwevscaskhz": {
-   "parallel-netcdf": {
-    "version": "1.12.1",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "cxx": true,
-     "fortran": true,
-     "pic": true,
-     "shared": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "m4": {
-      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
-      "type": [
-       "build"
-      ]
-     },
-     "openmpi": {
-      "hash": "mjwrcdv3cula2wmpyhivbaghpim6nw2a",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "oxtentyt245nvxmzj52dpfy5q43el3ts"
    }
   },
   "qtj37lethglt3hjnonuavbxjtdqeqlbz": {
@@ -14755,89 +15954,6 @@
     "hash": "wg2vticuxlbjwlr6cubztotyeh5sanaj"
    }
   },
-  "bfxsc7xv4abatvtukm7bbnqhqozzc5zq": {
-   "hdf5": {
-    "version": "1.12.0",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "api": "none",
-     "cxx": true,
-     "debug": false,
-     "fortran": true,
-     "hl": true,
-     "mpi": true,
-     "pic": true,
-     "shared": true,
-     "szip": true,
-     "threadsafe": false,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "libszip": {
-      "hash": "r5qptfq7oipkgvndcd4kv44rch4aah6k",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "numactl": {
-      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "openmpi": {
-      "hash": "sb3ggtkadvdlkulnegq244umbycj3c7i",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "jbrqjvu5fqjoi3zekmhqixiobfjjnhaz"
-   }
-  },
   "cxubqw4quf6cqzwzrhzltam4yrdzhyzj": {
    "libfabric": {
     "version": "1.9.1",
@@ -15098,9 +16214,9 @@
     "hash": "kmtdpr72ntqdcwnriquiobiwdil3yse6"
    }
   },
-  "s2trkufoaqnuxoa5hzit2g4rs4j47fpq": {
-   "py-pytest-runner": {
-    "version": "5.1",
+  "do6sgy7dbooeqv722nussv4xax2aej25": {
+   "py-sphinxcontrib-jsmath": {
+    "version": "1.0.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -15127,7 +16243,7 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
@@ -15140,19 +16256,13 @@
     },
     "dependencies": {
      "py-setuptools": {
-      "hash": "pe6aeav3roqlspxzezfylv2ae76t5vky",
-      "type": [
-       "build"
-      ]
-     },
-     "py-setuptools-scm": {
-      "hash": "n2pglh7tsvfdk7ppgukpetowx5r6ea5f",
+      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
       "type": [
        "build"
       ]
      },
      "python": {
-      "hash": "v5ed3gcg4kxjmwebnza3mba5iyijudhx",
+      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
       "type": [
        "build",
        "link",
@@ -15160,7 +16270,7 @@
       ]
      }
     },
-    "hash": "qwjsou665l7pmhonikoutn4vyeefkihi"
+    "hash": "teoeih35n7py4rxp6oor2vfenjdsmezv"
    }
   },
   "6yhp2cn7qipiruvnz3zszlwpz7riqxoj": {
@@ -15331,9 +16441,9 @@
     "hash": "kpv2qc2yt4fjo3tokuyfyshtv7sjb4c4"
    }
   },
-  "2cgp3gromnc5clpr2es2teubfhi6cudn": {
-   "py-pytz": {
-    "version": "2019.3",
+  "4gxblcshib7f2nwfoft4jz2ieybn7rix": {
+   "netcdf-fortran": {
+    "version": "4.5.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -15359,35 +16469,51 @@
      }
     },
     "compiler": {
-     "name": "gcc",
-     "version": "4.8.5"
+     "name": "intel",
+     "version": "19.0.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "cflags": [],
+     "doc": false,
+     "mpi": true,
+     "patches": [
+      "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+     ],
+     "pic": true,
+     "shared": true,
+     "cflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
      "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
+     "cxxflags": [
+      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
+     ],
+     "fflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
      "ldflags": [],
      "ldlibs": []
     },
+    "patches": [
+     "b050dbd8d832d13c8c7f69c903251fb6ce567abbfae75c6347e066585d032a7e"
+    ],
     "dependencies": {
-     "py-setuptools": {
-      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+     "intel-mpi": {
+      "hash": "xpihlagcp4s22rxpsxw6aymg4vynk4gx",
       "type": [
        "build",
-       "link",
-       "run"
+       "link"
+      ]
+     },
+     "netcdf-c": {
+      "hash": "ypefguemlrfmpdzbzbozrtsrnklvpzar",
+      "type": [
+       "build",
+       "link"
       ]
      }
     },
-    "hash": "bcfrcv5h4vgaccuse2cyeiilk3vf5akd"
+    "hash": "pp5oism25hehgoidm7ozo3mbzoisnvmo"
    }
   },
   "ttg5x2sscwxfbknpmcb5px25zi3uu5kg": {
@@ -15449,9 +16575,66 @@
     "hash": "bvbvrxgjszu4ciuv6bv4tgt2uw5op6n3"
    }
   },
-  "geb2axul5xnmefktm3myikx44cmim2js": {
-   "rdma-core": {
-    "version": "20",
+  "szg36gtaqhrkswhrnurxnz7r65zj6vex": {
+   "xextproto": {
+    "version": "7.3.0",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "vjplxbstdb77d4oq2ufp42sotipowd5g"
+   }
+  },
+  "v5ed3gcg4kxjmwebnza3mba5iyijudhx": {
+   "python": {
+    "version": "3.7.7",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -15482,7 +16665,26 @@
     },
     "namespace": "builtin",
     "parameters": {
-     "build_type": "RelWithDebInfo",
+     "bz2": true,
+     "ctypes": true,
+     "dbm": true,
+     "debug": false,
+     "libxml2": true,
+     "lzma": true,
+     "nis": false,
+     "optimizations": false,
+     "pic": true,
+     "pyexpat": true,
+     "pythoncmd": true,
+     "readline": true,
+     "shared": true,
+     "sqlite3": true,
+     "ssl": true,
+     "tix": false,
+     "tkinter": false,
+     "ucs4": false,
+     "uuid": false,
+     "zlib": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -15491,14 +16693,50 @@
      "ldlibs": []
     },
     "dependencies": {
-     "cmake": {
-      "hash": "m4dyai4zwe2yrvg6ehk7vwbtfyzh4ptv",
+     "bzip2": {
+      "hash": "ltoodu3gqwhjqoiqhrxl6hyahxar4jdi",
       "type": [
-       "build"
+       "build",
+       "link"
       ]
      },
-     "libnl": {
-      "hash": "gozllnde7fqfohsm7eyfdv4opw3ellze",
+     "expat": {
+      "hash": "dgayigpifx4zwn5pechg5nwrzyc6vwjk",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "gdbm": {
+      "hash": "iwb673ti3oll3hzejmc6ae772u7fh7cw",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "gettext": {
+      "hash": "fxlwglu53ko6ae2fgskjf657wsqtg52k",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libffi": {
+      "hash": "ebw4rkhic2etehezagd5prqza6wovpza",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ncurses": {
+      "hash": "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "openssl": {
+      "hash": "mnakyruturs2kfnflbu7yabv55wl52jk",
       "type": [
        "build",
        "link"
@@ -15509,9 +16747,37 @@
       "type": [
        "build"
       ]
+     },
+     "readline": {
+      "hash": "ubmdu3bfq6hsll2ccpvjzx5dy7vfu6vx",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "sqlite": {
+      "hash": "dvdq4xp7l73z5fnla3aiiocxf2gprwdl",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "xz": {
+      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
      }
     },
-    "hash": "w7fooob55d7f7ola3sm7veimliptfqvd"
+    "hash": "fo4yjmkhuli5cw26l3rkl33nasw2crda"
    }
   },
   "pnvemvhw7jzdx3phomuzycf3pgeyq3pu": {
@@ -15579,9 +16845,9 @@
     "hash": "nefsn65nx5adur35dqco7bq3hvexwpez"
    }
   },
-  "qyhbubways7bsynequ3lqu6cbywwa237": {
-   "hdf5": {
-    "version": "1.12.0",
+  "pucbqi355cv2lssd4hvjnkzh7kxyf3dh": {
+   "py-pygments": {
+    "version": "2.4.2",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -15608,20 +16874,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "api": "none",
-     "cxx": true,
-     "debug": false,
-     "fortran": true,
-     "hl": true,
-     "mpi": true,
-     "pic": true,
-     "shared": true,
-     "szip": true,
-     "threadsafe": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -15630,36 +16886,22 @@
      "ldlibs": []
     },
     "dependencies": {
-     "libszip": {
-      "hash": "r5qptfq7oipkgvndcd4kv44rch4aah6k",
+     "py-setuptools": {
+      "hash": "3kod3z35gslslfosaghaa6x55lo7ciju",
       "type": [
-       "build",
-       "link"
+       "build"
       ]
      },
-     "numactl": {
-      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+     "python": {
+      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
       "type": [
        "build",
-       "link"
-      ]
-     },
-     "openmpi": {
-      "hash": "mjwrcdv3cula2wmpyhivbaghpim6nw2a",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
-      "type": [
-       "build",
-       "link"
+       "link",
+       "run"
       ]
      }
     },
-    "hash": "jjtzh2pqwz3b3jyqaovjsicog6fa6r2t"
+    "hash": "dbioivmrhqdywkja4ndsgk6qy3eyxxoe"
    }
   },
   "nopc7nt6hoz5n7ffx6bbd4wpnwxfdnqw": {
@@ -15813,6 +17055,167 @@
      "ldlibs": []
     },
     "hash": "4wy2bgb6u5ehhtqlfz35utxl6o5ejizm"
+   }
+  },
+  "lw3tgo2ey6ljdd5l6ejc6y5snniygd6q": {
+   "ncurses": {
+    "version": "6.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "symlinks": false,
+     "termlib": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "n462obasstwprutw6q4evsmmebd577jr"
+   }
+  },
+  "ryemdfz4nsdvmh4xpzbi5kogp7d2sqy4": {
+   "openmpi": {
+    "version": "3.1.5",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "atomics": true,
+     "cuda": false,
+     "cxx": true,
+     "cxx_exceptions": true,
+     "fabrics": [
+      "libfabric",
+      "ucx"
+     ],
+     "gpfs": false,
+     "java": false,
+     "legacylaunchers": true,
+     "memchecker": false,
+     "pmi": true,
+     "runpath": true,
+     "schedulers": [
+      "slurm"
+     ],
+     "sqlite3": false,
+     "static": true,
+     "thread_multiple": true,
+     "vt": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "hwloc": {
+      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libfabric": {
+      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "numactl": {
+      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "slurm": {
+      "hash": "au54r7n4ppwxga4w474w4p4rz2qdxtte",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "ucx": {
+      "hash": "k4rume3erpnoihcnp5xkcbuzziim7gil",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "yytcifvlivjtfqcu3h5tysyh7eqx75pw"
    }
   },
   "inreiosbeshyjextw5ffx3sewr6gt5iq": {
@@ -16226,6 +17629,49 @@
     "hash": "ko4emhurxoh3dapgypk74nq2prlkhwwt"
    }
   },
+  "vh7lxs4eenau5id2ktri6kjayybq5pfl": {
+   "libpthread-stubs": {
+    "version": "0.4",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "vh7lxs4eenau5id2ktri6kjayybq5pfl"
+   }
+  },
   "ebw4rkhic2etehezagd5prqza6wovpza": {
    "libffi": {
     "version": "3.3",
@@ -16438,6 +17884,82 @@
      }
     },
     "hash": "zyyi2rb6acdqttbrmb3ksu5djurlslzt"
+   }
+  },
+  "kn44vf5ctxsvlogoqiuioowua7qtaec2": {
+   "libxext": {
+    "version": "1.3.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libx11": {
+      "hash": "z2tucpjkyisubhbp4xk52vava3vpmaqf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xextproto": {
+      "hash": "szg36gtaqhrkswhrnurxnz7r65zj6vex",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "yv3bcd5irdjznh3uod2hb5kgky6np3xt"
    }
   },
   "cygpud5vky5sve2l6dvaojjpewk2bhdq": {
@@ -16816,6 +18338,68 @@
     "hash": "x5odj7c4usvc3cdevbc5gqppshn3h4yp"
    }
   },
+  "gbgdcptgrigevfnwpi4nhjtmopxsypdl": {
+   "parallel-netcdf": {
+    "version": "1.12.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cxx": true,
+     "fortran": true,
+     "pic": true,
+     "shared": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "m4": {
+      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+      "type": [
+       "build"
+      ]
+     },
+     "openmpi": {
+      "hash": "ryemdfz4nsdvmh4xpzbi5kogp7d2sqy4",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "yqbc2nrxlom27nzahwvp2sa4r4ltz53m"
+   }
+  },
   "z42asdkv62lnjqyd3vrbqlmgitxu6rex": {
    "cmake": {
     "version": "3.16.5",
@@ -16898,9 +18482,9 @@
     "hash": "nxxa73pb6lcqe3zupwwp6g7qz24ahzcj"
    }
   },
-  "w4otf7jwcgye5ttmca3inlukiklnhxvm": {
-   "py-setuptools": {
-    "version": "46.1.3",
+  "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7": {
+   "tar": {
+    "version": "1.32",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -16926,35 +18510,28 @@
      }
     },
     "compiler": {
-     "name": "intel",
-     "version": "19.0.5"
+     "name": "gcc",
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
-     "cflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cflags": [],
      "cppflags": [],
-     "cxxflags": [
-      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
-     ],
-     "fflags": [
-      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
-     ],
+     "cxxflags": [],
+     "fflags": [],
      "ldflags": [],
      "ldlibs": []
     },
     "dependencies": {
-     "python": {
-      "hash": "vnmui4pd34kb2afzqlnqpi7eurr27qge",
+     "libiconv": {
+      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
       "type": [
        "build",
-       "link",
-       "run"
+       "link"
       ]
      }
     },
-    "hash": "ewm2veljihsnagv6ypcc4aomteeitjya"
+    "hash": "tpm5apb7mu6pmb2wirwdgj6gbocsj2u7"
    }
   },
   "wa5bs5s4utiu4lfdqajbqejfxaq3hklz": {
@@ -17217,6 +18794,89 @@
      }
     },
     "hash": "l6rt7v2vhyljrio4ipcmss7bjmfndpnl"
+   }
+  },
+  "icc5ybmfrxjj5rjmfiyfwjeizqyovgqg": {
+   "libxscrnsaver": {
+    "version": "1.2.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "libx11": {
+      "hash": "z2tucpjkyisubhbp4xk52vava3vpmaqf",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libxext": {
+      "hash": "kn44vf5ctxsvlogoqiuioowua7qtaec2",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "scrnsaverproto": {
+      "hash": "t64shver7i4td25b7sitbdmowgwmipap",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xextproto": {
+      "hash": "szg36gtaqhrkswhrnurxnz7r65zj6vex",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "a2qnfxsvzjepzivtaj5zeqpzkdehhfnt"
    }
   },
   "2jqtdxyblg5z447upemzyzyoqadg7vky": {
@@ -17766,9 +19426,9 @@
     "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b"
    }
   },
-  "lhae6lneaystrw2hg2i2wzvvrflnxemd": {
-   "libiconv": {
-    "version": "1.16",
+  "iwb673ti3oll3hzejmc6ae772u7fh7cw": {
+   "gdbm": {
+    "version": "1.18.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -17795,7 +19455,7 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "4.8.5"
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -17806,7 +19466,16 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "lhae6lneaystrw2hg2i2wzvvrflnxemd"
+    "dependencies": {
+     "readline": {
+      "hash": "ubmdu3bfq6hsll2ccpvjzx5dy7vfu6vx",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "as3pmag2aa3ff4rtbi3vwjdbeftnadi3"
    }
   },
   "fzpgdprdruoyaelctla2nbemq2luk5fw": {
@@ -18039,109 +19708,6 @@
     "hash": "qqg4ju5kujg7sn3gz3vtn2h47vssv6ur"
    }
   },
-  "hzbkmjkkdlxkve5wqyil4t54jafyobmj": {
-   "openmpi": {
-    "version": "2.1.6",
-    "arch": {
-     "platform": "linux",
-     "platform_os": "centos7",
-     "target": {
-      "name": "sandybridge",
-      "vendor": "GenuineIntel",
-      "features": [
-       "aes",
-       "avx",
-       "mmx",
-       "pclmulqdq",
-       "popcnt",
-       "sse",
-       "sse2",
-       "sse4_1",
-       "sse4_2",
-       "ssse3"
-      ],
-      "generation": 0,
-      "parents": [
-       "westmere"
-      ]
-     }
-    },
-    "compiler": {
-     "name": "gcc",
-     "version": "8.4.0"
-    },
-    "namespace": "builtin",
-    "parameters": {
-     "atomics": true,
-     "cuda": false,
-     "cxx": true,
-     "cxx_exceptions": true,
-     "fabrics": [
-      "libfabric",
-      "psm2",
-      "ucx",
-      "verbs"
-     ],
-     "gpfs": false,
-     "java": false,
-     "legacylaunchers": true,
-     "memchecker": false,
-     "pmi": true,
-     "runpath": true,
-     "schedulers": [
-      "slurm"
-     ],
-     "sqlite3": false,
-     "static": true,
-     "thread_multiple": true,
-     "vt": true,
-     "cflags": [],
-     "cppflags": [],
-     "cxxflags": [],
-     "fflags": [],
-     "ldflags": [],
-     "ldlibs": []
-    },
-    "dependencies": {
-     "hwloc": {
-      "hash": "puluh4w4btvktpb6fwdzhvopvnciqovh",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "libfabric": {
-      "hash": "cxubqw4quf6cqzwzrhzltam4yrdzhyzj",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "numactl": {
-      "hash": "xe6jqzk7xfvhzgilovzpv6ympcgi732p",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "slurm": {
-      "hash": "au54r7n4ppwxga4w474w4p4rz2qdxtte",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "ucx": {
-      "hash": "k4rume3erpnoihcnp5xkcbuzziim7gil",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "dy5fvjfqn6jvduzbxy7ij7wnmkjzucdk"
-   }
-  },
   "pxcb72oojdttjpspwa5n6mjbrfzqtapb": {
    "py-pytz": {
     "version": "2019.3",
@@ -18201,9 +19767,9 @@
     "hash": "465ydfddue6xbe5z2o46snqto7nhfkii"
    }
   },
-  "iwb673ti3oll3hzejmc6ae772u7fh7cw": {
-   "gdbm": {
-    "version": "1.18.1",
+  "lhae6lneaystrw2hg2i2wzvvrflnxemd": {
+   "libiconv": {
+    "version": "1.16",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -18230,7 +19796,7 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
@@ -18241,16 +19807,7 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "readline": {
-      "hash": "ubmdu3bfq6hsll2ccpvjzx5dy7vfu6vx",
-      "type": [
-       "build",
-       "link"
-      ]
-     }
-    },
-    "hash": "as3pmag2aa3ff4rtbi3vwjdbeftnadi3"
+    "hash": "lhae6lneaystrw2hg2i2wzvvrflnxemd"
    }
   },
   "pvbuqhhqscz563vciaj346gyf5pufoec": {
@@ -18894,9 +20451,9 @@
     "hash": "ye3djidvplel64rcr3cxf4ry6mdoz4as"
    }
   },
-  "aoidvupefb7sspwm47xr6zochioc4zly": {
-   "libseccomp": {
-    "version": "2.3.3",
+  "qtqz3jtwoulhzoialzdodc6sedn3xo6x": {
+   "libxml2": {
+    "version": "2.9.10",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -18923,11 +20480,11 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "4.8.5"
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
-     "python": true,
+     "python": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -18936,38 +20493,35 @@
      "ldlibs": []
     },
     "dependencies": {
-     "autoconf": {
-      "hash": "sij4ooyhvvefz74nr2i64egwo6mv3f7i",
+     "libiconv": {
+      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
       "type": [
        "build"
       ]
      },
-     "automake": {
-      "hash": "ivellyco44ktrtasdymeey65s3l4gadc",
+     "xz": {
+      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
       "type": [
-       "build"
+       "build",
+       "link"
       ]
      },
-     "libtool": {
-      "hash": "vwhlzrwu4eol4ory6drhcxxlrmdx6ugt",
+     "zlib": {
+      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
       "type": [
-       "build"
-      ]
-     },
-     "m4": {
-      "hash": "ha5lfxyuqodbjv37fwympkncbmggbcrg",
-      "type": [
-       "build"
-      ]
-     },
-     "py-cython": {
-      "hash": "rzjbki62yjoogc3eeniozr5j4crnyngq",
-      "type": [
-       "build"
+       "build",
+       "link"
       ]
      }
     },
-    "hash": "n63mdfdn4ib63hkgxvwxyosk3wtovzuj"
+    "hash": "lo3yds2amfkcuvb5utlzy4674vovm6vn"
    }
   },
   "gk6uzrqrowcdvrnqg5ikz2suqvgmqzpb": {
@@ -19317,9 +20871,9 @@
     "hash": "vmzl3d725o5y3p2ji6wg6u2eoun66pgu"
    }
   },
-  "zhtye66jxkazdsetrh5mzcypkaeaxn5l": {
-   "nasm": {
-    "version": "2.14.02",
+  "oe7zybvvyx3vfzaooegfu6su3q4hnz6c": {
+   "sqlite": {
+    "version": "3.31.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -19346,10 +20900,14 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
+     "column_metadata": true,
+     "fts": true,
+     "functions": false,
+     "rtree": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -19357,7 +20915,23 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "hash": "zhtye66jxkazdsetrh5mzcypkaeaxn5l"
+    "dependencies": {
+     "readline": {
+      "hash": "gjtbjphsmfgiquu3dghskq7dr3xagpxe",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "zlib": {
+      "hash": "biekv7acbhgy6oirdod6g3poef2627wa",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "ygjkeupqpyi5zwh6ny6abztfn3kmrn2g"
    }
   },
   "nmfb5aku66gwcxszoudxsxrfu3tnwpag": {
@@ -20565,6 +22139,83 @@
     "hash": "kbkkdl4ou2v2szeg3klvxkqmkmzvq6em"
    }
   },
+  "3jkkhn3wgp5jvw5jai6xhn7sblomz5q4": {
+   "mkfontscale": {
+    "version": "1.1.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "freetype": {
+      "hash": "pclkqzezj2wg5dxpheyf53j3wkx5dd24",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "libfontenc": {
+      "hash": "7xiawak7uqvyvp5bljlxwur2azattdk3",
+      "type": [
+       "build",
+       "link"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "yep6aijsyqddctpmgr6tm3xdeedzzjsl"
+   }
+  },
   "ff6toxod2viqdz3tkdezejbxrljaqar6": {
    "python": {
     "version": "3.7.7",
@@ -21066,9 +22717,9 @@
     "hash": "3awhk2zlhejqwpmwcaq3vunmaxn467ey"
    }
   },
-  "vtx3232tehtovjbvjhb6bwrgbaqramsa": {
-   "py-setuptools-scm": {
-    "version": "3.3.3",
+  "jrznnzmnaurytkh6wauorzdapnpadn3b": {
+   "netcdf-cxx4": {
+    "version": "4.3.1",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -21095,7 +22746,92 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "4.8.5"
+     "version": "8.4.0"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "dap": false,
+     "doxygen": false,
+     "jna": false,
+     "ncgen4": true,
+     "netcdf4": false,
+     "pic": true,
+     "pnetcdf": true,
+     "shared": true,
+     "static": true,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "autoconf": {
+      "hash": "se6fix7cwrn3hvxe2xqmeza3mwobuofs",
+      "type": [
+       "build"
+      ]
+     },
+     "automake": {
+      "hash": "kcbufkn7log2mny7w3gdub7yov5nqlai",
+      "type": [
+       "build"
+      ]
+     },
+     "libtool": {
+      "hash": "xtaikxzv6jtve6iunxd45y37kloiobx3",
+      "type": [
+       "build"
+      ]
+     },
+     "m4": {
+      "hash": "axgcc6yclv6vsbxxafmz2njlfqpmlff6",
+      "type": [
+       "build"
+      ]
+     },
+     "netcdf-c": {
+      "hash": "ghcbbkh6bpdffxajjqqcdqz6kqtxn6o7",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "zh6igzft5dpskv6sjsir5ctowub7odju"
+   }
+  },
+  "yayecput2rcxtsfndqfrnjsenx4zsqkd": {
+   "libpciaccess": {
+    "version": "0.13.5",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
@@ -21107,22 +22843,26 @@
      "ldlibs": []
     },
     "dependencies": {
-     "py-setuptools": {
-      "hash": "rhfvkz6xepmze4zsmv7j5cq7ku4z3gn7",
+     "libtool": {
+      "hash": "xtaikxzv6jtve6iunxd45y37kloiobx3",
       "type": [
        "build"
       ]
      },
-     "python": {
-      "hash": "ff6toxod2viqdz3tkdezejbxrljaqar6",
+     "pkgconf": {
+      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
       "type": [
-       "build",
-       "link",
-       "run"
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "6yhp2cn7qipiruvnz3zszlwpz7riqxoj",
+      "type": [
+       "build"
       ]
      }
     },
-    "hash": "v47oae74i4mny5gjslqqhepiduguuig5"
+    "hash": "olonx2bmbbwnst7rim2xdeizqawc52pq"
    }
   },
   "jgv3v3ezzbmw7mjnsyms7k43bwjgsu5x": {
@@ -21774,9 +23514,9 @@
     "hash": "5pw3xolzadbe2ly7ybswckazvctvlkor"
    }
   },
-  "qtqz3jtwoulhzoialzdodc6sedn3xo6x": {
-   "libxml2": {
-    "version": "2.9.10",
+  "aoidvupefb7sspwm47xr6zochioc4zly": {
+   "libseccomp": {
+    "version": "2.3.3",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -21803,11 +23543,11 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "8.4.0"
+     "version": "4.8.5"
     },
     "namespace": "builtin",
     "parameters": {
-     "python": false,
+     "python": true,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -21816,35 +23556,38 @@
      "ldlibs": []
     },
     "dependencies": {
-     "libiconv": {
-      "hash": "jmw64sxkbh7gfg34m5hptnzkvwng5w4b",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "pkgconf": {
-      "hash": "znbpde6eqvuf6rrdjxturaeotik5r4nc",
+     "autoconf": {
+      "hash": "sij4ooyhvvefz74nr2i64egwo6mv3f7i",
       "type": [
        "build"
       ]
      },
-     "xz": {
-      "hash": "wrf5ud5claqkjfda6g6zgtrg72ixkxy4",
+     "automake": {
+      "hash": "ivellyco44ktrtasdymeey65s3l4gadc",
       "type": [
-       "build",
-       "link"
+       "build"
       ]
      },
-     "zlib": {
-      "hash": "2svalmxrx42rqe7rsitigoaluqer3oyk",
+     "libtool": {
+      "hash": "vwhlzrwu4eol4ory6drhcxxlrmdx6ugt",
       "type": [
-       "build",
-       "link"
+       "build"
+      ]
+     },
+     "m4": {
+      "hash": "ha5lfxyuqodbjv37fwympkncbmggbcrg",
+      "type": [
+       "build"
+      ]
+     },
+     "py-cython": {
+      "hash": "rzjbki62yjoogc3eeniozr5j4crnyngq",
+      "type": [
+       "build"
       ]
      }
     },
-    "hash": "lo3yds2amfkcuvb5utlzy4674vovm6vn"
+    "hash": "n63mdfdn4ib63hkgxvwxyosk3wtovzuj"
    }
   },
   "6zor6vyijzblro6kbosw6wycdifnaevi": {
@@ -22340,9 +24083,9 @@
     "hash": "lji66asplbsgtj6voptulou2ikjf3jw6"
    }
   },
-  "oe7zybvvyx3vfzaooegfu6su3q4hnz6c": {
-   "sqlite": {
-    "version": "3.31.1",
+  "zhtye66jxkazdsetrh5mzcypkaeaxn5l": {
+   "nasm": {
+    "version": "2.14.02",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -22369,14 +24112,10 @@
     },
     "compiler": {
      "name": "gcc",
-     "version": "4.8.5"
+     "version": "8.4.0"
     },
     "namespace": "builtin",
     "parameters": {
-     "column_metadata": true,
-     "fts": true,
-     "functions": false,
-     "rtree": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -22384,23 +24123,71 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "dependencies": {
-     "readline": {
-      "hash": "gjtbjphsmfgiquu3dghskq7dr3xagpxe",
-      "type": [
-       "build",
-       "link"
-      ]
-     },
-     "zlib": {
-      "hash": "biekv7acbhgy6oirdod6g3poef2627wa",
-      "type": [
-       "build",
-       "link"
+    "hash": "zhtye66jxkazdsetrh5mzcypkaeaxn5l"
+   }
+  },
+  "wcbqms37goeflujphuunqfbcerpfkhix": {
+   "automake": {
+    "version": "1.16.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
       ]
      }
     },
-    "hash": "ygjkeupqpyi5zwh6ny6abztfn3kmrn2g"
+    "compiler": {
+     "name": "intel",
+     "version": "19.0.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "cppflags": [],
+     "cxxflags": [
+      "-gxx-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/g++"
+     ],
+     "fflags": [
+      "-gcc-name=/home/janderson/opt/spack/linux-centos7-sandybridge/gcc-4.8.5/gcc-8.4.0-jogpmpn2kmshvys44szd6oscy2baug4x/bin/gcc"
+     ],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "autoconf": {
+      "hash": "pnvemvhw7jzdx3phomuzycf3pgeyq3pu",
+      "type": [
+       "build"
+      ]
+     },
+     "perl": {
+      "hash": "r4obyp3eov7xnt3b44gwyshy5qlyhah3",
+      "type": [
+       "build",
+       "run"
+      ]
+     }
+    },
+    "hash": "pubn4jwlcaifi74gj5r34cxrkyielze6"
    }
   },
   "dwvgyjrykmnipb6bekg7pikjcch4zge7": {
@@ -22595,6 +24382,201 @@
      "ldlibs": []
     },
     "hash": "5iql3q46iecwxvzdnhtw7pefva4cgs43"
+   }
+  },
+  "7xiawak7uqvyvp5bljlxwur2azattdk3": {
+   "libfontenc": {
+    "version": "1.1.3",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     },
+     "xproto": {
+      "hash": "skfd2qonnjtmsf2ndg2v7lf2au3bwal6",
+      "type": [
+       "build"
+      ]
+     },
+     "zlib": {
+      "hash": "gd3pam7gbjvgvvd6nvgk3j6lpnuam5pt",
+      "type": [
+       "build",
+       "link"
+      ]
+     }
+    },
+    "hash": "acajogwdhpyi2pzf2mol6h4p6msmn7ly"
+   }
+  },
+  "jhfrhei7cy7revs7cxyn2gz46nboj3kf": {
+   "font-util": {
+    "version": "1.3.2",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "fonts": [
+      "encodings",
+      "font-adobe-100dpi",
+      "font-adobe-75dpi",
+      "font-adobe-utopia-100dpi",
+      "font-adobe-utopia-75dpi",
+      "font-adobe-utopia-type1",
+      "font-alias",
+      "font-arabic-misc",
+      "font-bh-100dpi",
+      "font-bh-75dpi",
+      "font-bh-lucidatypewriter-100dpi",
+      "font-bh-lucidatypewriter-75dpi",
+      "font-bh-ttf",
+      "font-bh-type1",
+      "font-bitstream-100dpi",
+      "font-bitstream-75dpi",
+      "font-bitstream-speedo",
+      "font-bitstream-type1",
+      "font-cronyx-cyrillic",
+      "font-cursor-misc",
+      "font-daewoo-misc",
+      "font-dec-misc",
+      "font-ibm-type1",
+      "font-isas-misc",
+      "font-jis-misc",
+      "font-micro-misc",
+      "font-misc-cyrillic",
+      "font-misc-ethiopic",
+      "font-misc-meltho",
+      "font-misc-misc",
+      "font-mutt-misc",
+      "font-schumacher-misc",
+      "font-screen-cyrillic",
+      "font-sun-misc",
+      "font-winitzki-cyrillic",
+      "font-xfree86-type1"
+     ],
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "dependencies": {
+     "autoconf": {
+      "hash": "sij4ooyhvvefz74nr2i64egwo6mv3f7i",
+      "type": [
+       "build"
+      ]
+     },
+     "automake": {
+      "hash": "ivellyco44ktrtasdymeey65s3l4gadc",
+      "type": [
+       "build"
+      ]
+     },
+     "bdftopcf": {
+      "hash": "6rq4hlntljzuwdq3zrzib4lp5dx3clsl",
+      "type": [
+       "build"
+      ]
+     },
+     "mkfontdir": {
+      "hash": "bgnas6v2dpifgrun6kygitxxo46s4yda",
+      "type": [
+       "build"
+      ]
+     },
+     "mkfontscale": {
+      "hash": "3jkkhn3wgp5jvw5jai6xhn7sblomz5q4",
+      "type": [
+       "build"
+      ]
+     },
+     "pkgconf": {
+      "hash": "ha4lolv726ffhafkw5fy7ijw5aaeml4t",
+      "type": [
+       "build"
+      ]
+     },
+     "util-macros": {
+      "hash": "v3qg2dxsiv3rxkwsxrs35omy6o3gcldp",
+      "type": [
+       "build"
+      ]
+     }
+    },
+    "hash": "6l72dlsvuptu4snntdg4y2eok66c3sdx"
    }
   },
   "6wz7nkzkdtpom752g3wo3y3ik2wym5od": {
@@ -23051,6 +25033,10 @@
    "spec": "tcl%gcc@4.8.5"
   },
   {
+   "hash": "hfuyt23px5zt6gw3eozauseo5uvd5qyz",
+   "spec": "tk%gcc@4.8.5"
+  },
+  {
    "hash": "age3o4oj5mstpatxrs72jnluv6vrbror",
    "spec": "udunits%gcc@4.8.5"
   },
@@ -23119,11 +25105,11 @@
    "spec": "intel-mpi%intel@19.0.5"
   },
   {
-   "hash": "hzbkmjkkdlxkve5wqyil4t54jafyobmj",
+   "hash": "qfzb6xh6nsk63nupaa5fadlp2rny3mri",
    "spec": "openmpi@2.1.6%gcc@8.4.0"
   },
   {
-   "hash": "sb3ggtkadvdlkulnegq244umbycj3c7i",
+   "hash": "ryemdfz4nsdvmh4xpzbi5kogp7d2sqy4",
    "spec": "openmpi@3.1.5%gcc@8.4.0"
   },
   {
@@ -23131,7 +25117,7 @@
    "spec": "hdf5%intel@19.0.5 ^intel-mpi"
   },
   {
-   "hash": "bfxsc7xv4abatvtukm7bbnqhqozzc5zq",
+   "hash": "qup2y3uyon32djm5v6ex3uqgjw3lug5o",
    "spec": "hdf5%gcc@8.4.0 ^openmpi@3.1.5"
   },
   {
@@ -23139,7 +25125,7 @@
    "spec": "parallel-netcdf%intel@19.0.5~cxx ^intel-mpi"
   },
   {
-   "hash": "7im7d3b3fcmulrr2hfj6feeww4nobey5",
+   "hash": "gbgdcptgrigevfnwpi4nhjtmopxsypdl",
    "spec": "parallel-netcdf%gcc@8.4.0 ^openmpi@3.1.5"
   },
   {
@@ -23147,7 +25133,7 @@
    "spec": "netcdf-c%intel@19.0.5 ^cmake%gcc@4.8.5 ^intel-mpi ^parallel-netcdf~cxx"
   },
   {
-   "hash": "jigyuxxxxklxjke2mwjh25kmzexljvx6",
+   "hash": "ghcbbkh6bpdffxajjqqcdqz6kqtxn6o7",
    "spec": "netcdf-c%gcc@8.4.0 ^cmake%gcc@4.8.5 ^openmpi@3.1.5"
   },
   {
@@ -23155,7 +25141,7 @@
    "spec": "netcdf-cxx4%intel@19.0.5 ^cmake%gcc@4.8.5 ^intel-mpi ^parallel-netcdf~cxx"
   },
   {
-   "hash": "tlinmarfiy6niazotqzqqll26yr2vmv5",
+   "hash": "jrznnzmnaurytkh6wauorzdapnpadn3b",
    "spec": "netcdf-cxx4%gcc@8.4.0 ^cmake%gcc@4.8.5 ^openmpi@3.1.5"
   },
   {
@@ -23163,7 +25149,7 @@
    "spec": "netcdf-fortran%intel@19.0.5 ^cmake%gcc@4.8.5 ^intel-mpi ^parallel-netcdf~cxx"
   },
   {
-   "hash": "kht4hzm75ajphkafriv2vczceuce4pyc",
+   "hash": "bvs5k7n6mz47d32uenruluslil7qfpc6",
    "spec": "netcdf-fortran%gcc@8.4.0 ^cmake%gcc@4.8.5 ^openmpi@3.1.5"
   }
  ]

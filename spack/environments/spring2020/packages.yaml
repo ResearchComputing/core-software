@@ -64,7 +64,8 @@ packages:
     version: [1.2.11]
 
   openmpi:
-    variants: fabrics=libfabric,ucx,verbs,psm2 schedulers=slurm +pmi +cxx +cxx_exceptions +atomics +thread_multiple +legacylaunchers ~gpfs
+    variants: fabrics=libfabric,ucx schedulers=slurm +pmi +cxx +cxx_exceptions +atomics +thread_multiple +legacylaunchers ~gpfs
+    #variants: fabrics=libfabric,ucx,verbs,psm2 schedulers=slurm +pmi +cxx +cxx_exceptions +atomics +thread_multiple +legacylaunchers ~gpfs
 
   hdf5:
     variants: +hl +cxx +fortran +szip
