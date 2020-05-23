@@ -101,8 +101,5 @@ packages:
   intel-mpi:
     version: [2019.6.166]
 
-  hdf5:
-    version: [1.12.0]
-
   parallel-netcdf:
     version: [1.12.1]
