@@ -17,6 +17,7 @@ modules:
       - expat
       - gcc
       - gdb
+      - geos
       - git
       - hdf5
       - intel

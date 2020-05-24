@@ -7821,6 +7821,51 @@
     "hash": "syaayh32sgsqdgbol5ut74tl6eayfreh"
    }
   },
+  "yejulldfrkoh5twat76xu3gzibumg4q5": {
+   "geos": {
+    "version": "3.8.1",
+    "arch": {
+     "platform": "linux",
+     "platform_os": "centos7",
+     "target": {
+      "name": "sandybridge",
+      "vendor": "GenuineIntel",
+      "features": [
+       "aes",
+       "avx",
+       "mmx",
+       "pclmulqdq",
+       "popcnt",
+       "sse",
+       "sse2",
+       "sse4_1",
+       "sse4_2",
+       "ssse3"
+      ],
+      "generation": 0,
+      "parents": [
+       "westmere"
+      ]
+     }
+    },
+    "compiler": {
+     "name": "gcc",
+     "version": "4.8.5"
+    },
+    "namespace": "builtin",
+    "parameters": {
+     "python": false,
+     "ruby": false,
+     "cflags": [],
+     "cppflags": [],
+     "cxxflags": [],
+     "fflags": [],
+     "ldflags": [],
+     "ldlibs": []
+    },
+    "hash": "yejulldfrkoh5twat76xu3gzibumg4q5"
+   }
+  },
   "qz7f4or3d76phvzy6ss3gw34x54vrxey": {
    "py-docutils": {
     "version": "0.15.2",
@@ -10734,9 +10779,9 @@
     "hash": "6nyng7brbznkfycmt72puu7bv2q7d4p7"
    }
   },
-  "tiheevjlqb55codk4pqstwox2lyc5zm7": {
-   "mpc": {
-    "version": "1.1.0",
+  "qynzmlxswrhddcceqfqakj25qq3sxe7m": {
+   "cmake": {
+    "version": "3.16.5",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -10767,6 +10812,14 @@
     },
     "namespace": "builtin",
     "parameters": {
+     "doc": true,
+     "ncurses": true,
+     "openssl": true,
+     "ownlibs": true,
+     "patches": [
+      "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
+     ],
+     "qt": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -10774,23 +10827,38 @@
      "ldflags": [],
      "ldlibs": []
     },
+    "patches": [
+     "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
+    ],
     "dependencies": {
-     "gmp": {
-      "hash": "nolxorewyfezibuspqwui3rklnwzr3y3",
+     "ncurses": {
+      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
       "type": [
        "build",
        "link"
       ]
      },
-     "mpfr": {
-      "hash": "35w2ltz3uslzapqy4wmewcwvn7jzmf7x",
+     "openssl": {
+      "hash": "cygpud5vky5sve2l6dvaojjpewk2bhdq",
       "type": [
        "build",
        "link"
       ]
+     },
+     "py-sphinx": {
+      "hash": "k2flw5qafme2ro3tsqxpygyxldne42os",
+      "type": [
+       "build"
+      ]
+     },
+     "python": {
+      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
+      "type": [
+       "build"
+      ]
      }
     },
-    "hash": "3drl53ek55lwosy4u4zcjuyvqbtl6qoi"
+    "hash": "c4evpmevkwtfl46jqptluwgx7ioduacr"
    }
   },
   "2l7443pnhuvyxzgu4prrnzsxk3p3dtzo": {
@@ -14313,9 +14381,9 @@
     "hash": "wdm2enhamqzniig6mwrcd7fyggnhdwwg"
    }
   },
-  "qynzmlxswrhddcceqfqakj25qq3sxe7m": {
-   "cmake": {
-    "version": "3.16.5",
+  "tiheevjlqb55codk4pqstwox2lyc5zm7": {
+   "mpc": {
+    "version": "1.1.0",
     "arch": {
      "platform": "linux",
      "platform_os": "centos7",
@@ -14346,14 +14414,6 @@
     },
     "namespace": "builtin",
     "parameters": {
-     "doc": true,
-     "ncurses": true,
-     "openssl": true,
-     "ownlibs": true,
-     "patches": [
-      "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
-     ],
-     "qt": false,
      "cflags": [],
      "cppflags": [],
      "cxxflags": [],
@@ -14361,38 +14421,23 @@
      "ldflags": [],
      "ldlibs": []
     },
-    "patches": [
-     "1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39"
-    ],
     "dependencies": {
-     "ncurses": {
-      "hash": "uvtxqsxb3gbzdnbwlg3kz55cpworrwoc",
+     "gmp": {
+      "hash": "nolxorewyfezibuspqwui3rklnwzr3y3",
       "type": [
        "build",
        "link"
       ]
      },
-     "openssl": {
-      "hash": "cygpud5vky5sve2l6dvaojjpewk2bhdq",
+     "mpfr": {
+      "hash": "35w2ltz3uslzapqy4wmewcwvn7jzmf7x",
       "type": [
        "build",
        "link"
-      ]
-     },
-     "py-sphinx": {
-      "hash": "k2flw5qafme2ro3tsqxpygyxldne42os",
-      "type": [
-       "build"
-      ]
-     },
-     "python": {
-      "hash": "flosso5orn42je5rlcochcp3cnnehhcq",
-      "type": [
-       "build"
       ]
      }
     },
-    "hash": "c4evpmevkwtfl46jqptluwgx7ioduacr"
+    "hash": "3drl53ek55lwosy4u4zcjuyvqbtl6qoi"
    }
   },
   "4cspeh57jivcmgghratzib3itecwm72p": {
@@ -24999,6 +25044,10 @@
   {
    "hash": "gyayeiqiio3rw67pkoohdaf7ccknauwd",
    "spec": "gdb%gcc@4.8.5"
+  },
+  {
+   "hash": "yejulldfrkoh5twat76xu3gzibumg4q5",
+   "spec": "geos%gcc@4.8.5"
   },
   {
    "hash": "aqpit2k7ol2mxdqtxrdmjnxx6ojkoogv",

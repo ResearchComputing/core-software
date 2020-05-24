@@ -8,6 +8,7 @@ spack:
       - emacs
       - expat
       - gdb
+      - geos
       - git
       - jdk
       - lmod
