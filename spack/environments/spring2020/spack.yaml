@@ -21,7 +21,6 @@ spack:
       - udunits
       - zip
     - - '%gcc@4.8.5'
-
   - matrix:
     - - intel-mkl
       - jasper
@@ -32,32 +31,25 @@ spack:
       - zlib
     - - '%gcc@8.4.0'
       - '%intel@19.0.5'
-
   - intel-mpi%intel@19.0.5
-
   - matrix:
     - - openmpi@2.1.6
       - openmpi@3.1.5
     - - '%gcc@8.4.0'
-
   - matrix:
     - - hdf5
     - - '%intel@19.0.5 ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
-
   - matrix:
     - - parallel-netcdf
-    - - '~cxx %intel@19.0.5 ^intel-mpi'
+    - - ~cxx %intel@19.0.5 ^intel-mpi
       - '%gcc@8.4.0 ^openmpi@3.1.5'
-
   - matrix:
     - - netcdf-c
       - netcdf-cxx4
       - netcdf-fortran
     - - '%intel@19.0.5 ^parallel-netcdf~cxx ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
-    - - ^cmake%gcc@4.8.5
-
   view:
     gcc8-openmpi-netcdf:
       root: /curc/sw/views/spring2020/gcc8-openmpi-netcdf
