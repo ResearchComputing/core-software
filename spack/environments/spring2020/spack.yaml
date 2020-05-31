@@ -51,6 +51,10 @@ spack:
     - - '%intel@19.0.5 ^parallel-netcdf~cxx ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
   view:
+    lmod:
+      root: /curc/sw/views/spring2020/lmod
+      select:
+      - lmod%gcc@4.8.5
     gcc8-openmpi-netcdf:
       root: /curc/sw/views/spring2020/gcc8-openmpi-netcdf
       select:
