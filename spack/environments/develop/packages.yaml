@@ -94,7 +94,7 @@ packages:
     version: [2019.5.281]
 
   intel-mpi:
-    version: [2019.6.166]
+    version: [2019.7.217]
 
   parallel-netcdf:
     version: [1.12.1]
