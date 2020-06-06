@@ -1,0 +1,46 @@
+modules:
+  enable::
+  - lmod
+  lmod:
+    hash_length: 0
+    core_compilers:
+    - gcc@4.8.5
+    - intel@0.0.0
+    hierarchy:
+    - mpi
+    blacklist:
+      - '%gcc'
+      - '%intel'
+    whitelist:
+      - cmake
+      - emacs
+      - expat
+      - gcc
+      - gdb
+      - geos
+      - git
+      - hdf5
+      - intel
+      - intel-mkl
+      - intel-mpi
+      - jasper
+      - jdk
+      - libjpeg
+      - libpng
+      - libszip
+      - mvapich2
+      - netcdf-c
+      - netcdf-cxx4
+      - netcdf-fortran
+      - openjpeg
+      - openmpi ^python%gcc@8.4.0
+      - parallel-netcdf
+      - parallel
+      - perl
+      - qemu
+      - singularity
+      - tcl
+      - tk
+      - udunits
+      - zip
+      - zlib
