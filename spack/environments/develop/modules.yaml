@@ -15,6 +15,7 @@ modules:
       - cmake
       - emacs
       - expat
+      - fftw
       - gcc
       - gdb
       - geos

@@ -38,6 +38,7 @@ spack:
     - - '%gcc@8.4.0'
   - matrix:
     - - hdf5
+      - fftw
     - - '%intel@19.0.5 ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
   - matrix:
