@@ -39,6 +39,7 @@ spack:
   - matrix:
     - - hdf5
       - fftw
+      - osu-micro-benchmarks
     - - '%intel@19.0.5 ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
   - matrix:
