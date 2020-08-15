@@ -52,6 +52,7 @@ spack:
       - netcdf-fortran
     - - '%intel@19.0.5 ^parallel-netcdf~cxx ^intel-mpi'
       - '%gcc@8.4.0 ^openmpi@3.1.5'
+  - matlab@R2018b%gcc@4.8.5 arch=linux-rhel7-haswell
   view:
     lmod:
       root: /curc/sw/views/develop/lmod

@@ -29,12 +29,14 @@ modules:
       - libjpeg
       - libpng
       - libszip
+      - matlab
       - mvapich2
       - netcdf-c
       - netcdf-cxx4
       - netcdf-fortran
       - openjpeg
       - openmpi ^python%gcc@8.4.0
+      - osu-micro-benchmarks
       - parallel-netcdf
       - parallel
       - perl

@@ -104,3 +104,12 @@ packages:
 
   fftw:
     version: [3.3.8]
+
+  matlab:
+    paths:
+      matlab@R2018b%gcc@4.8.5 arch=linux-rhel7-haswell: /curc/sw/matlab/R2018b
+      matlab@R2019b%gcc@4.8.5 arch=linux-rhel7-haswell: /curc/sw/matlab/R2019b
+    buildable: False
+
+  osu-micro-benchmarks:
+    version: [5.6.2]
