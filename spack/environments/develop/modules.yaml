@@ -37,6 +37,7 @@ modules:
       - openjpeg
       - openmpi ^python%gcc@8.4.0
       - osu-micro-benchmarks
+      - stream
       - parallel-netcdf
       - parallel
       - perl
